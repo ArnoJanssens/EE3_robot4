@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Weapon_code.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/Weapon_code.X.production.hex
+CND_ARTIFACT_NAME_default=EE3_robot4.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/EE3_robot4.production.hex

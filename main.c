@@ -85,8 +85,7 @@ static inline void actuator_off(uint8_t i){
         case 7: IO_RD4_SetLow(); break; //uCoutBoltHold
         case 8: IO_RD1_SetLow(); break; //UCoutFout
         case 9: IO_RA4_SetLow(); break; //uCoutLEDBOLTR
-        case 10: IO_RB3_SetLow(); 
-        break; //uCoutLEDMAGR
+        case 10: IO_RB3_SetLow(); break; //uCoutLEDMAGR
     }
 }
 
@@ -113,25 +112,24 @@ static void ActuatorTestTick_1ms(void)  //chatgpt code
     offCountdownMs = 1000; // 1000ms = 1s
 }
 
-int main(void)
-{
-    SYSTEM_Initialize();
+static void resetActuators(void){
     IO_RD0_SetLow(); //block sol
     IO_RD2_SetLow(); //valve
-    
-    //turn on all small solenoids
     IO_RA1_SetLow(); // mag release
     IO_RC0_SetLow(); // switch led
-    IO_RB5_SetLow(); //laser
-    
-    //connection to outer pcb
-    
+    IO_RB5_SetLow(); //laser    
     IO_RD3_SetLow(); //uOutChaser
     IO_RD5_SetLow(); //uCoutoutofammo CHANGE TO RD5
     IO_RD4_SetLow(); //uCoutBoltHold
     IO_RD1_SetLow(); //UCoutFout
     IO_RA4_SetLow(); //uCoutLEDBOLTR
-    IO_RB3_SetLow();
+    IO_RB3_SetLow(); //uCoutLEDMAGR
+}
+
+int main(void)
+{
+    SYSTEM_Initialize();
+    resetActuators();
     
     TMR0_OverflowCallbackRegister(ActuatorTestTick_1ms); 
     INTERRUPT_GlobalInterruptEnable();

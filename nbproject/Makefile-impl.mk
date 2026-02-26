@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Weapon code.X
+PROJECTNAME=EE3_robot4
 
 # Active Configuration
 DEFAULTCONF=default
