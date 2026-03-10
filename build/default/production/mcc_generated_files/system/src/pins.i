@@ -29578,7 +29578,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
 # 39 "mcc_generated_files/system/src/../pins.h" 2
-# 478 "mcc_generated_files/system/src/../pins.h"
+# 461 "mcc_generated_files/system/src/../pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29588,8 +29588,53 @@ void PIN_MANAGER_Initialize (void);
 
 
 void PIN_MANAGER_IOC(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 487 "mcc_generated_files/system/src/../pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 498 "mcc_generated_files/system/src/../pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 509 "mcc_generated_files/system/src/../pins.h"
+void IO_RA5_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA6_ISR(void);
+# 527 "mcc_generated_files/system/src/../pins.h"
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 538 "mcc_generated_files/system/src/../pins.h"
+extern void (*IO_RA6_InterruptHandler)(void);
+# 549 "mcc_generated_files/system/src/../pins.h"
+void IO_RA6_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA7_ISR(void);
+# 567 "mcc_generated_files/system/src/../pins.h"
+void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "mcc_generated_files/system/src/../pins.h"
+extern void (*IO_RA7_InterruptHandler)(void);
+# 589 "mcc_generated_files/system/src/../pins.h"
+void IO_RA7_DefaultInterruptHandler(void);
 # 36 "mcc_generated_files/system/src/pins.c" 2
 
+void (*IO_RA5_InterruptHandler)(void);
+void (*IO_RA6_InterruptHandler)(void);
+void (*IO_RA7_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -29615,7 +29660,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0xED;
+    TRISA = 0xEF;
     TRISB = 0xD7;
     TRISC = 0xFE;
     TRISD = 0x0;
@@ -29625,7 +29670,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    ANSELA = 0x4;
+    ANSELA = 0x6;
     ANSELB = 0xD0;
     ANSELC = 0xFE;
     ANSELD = 0x0;
@@ -29673,12 +29718,14 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    INT0PPS = 0x9;
+    INT1PPS = 0xA;
 
 
 
 
-    IOCAP = 0x0;
-    IOCAN = 0x0;
+    IOCAP = 0xE0;
+    IOCAN = 0xE0;
     IOCAF = 0x0;
     IOCBP = 0x0;
     IOCBN = 0x0;
@@ -29690,9 +29737,119 @@ void PIN_MANAGER_Initialize(void)
     IOCEN = 0x0;
     IOCEF = 0x0;
 
+    IO_RA5_SetInterruptHandler(IO_RA5_DefaultInterruptHandler);
+    IO_RA6_SetInterruptHandler(IO_RA6_DefaultInterruptHandler);
+    IO_RA7_SetInterruptHandler(IO_RA7_DefaultInterruptHandler);
 
+
+    PIE0bits.IOCIE = 1;
 }
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCAFbits.IOCAF5 == 1)
+    {
+        IO_RA5_ISR();
+    }
+
+    if(IOCAFbits.IOCAF6 == 1)
+    {
+        IO_RA6_ISR();
+    }
+
+    if(IOCAFbits.IOCAF7 == 1)
+    {
+        IO_RA7_ISR();
+    }
+}
+
+
+
+
+void IO_RA5_ISR(void) {
+
+
+
+
+    if(IO_RA5_InterruptHandler)
+    {
+        IO_RA5_InterruptHandler();
+    }
+    IOCAFbits.IOCAF5 = 0;
+}
+
+
+
+
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA5_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IO_RA5_DefaultInterruptHandler(void){
+
+
+}
+
+
+
+
+void IO_RA6_ISR(void) {
+
+
+
+
+    if(IO_RA6_InterruptHandler)
+    {
+        IO_RA6_InterruptHandler();
+    }
+    IOCAFbits.IOCAF6 = 0;
+}
+
+
+
+
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA6_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IO_RA6_DefaultInterruptHandler(void){
+
+
+}
+
+
+
+
+void IO_RA7_ISR(void) {
+
+
+
+
+    if(IO_RA7_InterruptHandler)
+    {
+        IO_RA7_InterruptHandler();
+    }
+    IOCAFbits.IOCAF7 = 0;
+}
+
+
+
+
+void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA7_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IO_RA7_DefaultInterruptHandler(void){
+
+
 }

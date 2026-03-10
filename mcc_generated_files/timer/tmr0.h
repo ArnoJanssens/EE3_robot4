@@ -55,7 +55,7 @@
  * @brief Defines the timer prescaled clock frequency in hertz.
  */
 /* cppcheck-suppress misra-c2012-2.5 */  
-#define TMR0_CLOCK_FREQ (64000000UL)
+#define TMR0_CLOCK_FREQ (31250UL)
 /**
  * @ingroup timerdriver
  * @brief Defines the Custom Name for the \ref TMR0_MAX_COUNT.
@@ -72,7 +72,7 @@
  * @ingroup timerdriver
  * @brief Defines the Custom Name for the \ref TMR0_Initialize API.
  */
-#define Timer0_Initialize TMR0_Initialize
+#define Timer0_Initialize TMR0_Initialize_startup_sequence
 /**
  * @ingroup timerdriver
  * @brief Defines the Custom Name for the \ref TMR0_Deinitialize API.
@@ -148,7 +148,7 @@ extern const struct TIMER_INTERFACE Timer0;
  * @param None.
  * @return None.
  */
-void TMR0_Initialize(void);
+void TMR0_Initialize_startup_sequence(void);
 
 /**
  * @ingroup timerdriver
@@ -220,13 +220,6 @@ uint32_t TMR0_PeriodGet(void);
  */
 uint32_t TMR0_MaxCountGet(void);
 
-/**
- * @ingroup timerdriver
- * @brief Interrupt Service Routine (ISR) for the TMR0 overflow interrupt.
- * @param None.
- * @return None.
- */
-void TMR0_ISR(void);
 
 /**
  * @ingroup timerdriver

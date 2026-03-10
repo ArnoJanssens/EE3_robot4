@@ -5,9 +5,9 @@
  * 
  * @ingroup interrupt 
  * 
- * @brief This file contains the API prototypes for the Interrupt Manager driver.
+ * @brief This file contains the API implementation for the Interrupt Manager driver.
  * 
- * @version Interrupt Manager Driver Version 2.0.4
+ * @version Interrupt Manager Driver Version 2.1.3
 */
 
 /*
@@ -33,7 +33,7 @@
 
 #include "../../system/interrupt.h"
 #include "../../system/system.h"
-#include "../pins.h"
+#include <stdbool.h>
 
 void (*INT0_InterruptHandler)(void);
 void (*INT1_InterruptHandler)(void);
@@ -41,8 +41,28 @@ void (*INT2_InterruptHandler)(void);
 
 void  INTERRUPT_Initialize (void)
 {
-    // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
-    INTCON0bits.IPEN = 0;
+    INTCON0bits.IPEN = 1;
+
+    bool state = (unsigned char)GIE;
+    GIE = 0;
+    IVTLOCK = 0x55;
+    IVTLOCK = 0xAA;
+    IVTLOCKbits.IVTLOCKED = 0x00; // unlock IVT
+
+    IVTBASEU = 0;
+    IVTBASEH = 0;
+    IVTBASEL = 8;
+
+    IVTLOCK = 0x55;
+    IVTLOCK = 0xAA;
+    IVTLOCKbits.IVTLOCKED = 0x01; // lock IVT
+
+    GIE = state;
+    // Assign peripheral interrupt priority vectors
+    IPR1bits.INT0IP = 1;
+    IPR3bits.TMR0IP = 1;
+    IPR6bits.INT1IP = 1;
+    IPR0bits.IOCIP = 0;
 
     // Clear the interrupt flag
     // Set the external interrupt edge detect
@@ -50,7 +70,7 @@ void  INTERRUPT_Initialize (void)
     EXT_INT0_risingEdgeSet();    
     // Set Default Interrupt Handler
     INT0_SetInterruptHandler(INT0_DefaultInterruptHandler);
-    // EXT_INT0_InterruptEnable();
+    EXT_INT0_InterruptEnable();
 
     // Clear the interrupt flag
     // Set the external interrupt edge detect
@@ -58,7 +78,7 @@ void  INTERRUPT_Initialize (void)
     EXT_INT1_risingEdgeSet();    
     // Set Default Interrupt Handler
     INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
-    // EXT_INT1_InterruptEnable();
+    EXT_INT1_InterruptEnable();
 
     // Clear the interrupt flag
     // Set the external interrupt edge detect
@@ -70,27 +90,24 @@ void  INTERRUPT_Initialize (void)
 
 }
 
+void __interrupt(irq(default),base(8)) Default_ISR()
+{
+}
+
+void __interrupt(irq(IOC), base(8), low_priority) IOC_ISR()
+{
+    PIN_MANAGER_IOC();
+}
+
+
 /**
  * @ingroup interrupt
- * @brief Executes whenever a high-priority interrupt is triggered. This routine checks the source of the interrupt and calls the relevant interrupt function.
+ * @brief Executes whenever the signal on the INT0 pin transitions on the selected edge.
  * @pre INTERRUPT_Initialize() is already called.
  * @param None.
  * @return None.
  */
-void __interrupt() INTERRUPT_InterruptManager (void)
-{
-    // interrupt handler
-    if(PIE3bits.TMR0IE == 1 && PIR3bits.TMR0IF == 1)
-    {
-        TMR0_ISR();
-    }
-    else
-    {
-        //Unhandled Interrupt
-    }
-}
-
-void INT0_ISR(void)
+void __interrupt(irq(INT0),base(8)) INT0_ISR()
 {
     EXT_INT0_InterruptFlagClear();
 
@@ -116,7 +133,15 @@ void INT0_DefaultInterruptHandler(void){
     // add your INT0 interrupt custom code
     // or set custom function using INT0_SetInterruptHandler()
 }
-void INT1_ISR(void)
+
+/**
+ * @ingroup interrupt
+ * @brief Executes whenever the signal on the INT1 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void __interrupt(irq(INT1),base(8)) INT1_ISR()
 {
     EXT_INT1_InterruptFlagClear();
 
@@ -142,7 +167,15 @@ void INT1_DefaultInterruptHandler(void){
     // add your INT1 interrupt custom code
     // or set custom function using INT1_SetInterruptHandler()
 }
-void INT2_ISR(void)
+
+/**
+ * @ingroup interrupt
+ * @brief Executes whenever the signal on the INT2 pin transitions on the selected edge.
+ * @pre INTERRUPT_Initialize() is already called.
+ * @param None.
+ * @return None.
+ */
+void __interrupt(irq(INT2),base(8)) INT2_ISR()
 {
     EXT_INT2_InterruptFlagClear();
 

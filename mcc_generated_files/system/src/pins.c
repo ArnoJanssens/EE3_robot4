@@ -34,6 +34,9 @@
 
 #include "../pins.h"
 
+void (*IO_RA5_InterruptHandler)(void);
+void (*IO_RA6_InterruptHandler)(void);
+void (*IO_RA7_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -59,7 +62,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISA = 0xED;
+    TRISA = 0xEF;
     TRISB = 0xD7;
     TRISC = 0xFE;
     TRISD = 0x0;
@@ -69,7 +72,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */
-    ANSELA = 0x4;
+    ANSELA = 0x6;
     ANSELB = 0xD0;
     ANSELC = 0xFE;
     ANSELD = 0x0;
@@ -117,12 +120,14 @@ void PIN_MANAGER_Initialize(void)
     /**
     PPS registers
     */
+    INT0PPS = 0x9; //RB1->INTERRUPT MANAGER:INT0;
+    INT1PPS = 0xA; //RB2->INTERRUPT MANAGER:INT1;
 
    /**
     IOCx registers 
     */
-    IOCAP = 0x0;
-    IOCAN = 0x0;
+    IOCAP = 0xE0;
+    IOCAN = 0xE0;
     IOCAF = 0x0;
     IOCBP = 0x0;
     IOCBN = 0x0;
@@ -134,11 +139,121 @@ void PIN_MANAGER_Initialize(void)
     IOCEN = 0x0;
     IOCEF = 0x0;
 
+    IO_RA5_SetInterruptHandler(IO_RA5_DefaultInterruptHandler);
+    IO_RA6_SetInterruptHandler(IO_RA6_DefaultInterruptHandler);
+    IO_RA7_SetInterruptHandler(IO_RA7_DefaultInterruptHandler);
 
+    // Enable PIE0bits.IOCIE interrupt 
+    PIE0bits.IOCIE = 1; 
 }
   
 void PIN_MANAGER_IOC(void)
 {
+    // interrupt on change for pin IO_RA5
+    if(IOCAFbits.IOCAF5 == 1)
+    {
+        IO_RA5_ISR();  
+    }
+    // interrupt on change for pin IO_RA6
+    if(IOCAFbits.IOCAF6 == 1)
+    {
+        IO_RA6_ISR();  
+    }
+    // interrupt on change for pin IO_RA7
+    if(IOCAFbits.IOCAF7 == 1)
+    {
+        IO_RA7_ISR();  
+    }
+}
+   
+/**
+   IO_RA5 Interrupt Service Routine
+*/
+void IO_RA5_ISR(void) {
+
+    // Add custom IO_RA5 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IO_RA5_InterruptHandler)
+    {
+        IO_RA5_InterruptHandler();
+    }
+    IOCAFbits.IOCAF5 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IO_RA5 at application runtime
+*/
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA5_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IO_RA5
+*/
+void IO_RA5_DefaultInterruptHandler(void){
+    // add your IO_RA5 interrupt custom code
+    // or set custom function using IO_RA5_SetInterruptHandler()
+}
+   
+/**
+   IO_RA6 Interrupt Service Routine
+*/
+void IO_RA6_ISR(void) {
+
+    // Add custom IO_RA6 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IO_RA6_InterruptHandler)
+    {
+        IO_RA6_InterruptHandler();
+    }
+    IOCAFbits.IOCAF6 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IO_RA6 at application runtime
+*/
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA6_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IO_RA6
+*/
+void IO_RA6_DefaultInterruptHandler(void){
+    // add your IO_RA6 interrupt custom code
+    // or set custom function using IO_RA6_SetInterruptHandler()
+}
+   
+/**
+   IO_RA7 Interrupt Service Routine
+*/
+void IO_RA7_ISR(void) {
+
+    // Add custom IO_RA7 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IO_RA7_InterruptHandler)
+    {
+        IO_RA7_InterruptHandler();
+    }
+    IOCAFbits.IOCAF7 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IO_RA7 at application runtime
+*/
+void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA7_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IO_RA7
+*/
+void IO_RA7_DefaultInterruptHandler(void){
+    // add your IO_RA7 interrupt custom code
+    // or set custom function using IO_RA7_SetInterruptHandler()
 }
 /**
  End of File

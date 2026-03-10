@@ -36,7 +36,7 @@
 #include "../tmr0.h"
 
 const struct TIMER_INTERFACE Timer0 = {
-    .Initialize = TMR0_Initialize,
+    .Initialize = TMR0_Initialize_startup_sequence,
     .Deinitialize = TMR0_Deinitialize,
     .Start = TMR0_Start,
     .Stop = TMR0_Stop,
@@ -57,13 +57,13 @@ static void TMR0_DefaultOverflowCallback(void);
   Section: TMR0 APIs
 */ 
 
-void TMR0_Initialize(void)
+void TMR0_Initialize_startup_sequence(void)
 {
-    TMR0H = 0x6;                    // Period 1ms; Frequency 64000000Hz; Count 1536
-    TMR0L = 0x0;
+    TMR0H = 0x48;                    // Period 1.5s; Frequency 31250Hz; Count 18661
+    TMR0L = 0xE5;
     
     T0CON1 = (3 << _T0CON1_T0CS_POSN)   // T0CS HFINTOSC
-        | (0 << _T0CON1_T0CKPS_POSN)   // T0CKPS 1:1
+        | (11 << _T0CON1_T0CKPS_POSN)   // T0CKPS 1:2048
         | (1 << _T0CON1_T0ASYNC_POSN);  // T0ASYNC not_synchronised
     
     tmr0PeriodCount = ((uint16_t)TMR0H << 8) | TMR0L;
@@ -138,7 +138,7 @@ uint32_t TMR0_MaxCountGet(void)
     return (uint32_t)TMR0_MAX_COUNT;
 }
 
-void TMR0_ISR(void)
+void __interrupt(irq(TMR0),base(8)) TMR0_ISR()
 {
     TMR0H = (uint8_t)(tmr0PeriodCount >> 8);
     TMR0L = (uint8_t)(tmr0PeriodCount);

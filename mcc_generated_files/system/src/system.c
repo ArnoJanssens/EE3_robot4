@@ -39,7 +39,7 @@ void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
-    TMR0_Initialize();
+    TMR0_Initialize_startup_sequence();
     INTERRUPT_Initialize();
 }
 

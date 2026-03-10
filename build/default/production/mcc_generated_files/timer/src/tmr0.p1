@@ -16,8 +16,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S2431 `*F17288 1 `*F17290 1 `*F17292 1 `*F17294 1 `*F17296 1 `*F17299 1 `*F17301 1 `*F17303 1 `*F17306 1 `*F17308 1 `*F17312 1 ]
 [n S2431 TIMER_INTERFACE Initialize Deinitialize Start Stop PeriodSet PeriodGet CounterGet CounterSet MaxCountGet TimeoutCallbackRegister Tasks ]
 "151 mcc_generated_files/timer/src/../tmr0.h
-[; ;mcc_generated_files/timer/src/../tmr0.h: 151: void TMR0_Initialize(void);
-[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
+[; ;mcc_generated_files/timer/src/../tmr0.h: 151: void TMR0_Initialize_startup_sequence(void);
+[v _TMR0_Initialize_startup_sequence `(v ~T0 @X0 0 ef ]
 "159
 [; ;mcc_generated_files/timer/src/../tmr0.h: 159: void TMR0_Deinitialize(void);
 [v _TMR0_Deinitialize `(v ~T0 @X0 0 ef ]
@@ -42,12 +42,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "221
 [; ;mcc_generated_files/timer/src/../tmr0.h: 221: uint32_t TMR0_MaxCountGet(void);
 [v _TMR0_MaxCountGet `(ul ~T0 @X0 0 ef ]
-[v F17327 `(v ~T0 @X0 0 tf ]
-"237
-[; ;mcc_generated_files/timer/src/../tmr0.h: 237:  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17327 ]
-[v F17345 `(v ~T0 @X0 0 tf ]
-[v F17348 `(v ~T0 @X0 0 tf ]
+[v F17326 `(v ~T0 @X0 0 tf ]
+"230
+[; ;mcc_generated_files/timer/src/../tmr0.h: 230:  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17326 ]
+[v F17344 `(v ~T0 @X0 0 tf ]
+[v F17347 `(v ~T0 @X0 0 tf ]
 "23378 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 23378: extern volatile unsigned char TMR0H __attribute__((address(0x319)));
 [v _TMR0H `Vuc ~T0 @X0 0 e@793 ]
@@ -108,9 +108,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23666
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 23666: extern volatile T0CON0bits_t T0CON0bits __attribute__((address(0x31A)));
 [v _T0CON0bits `VS1136 ~T0 @X0 0 e@794 ]
-[v F17367 `(v ~T0 @X0 0 tf ]
-[v F17369 `(v ~T0 @X0 0 tf ]
-[v F17371 `(v ~T0 @X0 0 tf ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt irq ( TMR0 ) base ( 8 ) ]
+[v F17366 `(v ~T0 @X0 0 tf ]
+[v F17368 `(v ~T0 @X0 0 tf ]
+[v F17370 `(v ~T0 @X0 0 tf ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2688,7 +2690,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _Timer0
 :U ..
 :U ..
-&U _TMR0_Initialize
+&U _TMR0_Initialize_startup_sequence
 &U _TMR0_Deinitialize
 &U _TMR0_Start
 &U _TMR0_Stop
@@ -2698,7 +2700,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _TMR0_CounterSet
 &U _TMR0_MaxCountGet
 &U _TMR0_OverflowCallbackRegister
--> -> -> 0 `i `*v `*F17345
+-> -> -> 0 `i `*v `*F17344
 ..
 ..
 ]
@@ -2707,24 +2709,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _tmr0PeriodCount `Vus ~T0 @X0 1 s ]
 "53
 [; ;mcc_generated_files/timer/src/tmr0.c: 53: static void (*TMR0_OverflowCallback)(void);
-[v _TMR0_OverflowCallback `*F17348 ~T0 @X0 1 s ]
+[v _TMR0_OverflowCallback `*F17347 ~T0 @X0 1 s ]
 "60
-[; ;mcc_generated_files/timer/src/tmr0.c: 60: void TMR0_Initialize(void)
-[v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 60: void TMR0_Initialize_startup_sequence(void)
+[v _TMR0_Initialize_startup_sequence `(v ~T0 @X0 1 ef ]
 "61
 [; ;mcc_generated_files/timer/src/tmr0.c: 61: {
 {
-[e :U _TMR0_Initialize ]
+[e :U _TMR0_Initialize_startup_sequence ]
 [f ]
 "62
-[; ;mcc_generated_files/timer/src/tmr0.c: 62:     TMR0H = 0x6;
-[e = _TMR0H -> -> 6 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 62:     TMR0H = 0x48;
+[e = _TMR0H -> -> 72 `i `uc ]
 "63
-[; ;mcc_generated_files/timer/src/tmr0.c: 63:     TMR0L = 0x0;
-[e = _TMR0L -> -> 0 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 63:     TMR0L = 0xE5;
+[e = _TMR0L -> -> 229 `i `uc ]
 "65
 [; ;mcc_generated_files/timer/src/tmr0.c: 65:     T0CON1 = (3 << 0x5)
-[e = _T0CON1 -> | | << -> 3 `i -> 5 `i << -> 0 `i -> 0 `i << -> 1 `i -> 4 `i `uc ]
+[e = _T0CON1 -> | | << -> 3 `i -> 5 `i << -> 11 `i -> 0 `i << -> 1 `i -> 4 `i `uc ]
 "69
 [; ;mcc_generated_files/timer/src/tmr0.c: 69:     tmr0PeriodCount = ((uint16_t)TMR0H << 8) | TMR0L;
 [e = _tmr0PeriodCount -> | << -> -> _TMR0H `us `ui -> 8 `i -> _TMR0L `ui `us ]
@@ -2922,9 +2924,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/timer/src/tmr0.c: 139: }
 [e :UE 2440 ]
 }
+[v $root$_TMR0_ISR `(v ~T0 @X0 0 e ]
 "141
-[; ;mcc_generated_files/timer/src/tmr0.c: 141: void TMR0_ISR(void)
-[v _TMR0_ISR `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 141: void __attribute__((picinterrupt(("irq(TMR0),base(8)")))) TMR0_ISR()
+[v _TMR0_ISR `(v ~T1 @X0 1 ef ]
 "142
 [; ;mcc_generated_files/timer/src/tmr0.c: 142: {
 {
@@ -2938,7 +2941,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TMR0L -> _tmr0PeriodCount `uc ]
 "146
 [; ;mcc_generated_files/timer/src/tmr0.c: 146:     if(((void*)0) != TMR0_OverflowCallback)
-[e $ ! != -> -> -> 0 `i `*v `*F17367 _TMR0_OverflowCallback 2442  ]
+[e $ ! != -> -> -> 0 `i `*v `*F17366 _TMR0_OverflowCallback 2442  ]
 "147
 [; ;mcc_generated_files/timer/src/tmr0.c: 147:     {
 {
@@ -2958,14 +2961,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "153
 [; ;mcc_generated_files/timer/src/tmr0.c: 153: void TMR0_OverflowCallbackRegister(void (* callbackHandler)(void))
-[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 1 ef1`*F17369 ]
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 1 ef1`*F17368 ]
 "154
 [; ;mcc_generated_files/timer/src/tmr0.c: 154: {
 {
 [e :U _TMR0_OverflowCallbackRegister ]
 "153
 [; ;mcc_generated_files/timer/src/tmr0.c: 153: void TMR0_OverflowCallbackRegister(void (* callbackHandler)(void))
-[v _callbackHandler `*F17371 ~T0 @X0 1 r1 ]
+[v _callbackHandler `*F17370 ~T0 @X0 1 r1 ]
 "154
 [; ;mcc_generated_files/timer/src/tmr0.c: 154: {
 [f ]
