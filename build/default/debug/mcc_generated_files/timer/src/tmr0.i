@@ -29639,7 +29639,7 @@ struct TIMER_INTERFACE
 # 142 "mcc_generated_files/timer/src/../tmr0.h"
 extern const struct TIMER_INTERFACE Timer0;
 # 151 "mcc_generated_files/timer/src/../tmr0.h"
-void TMR0_Initialize(void);
+void TMR0_Initialize_startup_sequence(void);
 
 
 
@@ -29668,26 +29668,12 @@ uint32_t TMR0_PeriodGet(void);
 
 
 uint32_t TMR0_MaxCountGet(void);
-
-
-
-
-
-
-
-void TMR0_ISR(void);
-
-
-
-
-
-
-
+# 230 "mcc_generated_files/timer/src/../tmr0.h"
  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 # 37 "mcc_generated_files/timer/src/tmr0.c" 2
 
 const struct TIMER_INTERFACE Timer0 = {
-    .Initialize = TMR0_Initialize,
+    .Initialize = TMR0_Initialize_startup_sequence,
     .Deinitialize = TMR0_Deinitialize,
     .Start = TMR0_Start,
     .Stop = TMR0_Stop,
@@ -29708,13 +29694,13 @@ static void TMR0_DefaultOverflowCallback(void);
 
 
 
-void TMR0_Initialize(void)
+void TMR0_Initialize_startup_sequence(void)
 {
-    TMR0H = 0x6;
-    TMR0L = 0x0;
+    TMR0H = 0x48;
+    TMR0L = 0xE5;
 
     T0CON1 = (3 << 0x5)
-        | (0 << 0x0)
+        | (11 << 0x0)
         | (1 << 0x4);
 
     tmr0PeriodCount = ((uint16_t)TMR0H << 8) | TMR0L;
@@ -29789,7 +29775,7 @@ uint32_t TMR0_MaxCountGet(void)
     return (uint32_t)(65535U);
 }
 
-void TMR0_ISR(void)
+void __attribute__((picinterrupt(("irq(TMR0),base(8)")))) TMR0_ISR()
 {
     TMR0H = (uint8_t)(tmr0PeriodCount >> 8);
     TMR0L = (uint8_t)(tmr0PeriodCount);

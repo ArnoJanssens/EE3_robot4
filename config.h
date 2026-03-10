@@ -8,11 +8,9 @@
 #ifndef CONFIG_H
 #define	CONFIG_H
 
+#define N_ACTUATORS 10
 
-
-
-
-
+void resetActuators(void);
 
 
 #endif	/* CONFIG_H */

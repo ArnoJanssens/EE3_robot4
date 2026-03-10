@@ -12,7 +12,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46
 [p x PR1WAY  =  ON      ]
 "49
-[p x MVECEN  =  OFF      ]
+[p x MVECEN  =  ON      ]
 "50
 [p x MCLRE  =  EXTMCLR      ]
 "51

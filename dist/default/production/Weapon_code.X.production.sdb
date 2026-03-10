@@ -63,15 +63,15 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"46 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
-[v _startup_sequence_actuator_on startup_sequence_actuator_on `T(v  1 s 1 startup_sequence_actuator_on ]
-"67
-[v _startup_sequence_actuator_off startup_sequence_actuator_off `T(v  1 s 1 startup_sequence_actuator_off ]
-"88
-[v _startup_sequence_OnTimerInterrupt startup_sequence_OnTimerInterrupt `(v  1 s 1 startup_sequence_OnTimerInterrupt ]
-"105
+"47 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
 [v _resetActuators resetActuators `(v  1 s 1 resetActuators ]
-"118
+"60
+[v _startup_sequence_actuator_on startup_sequence_actuator_on `T(v  1 s 1 startup_sequence_actuator_on ]
+"82
+[v _startup_sequence_actuator_off startup_sequence_actuator_off `T(v  1 s 1 startup_sequence_actuator_off ]
+"104
+[v _startup_sequence_OnTimerInterrupt startup_sequence_OnTimerInterrupt `(v  1 s 1 startup_sequence_OnTimerInterrupt ]
+"121
 [v _main main `(i  1 e 2 0 ]
 "39 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -584,8 +584,8 @@
 [v _INTCON0bits INTCON0bits `VES251  1 e 1 @1238 ]
 "55357
 [v _GIE GIE `VEb  1 e 0 @9911 ]
-"41 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
-[v _currentAct currentAct `VEuc  1 s 1 currentAct ]
+"42 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
+[v _currentAct currentAct `VEc  1 s 1 currentAct ]
 "38 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
 "39
@@ -602,15 +602,15 @@
 [v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
 "53
 [v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
-"118 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
+"121 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"134
+"135
 } 0
-"105
+"47
 [v _resetActuators resetActuators `(v  1 s 1 resetActuators ]
 {
-"116
+"58
 } 0
 "153 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
@@ -781,10 +781,10 @@
 {
 "161
 } 0
-"88 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
+"104 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
 [v _startup_sequence_OnTimerInterrupt startup_sequence_OnTimerInterrupt `(v  1 s 1 startup_sequence_OnTimerInterrupt ]
 {
-"98
+"114
 } 0
 "153 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
 [v i2_TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
@@ -792,19 +792,19 @@
 [v i2TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 6 ]
 "156
 } 0
-"46 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
+"60 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
 [v _startup_sequence_actuator_on startup_sequence_actuator_on `T(v  1 s 1 startup_sequence_actuator_on ]
 {
-[v startup_sequence_actuator_on@i i `uc  1 p 1 wreg ]
-[v startup_sequence_actuator_on@i i `uc  1 p 1 wreg ]
-[v startup_sequence_actuator_on@i i `uc  1 p 1 6 ]
-"65
+[v startup_sequence_actuator_on@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_on@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_on@i i `c  1 p 1 6 ]
+"80
 } 1
-"67
+"82
 [v _startup_sequence_actuator_off startup_sequence_actuator_off `T(v  1 s 1 startup_sequence_actuator_off ]
 {
-[v startup_sequence_actuator_off@i i `uc  1 p 1 wreg ]
-[v startup_sequence_actuator_off@i i `uc  1 p 1 wreg ]
-[v startup_sequence_actuator_off@i i `uc  1 p 1 6 ]
-"86
+[v startup_sequence_actuator_off@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_off@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_off@i i `c  1 p 1 6 ]
+"102
 } 1

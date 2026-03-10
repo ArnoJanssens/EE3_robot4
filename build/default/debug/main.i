@@ -29589,7 +29589,7 @@ void CLOCK_Initialize(void);
 # 40 "./mcc_generated_files/system/../system/config_bits.h" 2
 # 43 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 478 "./mcc_generated_files/system/../system/pins.h"
+# 461 "./mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29599,39 +29599,75 @@ void PIN_MANAGER_Initialize (void);
 
 
 void PIN_MANAGER_IOC(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 487 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 498 "./mcc_generated_files/system/../system/pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 509 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA5_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA6_ISR(void);
+# 527 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 538 "./mcc_generated_files/system/../system/pins.h"
+extern void (*IO_RA6_InterruptHandler)(void);
+# 549 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA6_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA7_ISR(void);
+# 567 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "./mcc_generated_files/system/../system/pins.h"
+extern void (*IO_RA7_InterruptHandler)(void);
+# 589 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA7_DefaultInterruptHandler(void);
 # 44 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/interrupt.h" 1
-# 69 "./mcc_generated_files/system/../system/interrupt.h"
+# 91 "./mcc_generated_files/system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
-# 218 "./mcc_generated_files/system/../system/interrupt.h"
-void INT0_ISR(void);
-# 227 "./mcc_generated_files/system/../system/interrupt.h"
+# 228 "./mcc_generated_files/system/../system/interrupt.h"
 void INT0_CallBack(void);
-# 236 "./mcc_generated_files/system/../system/interrupt.h"
+# 237 "./mcc_generated_files/system/../system/interrupt.h"
 void INT0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 246 "./mcc_generated_files/system/../system/interrupt.h"
+# 247 "./mcc_generated_files/system/../system/interrupt.h"
 extern void (*INT0_InterruptHandler)(void);
-# 255 "./mcc_generated_files/system/../system/interrupt.h"
+# 256 "./mcc_generated_files/system/../system/interrupt.h"
 void INT0_DefaultInterruptHandler(void);
-# 264 "./mcc_generated_files/system/../system/interrupt.h"
-void INT1_ISR(void);
-# 273 "./mcc_generated_files/system/../system/interrupt.h"
+# 265 "./mcc_generated_files/system/../system/interrupt.h"
 void INT1_CallBack(void);
-# 282 "./mcc_generated_files/system/../system/interrupt.h"
+# 274 "./mcc_generated_files/system/../system/interrupt.h"
 void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 292 "./mcc_generated_files/system/../system/interrupt.h"
+# 284 "./mcc_generated_files/system/../system/interrupt.h"
 extern void (*INT1_InterruptHandler)(void);
-# 301 "./mcc_generated_files/system/../system/interrupt.h"
+# 293 "./mcc_generated_files/system/../system/interrupt.h"
 void INT1_DefaultInterruptHandler(void);
-# 310 "./mcc_generated_files/system/../system/interrupt.h"
-void INT2_ISR(void);
-# 319 "./mcc_generated_files/system/../system/interrupt.h"
+# 302 "./mcc_generated_files/system/../system/interrupt.h"
 void INT2_CallBack(void);
-# 328 "./mcc_generated_files/system/../system/interrupt.h"
+# 311 "./mcc_generated_files/system/../system/interrupt.h"
 void INT2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 338 "./mcc_generated_files/system/../system/interrupt.h"
+# 321 "./mcc_generated_files/system/../system/interrupt.h"
 extern void (*INT2_InterruptHandler)(void);
-# 347 "./mcc_generated_files/system/../system/interrupt.h"
+# 330 "./mcc_generated_files/system/../system/interrupt.h"
 void INT2_DefaultInterruptHandler(void);
 # 45 "./mcc_generated_files/system/system.h" 2
 
@@ -29696,7 +29732,7 @@ struct TIMER_INTERFACE
 # 142 "./mcc_generated_files/system/../timer/tmr0.h"
 extern const struct TIMER_INTERFACE Timer0;
 # 151 "./mcc_generated_files/system/../timer/tmr0.h"
-void TMR0_Initialize(void);
+void TMR0_Initialize_startup_sequence(void);
 
 
 
@@ -29725,21 +29761,7 @@ uint32_t TMR0_PeriodGet(void);
 
 
 uint32_t TMR0_MaxCountGet(void);
-
-
-
-
-
-
-
-void TMR0_ISR(void);
-
-
-
-
-
-
-
+# 230 "./mcc_generated_files/system/../timer/tmr0.h"
  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 # 47 "./mcc_generated_files/system/system.h" 2
 
@@ -29754,107 +29776,36 @@ void SYSTEM_Initialize(void);
 # 36 "main.c" 2
 
 
+# 1 "./config.h" 1
+# 13 "./config.h"
+void resetActuators(void);
+# 39 "main.c" 2
+# 1 "./startupsequence.h" 1
+# 11 "./startupsequence.h"
+void startup_sequence_actuator_on(int8_t i);
+
+void startup_sequence_actuator_off(int8_t i);
+
+void startup_sequence_OnTimerInterrupt(void);
+
+void startup_sequence_Init(void);
+# 40 "main.c" 2
 
 
 
-static volatile uint16_t offCountdownMs = 0;
-static volatile uint8_t currentAct = 0;
-static volatile _Bool testDone = 0;
 
 
 
-
-static __attribute__((inline)) void actuator_on(uint8_t i){
-    switch(i){
-
-        case 0: do { LATDbits.LATD0 = 1; } while(0); break;
-        case 1: do { LATDbits.LATD2 = 1; } while(0); break;
-
-
-        case 2: do { LATAbits.LATA1 = 1; } while(0); break;
-        case 3: do { LATCbits.LATC0 = 1; } while(0); break;
-        case 4: do { LATBbits.LATB5 = 1; } while(0); break;
-
-
-
-        case 5: do { LATDbits.LATD3 = 1; } while(0); break;
-        case 6: do { LATDbits.LATD5 = 1; } while(0); break;
-        case 7: do { LATDbits.LATD4 = 1; } while(0); break;
-        case 8: do { LATDbits.LATD1 = 1; } while(0); break;
-        case 9: do { LATAbits.LATA4 = 1; } while(0); break;
-        case 10: do { LATBbits.LATB3 = 1; } while(0); break;
-    }
-}
-
-static __attribute__((inline)) void actuator_off(uint8_t i){
-    switch(i){
-
-        case 0: do { LATDbits.LATD0 = 0; } while(0); break;
-        case 1: do { LATDbits.LATD2 = 0; } while(0); break;
-
-
-        case 2: do { LATAbits.LATA1 = 0; } while(0); break;
-        case 3: do { LATCbits.LATC0 = 0; } while(0); break;
-        case 4: do { LATBbits.LATB5 = 0; } while(0); break;
-
-
-
-        case 5: do { LATDbits.LATD3 = 0; } while(0); break;
-        case 6: do { LATDbits.LATD5 = 0; } while(0); break;
-        case 7: do { LATDbits.LATD4 = 0; } while(0); break;
-        case 8: do { LATDbits.LATD1 = 0; } while(0); break;
-        case 9: do { LATAbits.LATA4 = 0; } while(0); break;
-        case 10: do { LATBbits.LATB3 = 0; } while(0);
-        break;
-    }
-}
-
-static void ActuatorTestTick_1ms(void)
-{
-
-    if (offCountdownMs > 0)
-    {
-        offCountdownMs--;
-        if (offCountdownMs == 0)
-        {
-            actuator_off(currentAct);
-            currentAct++;
-            if (currentAct >= 11){
-                testDone = 1;
-                return;
-            }
-        }
-        return;
-    }
-
-
-    actuator_on(currentAct);
-    offCountdownMs = 1000;
-}
 
 int main(void)
 {
     SYSTEM_Initialize();
-    do { LATDbits.LATD0 = 0; } while(0);
-    do { LATDbits.LATD2 = 0; } while(0);
-
-
-    do { LATAbits.LATA1 = 0; } while(0);
-    do { LATCbits.LATC0 = 0; } while(0);
-    do { LATBbits.LATB5 = 0; } while(0);
-
-
-
-    do { LATDbits.LATD3 = 0; } while(0);
-    do { LATDbits.LATD5 = 0; } while(0);
-    do { LATDbits.LATD4 = 0; } while(0);
-    do { LATDbits.LATD1 = 0; } while(0);
-    do { LATAbits.LATA4 = 0; } while(0);
-    do { LATBbits.LATB3 = 0; } while(0);
-
-    TMR0_OverflowCallbackRegister(ActuatorTestTick_1ms);
+    resetActuators();
     (INTCON0bits.GIE = 1);
-# 174 "main.c"
+    (INTCON0bits.GIEL = 1);
+
+
+
     while(1)
     {
 

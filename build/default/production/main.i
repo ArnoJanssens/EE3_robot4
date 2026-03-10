@@ -29776,15 +29776,30 @@ void SYSTEM_Initialize(void);
 # 36 "main.c" 2
 
 
+# 1 "./config.h" 1
+# 39 "main.c" 2
 
 
 
-static volatile uint8_t currentAct = 0;
+static volatile int8_t currentAct = -1;
 
 
 
 
-static __attribute__((inline)) void startup_sequence_actuator_on(uint8_t i){
+static void resetActuators(void){
+    do { LATDbits.LATD0 = 0; } while(0);
+    do { LATDbits.LATD2 = 0; } while(0);
+    do { LATCbits.LATC0 = 0; } while(0);
+    do { LATBbits.LATB5 = 0; } while(0);
+    do { LATDbits.LATD3 = 0; } while(0);
+    do { LATDbits.LATD5 = 0; } while(0);
+    do { LATDbits.LATD4 = 0; } while(0);
+    do { LATDbits.LATD1 = 0; } while(0);
+    do { LATAbits.LATA4 = 0; } while(0);
+    do { LATBbits.LATB3 = 0; } while(0);
+}
+
+static __attribute__((inline)) void startup_sequence_actuator_on(int8_t i){
     switch(i){
 
         case 0: do { LATDbits.LATD0 = 1; } while(0); break;
@@ -29802,10 +29817,11 @@ static __attribute__((inline)) void startup_sequence_actuator_on(uint8_t i){
         case 7: do { LATDbits.LATD1 = 1; } while(0); break;
         case 8: do { LATAbits.LATA4 = 1; } while(0); break;
         case 9: do { LATBbits.LATB3 = 1; } while(0); break;
+        default: break;
     }
 }
 
-static __attribute__((inline)) void startup_sequence_actuator_off(uint8_t i){
+static __attribute__((inline)) void startup_sequence_actuator_off(int8_t i){
     switch(i){
 
         case 0: do { LATDbits.LATD0 = 0; } while(0); break;
@@ -29823,6 +29839,7 @@ static __attribute__((inline)) void startup_sequence_actuator_off(uint8_t i){
         case 7: do { LATDbits.LATD1 = 0; } while(0); break;
         case 8: do { LATAbits.LATA4 = 0; } while(0); break;
         case 9: do { LATBbits.LATB3 = 0; } while(0); break;
+        default: break;
     }
 }
 
@@ -29843,28 +29860,13 @@ static void startup_sequence_run(void){
     TMR0_Initialize_startup_sequence();
 }
 
-static void resetActuators(void){
-    do { LATDbits.LATD0 = 0; } while(0);
-    do { LATDbits.LATD2 = 0; } while(0);
-    do { LATCbits.LATC0 = 0; } while(0);
-    do { LATBbits.LATB5 = 0; } while(0);
-    do { LATDbits.LATD3 = 0; } while(0);
-    do { LATDbits.LATD5 = 0; } while(0);
-    do { LATDbits.LATD4 = 0; } while(0);
-    do { LATDbits.LATD1 = 0; } while(0);
-    do { LATAbits.LATA4 = 0; } while(0);
-    do { LATBbits.LATB3 = 0; } while(0);
-}
-
 int main(void)
 {
     SYSTEM_Initialize();
     resetActuators();
-
     TMR0_OverflowCallbackRegister(startup_sequence_OnTimerInterrupt);
     (INTCON0bits.GIE = 1);
     (INTCON0bits.GIEL = 1);
-
 
 
     while(1)
