@@ -8,4 +8,5 @@ mcc_generated_files/system/../system/interrupt.h  \
 mcc_generated_files/system/../system/clock.h  \
 mcc_generated_files/system/../timer/tmr0.h  \
 mcc_generated_files/system/../timer/timer_interface.h  \
-config.h 
+config.h  \
+startupsequence.h 

@@ -48,11 +48,9 @@ int main(void)
 {
     SYSTEM_Initialize();
     resetActuators();
+    startup_sequence_Init();
     INTERRUPT_GlobalInterruptHighEnable();
     INTERRUPT_GlobalInterruptLowEnable();
-    
- 
-    
     while(1)
     {
         

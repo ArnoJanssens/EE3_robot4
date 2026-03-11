@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o
+ C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o
  -Odist/default/production\Weapon_code.X.production.hex
  -logfile=dist/default/production\Weapon_code.X.production.hxl
  -addressing=1
@@ -9,27 +9,31 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  8h - 105h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  2600h - 2622h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  2624h - 28A5h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  28A8h - 2B49h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  2B4Ch - 2C42h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  300000h - 300007h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
-  300009h - 300009h		(C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
+  0h - 3h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  8h - 105h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  2600h - 2622h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  2624h - 28A5h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  28A8h - 2AF1h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  2AF4h - 2B41h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  2B44h - 2C45h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  2C48h - 2C52h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  300000h - 300007h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
+  300009h - 300009h		(C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   106h - 25FFh
   2623h - 2623h
   28A6h - 28A7h
-  2B4Ah - 2B4Bh
-  2C43h - 2FFFFFh
+  2AF2h - 2AF3h
+  2B42h - 2B43h
+  2C46h - 2C47h
+  2C53h - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\janss\AppData\Local\Temp\xcAsqok.0\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\janss\AppData\Local\Temp\xcAsh8s.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -130,12 +134,12 @@
 00002AC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002AD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002AE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002AF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002AF0 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002B40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
+00002B40 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002B70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -151,7 +155,8 @@
 00002C10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002C20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002C30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002C40 | H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- --
+00002C40 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00002C50 | H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --

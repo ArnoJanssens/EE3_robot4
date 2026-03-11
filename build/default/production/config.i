@@ -8,6 +8,8 @@
 # 2 "<built-in>" 2
 # 1 "config.c" 2
 # 1 "./config.h" 1
+# 13 "./config.h"
+void resetActuators(void);
 # 2 "config.c" 2
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
@@ -29776,9 +29778,20 @@ uint32_t TMR0_MaxCountGet(void);
 void SYSTEM_Initialize(void);
 # 3 "config.c" 2
 
+void resetActuators(void){
+    do { LATDbits.LATD0 = 0; } while(0);
+    do { LATDbits.LATD2 = 0; } while(0);
+    do { LATCbits.LATC0 = 0; } while(0);
+    do { LATBbits.LATB5 = 0; } while(0);
+    do { LATDbits.LATD3 = 0; } while(0);
+    do { LATDbits.LATD5 = 0; } while(0);
+    do { LATDbits.LATD4 = 0; } while(0);
+    do { LATDbits.LATD1 = 0; } while(0);
+    do { LATAbits.LATA4 = 0; } while(0);
+    do { LATBbits.LATB3 = 0; } while(0);
+}
 
-
-static void blocking_solenoid_set(_Bool enable){
+void blocking_solenoid_set(_Bool enable){
     if(enable) do { LATDbits.LATD0 = 1; } while(0);
     else do { LATDbits.LATD0 = 0; } while(0);
 }

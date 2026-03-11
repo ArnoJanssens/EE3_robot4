@@ -1,60 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"48995 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48995:     struct {
-[s S2288 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2288 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"48994
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48994: typedef union {
-[u S2287 `S2288 1 ]
-[n S2287 . . ]
-"49006
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49006: extern volatile LATDbits_t LATDbits __attribute__((address(0x4C1)));
-[v _LATDbits `VS2287 ~T0 @X0 0 e@1217 ]
-"48933
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48933:     struct {
-[s S2286 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2286 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"48932
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48932: typedef union {
-[u S2285 `S2286 1 ]
-[n S2285 . . ]
-"48944
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48944: extern volatile LATCbits_t LATCbits __attribute__((address(0x4C0)));
-[v _LATCbits `VS2285 ~T0 @X0 0 e@1216 ]
-"48871
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48871:     struct {
-[s S2284 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2284 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"48870
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48870: typedef union {
-[u S2283 `S2284 1 ]
-[n S2283 . . ]
-"48882
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48882: extern volatile LATBbits_t LATBbits __attribute__((address(0x4BF)));
-[v _LATBbits `VS2283 ~T0 @X0 0 e@1215 ]
-"48809
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48809:     struct {
-[s S2282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2282 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"48808
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48808: typedef union {
-[u S2281 `S2282 1 ]
-[n S2281 . . ]
-"48820
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48820: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
-[v _LATAbits `VS2281 ~T0 @X0 0 e@1214 ]
-[v F17378 `(v ~T0 @X0 0 tf ]
-"230 ./mcc_generated_files/system/../timer/tmr0.h
-[; ;./mcc_generated_files/system/../timer/tmr0.h: 230:  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17378 ]
-[v F17392 `(v ~T0 @X0 0 tf ]
-"151
-[; ;./mcc_generated_files/system/../timer/tmr0.h: 151: void TMR0_Initialize_startup_sequence(void);
-[v _TMR0_Initialize_startup_sequence `(v ~T0 @X0 0 ef ]
 [p mainexit ]
 "55 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 55: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"13 ./config.h
+[; ;./config.h: 13: void resetActuators(void);
+[v _resetActuators `(v ~T0 @X0 0 ef ]
+"17 ./startupsequence.h
+[; ;./startupsequence.h: 17: void startup_sequence_Init(void);
+[v _startup_sequence_Init `(v ~T0 @X0 0 ef ]
 "49841 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49841:     struct {
 [s S2318 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2641,434 +2595,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51113
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 51113: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"42 main.c
-[; ;main.c: 42: static volatile int8_t currentAct = -1;
-[v _currentAct `Vc ~T0 @X0 1 s ]
-[i _currentAct
--> -U -> 1 `i `c
-]
-"47
-[; ;main.c: 47: static void resetActuators(void){
-[v _resetActuators `(v ~T0 @X0 1 sf ]
-{
-[e :U _resetActuators ]
-[f ]
-"48
-[; ;main.c: 48:     do { LATDbits.LATD0 = 0; } while(0);
-[e :U 2435 ]
-{
-[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 2434 ]
-"49
-[; ;main.c: 49:     do { LATDbits.LATD2 = 0; } while(0);
-[e :U 2438 ]
-{
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 2437 ]
-"50
-[; ;main.c: 50:     do { LATCbits.LATC0 = 0; } while(0);
-[e :U 2441 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 2440 ]
-"51
-[; ;main.c: 51:     do { LATBbits.LATB5 = 0; } while(0);
-[e :U 2444 ]
-{
-[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 2443 ]
-"52
-[; ;main.c: 52:     do { LATDbits.LATD3 = 0; } while(0);
-[e :U 2447 ]
-{
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 2446 ]
-"53
-[; ;main.c: 53:     do { LATDbits.LATD5 = 0; } while(0);
-[e :U 2450 ]
-{
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 2449 ]
-"54
-[; ;main.c: 54:     do { LATDbits.LATD4 = 0; } while(0);
-[e :U 2453 ]
-{
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 2452 ]
-"55
-[; ;main.c: 55:     do { LATDbits.LATD1 = 0; } while(0);
-[e :U 2456 ]
-{
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 2455 ]
-"56
-[; ;main.c: 56:     do { LATAbits.LATA4 = 0; } while(0);
-[e :U 2459 ]
-{
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 2458 ]
-"57
-[; ;main.c: 57:     do { LATBbits.LATB3 = 0; } while(0);
-[e :U 2462 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 2461 ]
-"58
-[; ;main.c: 58: }
-[e :UE 2432 ]
-}
-[v F17385 `(v ~T0 @X0 1 tf1`c ]
-"60
-[; ;main.c: 60: static __attribute__((inline)) void startup_sequence_actuator_on(int8_t i){
-[v _startup_sequence_actuator_on `TF17385 ~T0 @X0 1 s ]
-{
-[e :U _startup_sequence_actuator_on ]
-[v _i `c ~T0 @X0 1 r1 ]
-[f ]
-"61
-[; ;main.c: 61:     switch(i){
-[e $U 2465  ]
-{
-"63
-[; ;main.c: 63:         case 0: do { LATDbits.LATD0 = 1; } while(0); break;
-[e :U 2466 ]
-[e :U 2469 ]
-{
-[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 2468 ]
-[e $U 2464  ]
-"64
-[; ;main.c: 64:         case 1: do { LATDbits.LATD2 = 1; } while(0); break;
-[e :U 2470 ]
-[e :U 2473 ]
-{
-[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 2472 ]
-[e $U 2464  ]
-"67
-[; ;main.c: 67:         case 2: do { LATCbits.LATC0 = 1; } while(0); break;
-[e :U 2474 ]
-[e :U 2477 ]
-{
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-}
-[e :U 2476 ]
-[e $U 2464  ]
-"68
-[; ;main.c: 68:         case 3: do { LATBbits.LATB5 = 1; } while(0); break;
-[e :U 2478 ]
-[e :U 2481 ]
-{
-[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 2480 ]
-[e $U 2464  ]
-"72
-[; ;main.c: 72:         case 4: do { LATDbits.LATD3 = 1; } while(0); break;
-[e :U 2482 ]
-[e :U 2485 ]
-{
-[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
-}
-[e :U 2484 ]
-[e $U 2464  ]
-"73
-[; ;main.c: 73:         case 5: do { LATDbits.LATD5 = 1; } while(0); break;
-[e :U 2486 ]
-[e :U 2489 ]
-{
-[e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 2488 ]
-[e $U 2464  ]
-"74
-[; ;main.c: 74:         case 6: do { LATDbits.LATD4 = 1; } while(0); break;
-[e :U 2490 ]
-[e :U 2493 ]
-{
-[e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 2492 ]
-[e $U 2464  ]
-"75
-[; ;main.c: 75:         case 7: do { LATDbits.LATD1 = 1; } while(0); break;
-[e :U 2494 ]
-[e :U 2497 ]
-{
-[e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 2496 ]
-[e $U 2464  ]
-"76
-[; ;main.c: 76:         case 8: do { LATAbits.LATA4 = 1; } while(0); break;
-[e :U 2498 ]
-[e :U 2501 ]
-{
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 2500 ]
-[e $U 2464  ]
-"77
-[; ;main.c: 77:         case 9: do { LATBbits.LATB3 = 1; } while(0); break;
-[e :U 2502 ]
-[e :U 2505 ]
-{
-[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-}
-[e :U 2504 ]
-[e $U 2464  ]
-"78
-[; ;main.c: 78:         default: break;
-[e :U 2506 ]
-[e $U 2464  ]
-"79
-[; ;main.c: 79:     }
-}
-[e $U 2464  ]
-[e :U 2465 ]
-[e [\ _i , $ -> 0 `i 2466
- , $ -> 1 `i 2470
- , $ -> 2 `i 2474
- , $ -> 3 `i 2478
- , $ -> 4 `i 2482
- , $ -> 5 `i 2486
- , $ -> 6 `i 2490
- , $ -> 7 `i 2494
- , $ -> 8 `i 2498
- , $ -> 9 `i 2502
- 2506 ]
-[e :U 2464 ]
-"80
-[; ;main.c: 80: }
-[e :UE 2463 ]
-}
-[v F17388 `(v ~T0 @X0 1 tf1`c ]
-"82
-[; ;main.c: 82: static __attribute__((inline)) void startup_sequence_actuator_off(int8_t i){
-[v _startup_sequence_actuator_off `TF17388 ~T0 @X0 1 s ]
-{
-[e :U _startup_sequence_actuator_off ]
-[v _i `c ~T0 @X0 1 r1 ]
-[f ]
-"83
-[; ;main.c: 83:     switch(i){
-[e $U 2509  ]
-{
-"85
-[; ;main.c: 85:         case 0: do { LATDbits.LATD0 = 0; } while(0); break;
-[e :U 2510 ]
-[e :U 2513 ]
-{
-[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 2512 ]
-[e $U 2508  ]
-"86
-[; ;main.c: 86:         case 1: do { LATDbits.LATD2 = 0; } while(0); break;
-[e :U 2514 ]
-[e :U 2517 ]
-{
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 2516 ]
-[e $U 2508  ]
-"89
-[; ;main.c: 89:         case 2: do { LATCbits.LATC0 = 0; } while(0); break;
-[e :U 2518 ]
-[e :U 2521 ]
-{
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-}
-[e :U 2520 ]
-[e $U 2508  ]
-"90
-[; ;main.c: 90:         case 3: do { LATBbits.LATB5 = 0; } while(0); break;
-[e :U 2522 ]
-[e :U 2525 ]
-{
-[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 2524 ]
-[e $U 2508  ]
-"94
-[; ;main.c: 94:         case 4: do { LATDbits.LATD3 = 0; } while(0); break;
-[e :U 2526 ]
-[e :U 2529 ]
-{
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 2528 ]
-[e $U 2508  ]
-"95
-[; ;main.c: 95:         case 5: do { LATDbits.LATD5 = 0; } while(0); break;
-[e :U 2530 ]
-[e :U 2533 ]
-{
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 2532 ]
-[e $U 2508  ]
-"96
-[; ;main.c: 96:         case 6: do { LATDbits.LATD4 = 0; } while(0); break;
-[e :U 2534 ]
-[e :U 2537 ]
-{
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 2536 ]
-[e $U 2508  ]
-"97
-[; ;main.c: 97:         case 7: do { LATDbits.LATD1 = 0; } while(0); break;
-[e :U 2538 ]
-[e :U 2541 ]
-{
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 2540 ]
-[e $U 2508  ]
-"98
-[; ;main.c: 98:         case 8: do { LATAbits.LATA4 = 0; } while(0); break;
-[e :U 2542 ]
-[e :U 2545 ]
-{
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 2544 ]
-[e $U 2508  ]
-"99
-[; ;main.c: 99:         case 9: do { LATBbits.LATB3 = 0; } while(0); break;
-[e :U 2546 ]
-[e :U 2549 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 2548 ]
-[e $U 2508  ]
-"100
-[; ;main.c: 100:         default: break;
-[e :U 2550 ]
-[e $U 2508  ]
-"101
-[; ;main.c: 101:     }
-}
-[e $U 2508  ]
-[e :U 2509 ]
-[e [\ _i , $ -> 0 `i 2510
- , $ -> 1 `i 2514
- , $ -> 2 `i 2518
- , $ -> 3 `i 2522
- , $ -> 4 `i 2526
- , $ -> 5 `i 2530
- , $ -> 6 `i 2534
- , $ -> 7 `i 2538
- , $ -> 8 `i 2542
- , $ -> 9 `i 2546
- 2550 ]
-[e :U 2508 ]
-"102
-[; ;main.c: 102: }
-[e :UE 2507 ]
-}
-"104
-[; ;main.c: 104: static void startup_sequence_OnTimerInterrupt(void)
-[v _startup_sequence_OnTimerInterrupt `(v ~T0 @X0 1 sf ]
-"105
-[; ;main.c: 105: {
-{
-[e :U _startup_sequence_OnTimerInterrupt ]
-[f ]
-"106
-[; ;main.c: 106:     startup_sequence_actuator_off(currentAct);
-[e ( _startup_sequence_actuator_off (1 _currentAct ]
-"107
-[; ;main.c: 107:     currentAct++;
-[e ++ _currentAct -> -> 1 `i `Vc ]
-"108
-[; ;main.c: 108:     if (currentAct >= 10){
-[e $ ! >= -> _currentAct `i -> 10 `i 2552  ]
-{
-"110
-[; ;main.c: 110:         TMR0_OverflowCallbackRegister(((void*)0));
-[e ( _TMR0_OverflowCallbackRegister (1 -> -> -> 0 `i `*v `*F17392 ]
-"111
-[; ;main.c: 111:         return;
-[e $UE 2551  ]
-"112
-[; ;main.c: 112:         }
-}
-[e :U 2552 ]
-"113
-[; ;main.c: 113:     startup_sequence_actuator_on(currentAct);
-[e ( _startup_sequence_actuator_on (1 _currentAct ]
-"114
-[; ;main.c: 114: }
-[e :UE 2551 ]
-}
-"116
-[; ;main.c: 116: static void startup_sequence_run(void){
-[v _startup_sequence_run `(v ~T0 @X0 1 sf ]
-{
-[e :U _startup_sequence_run ]
-[f ]
-"117
-[; ;main.c: 117:     TMR0_OverflowCallbackRegister(startup_sequence_OnTimerInterrupt);
-[e ( _TMR0_OverflowCallbackRegister (1 &U _startup_sequence_OnTimerInterrupt ]
-"118
-[; ;main.c: 118:     TMR0_Initialize_startup_sequence();
-[e ( _TMR0_Initialize_startup_sequence ..  ]
-"119
-[; ;main.c: 119: }
-[e :UE 2553 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"121
-[; ;main.c: 121: int main(void)
+"47 main.c
+[; ;main.c: 47: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"122
-[; ;main.c: 122: {
+"48
+[; ;main.c: 48: {
 {
 [e :U _main ]
 [f ]
-"123
-[; ;main.c: 123:     SYSTEM_Initialize();
+"49
+[; ;main.c: 49:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"124
-[; ;main.c: 124:     resetActuators();
+"50
+[; ;main.c: 50:     resetActuators();
 [e ( _resetActuators ..  ]
-"125
-[; ;main.c: 125:     TMR0_OverflowCallbackRegister(startup_sequence_OnTimerInterrupt);
-[e ( _TMR0_OverflowCallbackRegister (1 &U _startup_sequence_OnTimerInterrupt ]
-"126
-[; ;main.c: 126:     (INTCON0bits.GIE = 1);
+"51
+[; ;main.c: 51:     startup_sequence_Init();
+[e ( _startup_sequence_Init ..  ]
+"52
+[; ;main.c: 52:     (INTCON0bits.GIE = 1);
 [e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"127
-[; ;main.c: 127:     (INTCON0bits.GIEL = 1);
+"53
+[; ;main.c: 53:     (INTCON0bits.GIEL = 1);
 [e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
-"130
-[; ;main.c: 130:     while(1)
-[e :U 2556 ]
-"131
-[; ;main.c: 131:     {
+"57
+[; ;main.c: 57:     while(1)
+[e :U 2434 ]
+"58
+[; ;main.c: 58:     {
 {
-"133
-[; ;main.c: 133:     }
+"60
+[; ;main.c: 60:     }
 }
-[e :U 2555 ]
-[e $U 2556  ]
-[e :U 2557 ]
-"135
-[; ;main.c: 135: }
-[e :UE 2554 ]
+[e :U 2433 ]
+[e $U 2434  ]
+[e :U 2435 ]
+"62
+[; ;main.c: 62: }
+[e :UE 2432 ]
 }

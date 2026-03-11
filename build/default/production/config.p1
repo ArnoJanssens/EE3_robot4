@@ -10,6 +10,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49006
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49006: extern volatile LATDbits_t LATDbits __attribute__((address(0x4C1)));
 [v _LATDbits `VS2287 ~T0 @X0 0 e@1217 ]
+"48933
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48933:     struct {
+[s S2286 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2286 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"48932
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48932: typedef union {
+[u S2285 `S2286 1 ]
+[n S2285 . . ]
+"48944
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48944: extern volatile LATCbits_t LATCbits __attribute__((address(0x4C0)));
+[v _LATCbits `VS2285 ~T0 @X0 0 e@1216 ]
+"48871
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48871:     struct {
+[s S2284 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2284 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"48870
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48870: typedef union {
+[u S2283 `S2284 1 ]
+[n S2283 . . ]
+"48882
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48882: extern volatile LATBbits_t LATBbits __attribute__((address(0x4BF)));
+[v _LATBbits `VS2283 ~T0 @X0 0 e@1215 ]
+"48809
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48809:     struct {
+[s S2282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2282 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"48808
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48808: typedef union {
+[u S2281 `S2282 1 ]
+[n S2281 . . ]
+"48820
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48820: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
+[v _LATAbits `VS2281 ~T0 @X0 0 e@1214 ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2581,32 +2614,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51113
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 51113: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"6 config.c
-[; ;config.c: 6: static void blocking_solenoid_set(_Bool enable){
-[v _blocking_solenoid_set `(v ~T0 @X0 1 sf1`a ]
+"4 config.c
+[; ;config.c: 4: void resetActuators(void){
+[v _resetActuators `(v ~T0 @X0 1 ef ]
+{
+[e :U _resetActuators ]
+[f ]
+"5
+[; ;config.c: 5:     do { LATDbits.LATD0 = 0; } while(0);
+[e :U 2435 ]
+{
+[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 2434 ]
+"6
+[; ;config.c: 6:     do { LATDbits.LATD2 = 0; } while(0);
+[e :U 2438 ]
+{
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 2437 ]
+"7
+[; ;config.c: 7:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 2441 ]
+{
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 2440 ]
+"8
+[; ;config.c: 8:     do { LATBbits.LATB5 = 0; } while(0);
+[e :U 2444 ]
+{
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 2443 ]
+"9
+[; ;config.c: 9:     do { LATDbits.LATD3 = 0; } while(0);
+[e :U 2447 ]
+{
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
+}
+[e :U 2446 ]
+"10
+[; ;config.c: 10:     do { LATDbits.LATD5 = 0; } while(0);
+[e :U 2450 ]
+{
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 2449 ]
+"11
+[; ;config.c: 11:     do { LATDbits.LATD4 = 0; } while(0);
+[e :U 2453 ]
+{
+[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 2452 ]
+"12
+[; ;config.c: 12:     do { LATDbits.LATD1 = 0; } while(0);
+[e :U 2456 ]
+{
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 2455 ]
+"13
+[; ;config.c: 13:     do { LATAbits.LATA4 = 0; } while(0);
+[e :U 2459 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 2458 ]
+"14
+[; ;config.c: 14:     do { LATBbits.LATB3 = 0; } while(0);
+[e :U 2462 ]
+{
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+}
+[e :U 2461 ]
+"15
+[; ;config.c: 15: }
+[e :UE 2432 ]
+}
+"17
+[; ;config.c: 17: void blocking_solenoid_set(_Bool enable){
+[v _blocking_solenoid_set `(v ~T0 @X0 1 ef1`a ]
 {
 [e :U _blocking_solenoid_set ]
 [v _enable `a ~T0 @X0 1 r1 ]
 [f ]
-"7
-[; ;config.c: 7:     if(enable) do { LATDbits.LATD0 = 1; } while(0);
-[e $ ! != -> _enable `i -> 0 `i 2433  ]
-[e :U 2436 ]
+"18
+[; ;config.c: 18:     if(enable) do { LATDbits.LATD0 = 1; } while(0);
+[e $ ! != -> _enable `i -> 0 `i 2464  ]
+[e :U 2467 ]
 {
 [e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 2435 ]
-[e $U 2437  ]
-"8
-[; ;config.c: 8:     else do { LATDbits.LATD0 = 0; } while(0);
-[e :U 2433 ]
-[e :U 2440 ]
+[e :U 2466 ]
+[e $U 2468  ]
+"19
+[; ;config.c: 19:     else do { LATDbits.LATD0 = 0; } while(0);
+[e :U 2464 ]
+[e :U 2471 ]
 {
 [e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 2439 ]
-[e :U 2437 ]
-"9
-[; ;config.c: 9: }
-[e :UE 2432 ]
+[e :U 2470 ]
+[e :U 2468 ]
+"20
+[; ;config.c: 20: }
+[e :UE 2463 ]
 }
