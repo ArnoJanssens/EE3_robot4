@@ -20,7 +20,7 @@ void startup_sequence_actuator_on(int8_t i){
         case 5: IO_RD5_SetHigh(); break; //uCoutoutofammo
         case 6: IO_RD4_SetHigh(); break; //uCoutBoltHold
         case 7: IO_RD1_SetHigh(); break; //UCoutFout
-        case 8: IO_RA4_SetHigh(); break; //uCoutLEDBOLTR
+        case 8:  break; //uCoutLEDBOLTR, now being used as input pin for safety switch
         case 9: IO_RB3_SetHigh(); break; //uCoutLEDMAGR
         default: break;
     }

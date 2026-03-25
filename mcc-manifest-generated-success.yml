@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: Weapon_code
-creation_date: 2026-03-10T14:08:05.234+01:00[Europe/Paris]
+creation_date: 2026-03-24T19:19:53.349+01:00[Europe/Paris]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -15,7 +15,7 @@ is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.melody.Library, name: Melody, version: 2.10.1}
-packs: {name: PIC18F-Q_DFP, version: 1.29.481}
+packs: {name: PIC18F-Q_DFP, version: 1.30.487}
 modules:
 - {name: '@mchp-mcc/main-manager', type: MELODY, version: 3.1.2}
 - {name: '@mchp-mcc/pic-8bit', type: MELODY, version: 5.30.0}
@@ -25,4 +25,6 @@ modules:
 - {name: '@mchp-mcc/scf-pic8-interrupt-v1', type: MELODY, version: 5.2.11}
 - {name: '@mchp-mcc/scf-pic8-osc-v1', type: MELODY, version: 4.4.0}
 - {name: '@mchp-mcc/scf-pic8-tmr0-v1', type: MELODY, version: 5.1.0}
+- {name: '@mchp-mcc/scf-pic8-uart-v1', type: MELODY, version: 7.2.1}
 - {name: '@mchp-mcc/timer', type: MELODY, version: 1.2.3}
+- {name: '@mchp-mcc/uart-driver', type: MELODY, version: 1.10.2}

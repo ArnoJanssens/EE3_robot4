@@ -2,12 +2,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56 mcc_generated_files/system/src/../../system/../system/clock.h
 [; ;mcc_generated_files/system/src/../../system/../system/clock.h: 56: void CLOCK_Initialize(void);
 [v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
-"461 mcc_generated_files/system/src/../../system/pins.h
-[; ;mcc_generated_files/system/src/../../system/pins.h: 461: void PIN_MANAGER_Initialize (void);
+"501 mcc_generated_files/system/src/../../system/pins.h
+[; ;mcc_generated_files/system/src/../../system/pins.h: 501: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"151 mcc_generated_files/system/src/../../timer/tmr0.h
-[; ;mcc_generated_files/system/src/../../timer/tmr0.h: 151: void TMR0_Initialize_startup_sequence(void);
-[v _TMR0_Initialize_startup_sequence `(v ~T0 @X0 0 ef ]
+"91 mcc_generated_files/system/src/../../uart/uart1.h
+[; ;mcc_generated_files/system/src/../../uart/uart1.h: 91: void UART1_Initialize(void);
+[v _UART1_Initialize `(v ~T0 @X0 0 ef ]
 "91 mcc_generated_files/system/src/../../system/interrupt.h
 [; ;mcc_generated_files/system/src/../../system/interrupt.h: 91: void INTERRUPT_Initialize (void);
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
@@ -2597,12 +2597,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/system.c: 41:     PIN_MANAGER_Initialize();
 [e ( _PIN_MANAGER_Initialize ..  ]
 "42
-[; ;mcc_generated_files/system/src/system.c: 42:     TMR0_Initialize_startup_sequence();
-[e ( _TMR0_Initialize_startup_sequence ..  ]
+[; ;mcc_generated_files/system/src/system.c: 42:     UART1_Initialize();
+[e ( _UART1_Initialize ..  ]
 "43
 [; ;mcc_generated_files/system/src/system.c: 43:     INTERRUPT_Initialize();
 [e ( _INTERRUPT_Initialize ..  ]
 "44
 [; ;mcc_generated_files/system/src/system.c: 44: }
-[e :UE 2432 ]
+[e :UE 2437 ]
 }

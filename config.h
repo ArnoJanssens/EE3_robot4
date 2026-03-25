@@ -9,8 +9,14 @@
 #define	CONFIG_H
 
 #define N_ACTUATORS 10
+#include <stdbool.h>
 
 void resetActuators(void);
+void reset();
+void error_lights(bool on);
+void cylinder_set(bool extended);
+void blocking_solenoid_set(bool enable);
+void bolt_release_led(bool on);
 
 
 #endif	/* CONFIG_H */

@@ -1,26 +1,24 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"55 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 55: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"13 ./config.h
-[; ;./config.h: 13: void resetActuators(void);
-[v _resetActuators `(v ~T0 @X0 0 ef ]
-"49841 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49841:     struct {
-[s S2318 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2318 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
-"49850
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49850:     struct {
-[s S2319 :7 `uc 1 :1 `uc 1 ]
-[n S2319 . . GIEH ]
-"49840
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49840: typedef union {
-[u S2317 `S2318 1 `S2319 1 ]
-[n S2317 . . . ]
-"49855
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49855: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
-[v _INTCON0bits `VS2317 ~T0 @X0 0 e@1238 ]
+"49493 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49493:     struct {
+[s S2306 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2306 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"49492
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49492: typedef union {
+[u S2305 `S2306 1 ]
+[n S2305 . . ]
+"49504
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49504: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x4CE)));
+[v _PORTAbits `VS2305 ~T0 @X0 0 e@1230 ]
+"21 ./safety.h
+[; ;./safety.h: 21: void safety_set_A();
+[v _safety_set_A `(v ~T0 @X0 0 e? ]
+"20
+[; ;./safety.h: 20: void safety_set_1();
+[v _safety_set_1 `(v ~T0 @X0 0 e? ]
+"117 C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h
+[; ;C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h: 117: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2592,40 +2590,116 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51113
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 51113: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
-"47 main.c
-[; ;main.c: 47: int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
-"48
-[; ;main.c: 48: {
+"9 safety.c
+[; ;safety.c: 9: volatile int8_t safetyStatus;
+[v _safetyStatus `Vc ~T0 @X0 1 e ]
+"11
+[; ;safety.c: 11: void safety_initialize(){
+[v _safety_initialize `(v ~T0 @X0 1 ef ]
 {
-[e :U _main ]
+[e :U _safety_initialize ]
 [f ]
-"49
-[; ;main.c: 49:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"50
-[; ;main.c: 50:     resetActuators();
-[e ( _resetActuators ..  ]
-"51
-[; ;main.c: 51:     (INTCON0bits.GIE = 1);
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"52
-[; ;main.c: 52:     (INTCON0bits.GIEL = 1);
-[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
-"56
-[; ;main.c: 56:     while(1)
-[e :U 2434 ]
-"57
-[; ;main.c: 57:     {
+"12
+[; ;safety.c: 12:     if(PORTAbits.RA5 && !PORTAbits.RA6 && !PORTAbits.RA7){ safety_set_A();}
+[e $ ! && && != -> . . _PORTAbits 0 5 `i -> 0 `i ! != -> . . _PORTAbits 0 6 `i -> 0 `i ! != -> . . _PORTAbits 0 7 `i -> 0 `i 2438  ]
 {
-"59
-[; ;main.c: 59:     }
+[e ( _safety_set_A ..  ]
 }
-[e :U 2433 ]
-[e $U 2434  ]
-[e :U 2435 ]
-"61
-[; ;main.c: 61: }
-[e :UE 2432 ]
+[e $U 2439  ]
+"13
+[; ;safety.c: 13:     else if(!PORTAbits.RA5 && PORTAbits.RA6 && !PORTAbits.RA7){ safety_set_1();}
+[e :U 2438 ]
+[e $ ! && && ! != -> . . _PORTAbits 0 5 `i -> 0 `i != -> . . _PORTAbits 0 6 `i -> 0 `i ! != -> . . _PORTAbits 0 7 `i -> 0 `i 2440  ]
+{
+[e ( _safety_set_1 ..  ]
 }
+[e $U 2441  ]
+"14
+[; ;safety.c: 14:     else if(!PORTAbits.RA5 && !PORTAbits.RA6 && PORTAbits.RA7){safetyStatus = 0;;}
+[e :U 2440 ]
+[e $ ! && && ! != -> . . _PORTAbits 0 5 `i -> 0 `i ! != -> . . _PORTAbits 0 6 `i -> 0 `i != -> . . _PORTAbits 0 7 `i -> 0 `i 2442  ]
+{
+[e = _safetyStatus -> -> 0 `i `c ]
+}
+[e $U 2443  ]
+"15
+[; ;safety.c: 15:     else {safetyStatus = 3;; printf("Error while initiating safety \n");}
+[e :U 2442 ]
+{
+[e = _safetyStatus -> -> 3 `i `c ]
+[e ( _printf :s 1C ]
+}
+[e :U 2443 ]
+[e :U 2441 ]
+[e :U 2439 ]
+"16
+[; ;safety.c: 16: }
+[e :UE 2437 ]
+}
+"18
+[; ;safety.c: 18: int8_t get_safety(){
+[v _get_safety `(c ~T0 @X0 1 ef ]
+{
+[e :U _get_safety ]
+[f ]
+"19
+[; ;safety.c: 19:     return safetyStatus;
+[e ) _safetyStatus ]
+[e $UE 2444  ]
+"20
+[; ;safety.c: 20: }
+[e :UE 2444 ]
+}
+"22
+[; ;safety.c: 22: void safety_set_safe(){
+[v _safety_set_safe `(v ~T0 @X0 1 ef ]
+{
+[e :U _safety_set_safe ]
+[f ]
+"23
+[; ;safety.c: 23:     safetyStatus = 0;;
+[e = _safetyStatus -> -> 0 `i `c ]
+"24
+[; ;safety.c: 24:     printf("Safety Mode Changed: S");
+[e ( _printf :s 2C ]
+"25
+[; ;safety.c: 25: }
+[e :UE 2445 ]
+}
+"27
+[; ;safety.c: 27: void safety_set_1(){
+[v _safety_set_1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _safety_set_1 ]
+[f ]
+"28
+[; ;safety.c: 28:     safetyStatus = 1;;
+[e = _safetyStatus -> -> 1 `i `c ]
+"29
+[; ;safety.c: 29:     printf("Safety Mode Changed: 1");
+[e ( _printf :s 3C ]
+"30
+[; ;safety.c: 30: }
+[e :UE 2446 ]
+}
+"32
+[; ;safety.c: 32: void safety_set_A(){
+[v _safety_set_A `(v ~T0 @X0 1 ef ]
+{
+[e :U _safety_set_A ]
+[f ]
+"33
+[; ;safety.c: 33:     safetyStatus = 2;;
+[e = _safetyStatus -> -> 2 `i `c ]
+"34
+[; ;safety.c: 34:     printf("Safety Mode Changed: A");
+[e ( _printf :s 4C ]
+"35
+[; ;safety.c: 35: }
+[e :UE 2447 ]
+}
+[p f _printf 8388608 ]
+[a 2C 83 97 102 101 116 121 32 77 111 100 101 32 67 104 97 110 103 101 100 58 32 83 0 ]
+[a 4C 83 97 102 101 116 121 32 77 111 100 101 32 67 104 97 110 103 101 100 58 32 65 0 ]
+[a 3C 83 97 102 101 116 121 32 77 111 100 101 32 67 104 97 110 103 101 100 58 32 49 0 ]
+[a 1C 69 114 114 111 114 32 119 104 105 108 101 32 105 110 105 116 105 97 116 105 110 103 32 115 97 102 101 116 121 32 10 0 ]

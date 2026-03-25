@@ -1,4 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"56 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 56: void SYSTEM_Initialize(void);
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"14 ./config.h
+[; ;./config.h: 14: void resetActuators(void);
+[v _resetActuators `(v ~T0 @X0 0 ef ]
+"49841 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49841:     struct {
+[s S2318 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2318 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
+"49850
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49850:     struct {
+[s S2319 :7 `uc 1 :1 `uc 1 ]
+[n S2319 . . GIEH ]
+"49840
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49840: typedef union {
+[u S2317 `S2318 1 `S2319 1 ]
+[n S2317 . . . ]
+"49855
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49855: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
+[v _INTCON0bits `VS2317 ~T0 @X0 0 e@1238 ]
+"20 ./safety.h
+[; ;./safety.h: 20: void safety_initialize();
+[v _safety_initialize `(v ~T0 @X0 0 e? ]
 "48995 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48995:     struct {
 [s S2288 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -32,17 +56,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48882
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48882: extern volatile LATBbits_t LATBbits __attribute__((address(0x4BF)));
 [v _LATBbits `VS2283 ~T0 @X0 0 e@1215 ]
-"48809
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48809:     struct {
-[s S2282 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2282 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"48808
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48808: typedef union {
-[u S2281 `S2282 1 ]
-[n S2281 . . ]
-"48820
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48820: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
-[v _LATAbits `VS2281 ~T0 @X0 0 e@1214 ]
+"17 ./safety.h
+[; ;./safety.h: 17: volatile int8_t safetyStatus;
+[v _safetyStatus `Vc ~T0 @X0 1 e ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2615,111 +2631,248 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 51113: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
 "4 config.c
-[; ;config.c: 4: void resetActuators(void){
+[; ;config.c: 4:  void reset(){
+[v _reset `(v ~T0 @X0 1 ef ]
+{
+[e :U _reset ]
+[f ]
+"5
+[; ;config.c: 5:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"6
+[; ;config.c: 6:     resetActuators();
+[e ( _resetActuators ..  ]
+"7
+[; ;config.c: 7:     (INTCON0bits.GIE = 1);
+[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
+"8
+[; ;config.c: 8:     (INTCON0bits.GIEL = 1);
+[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
+"9
+[; ;config.c: 9:     safety_initialize();
+[e ( _safety_initialize ..  ]
+"11
+[; ;config.c: 11: }
+[e :UE 2437 ]
+}
+"12
+[; ;config.c: 12: void resetActuators(void){
 [v _resetActuators `(v ~T0 @X0 1 ef ]
 {
 [e :U _resetActuators ]
 [f ]
-"5
-[; ;config.c: 5:     do { LATDbits.LATD0 = 0; } while(0);
-[e :U 2435 ]
+"13
+[; ;config.c: 13:     do { LATDbits.LATD0 = 0; } while(0);
+[e :U 2441 ]
 {
 [e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 2434 ]
-"6
-[; ;config.c: 6:     do { LATDbits.LATD2 = 0; } while(0);
-[e :U 2438 ]
+[e :U 2440 ]
+"14
+[; ;config.c: 14:     do { LATDbits.LATD2 = 0; } while(0);
+[e :U 2444 ]
 {
 [e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2437 ]
-"7
-[; ;config.c: 7:     do { LATCbits.LATC0 = 0; } while(0);
-[e :U 2441 ]
+[e :U 2443 ]
+"15
+[; ;config.c: 15:     do { LATCbits.LATC0 = 0; } while(0);
+[e :U 2447 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 2440 ]
-"8
-[; ;config.c: 8:     do { LATBbits.LATB5 = 0; } while(0);
-[e :U 2444 ]
+[e :U 2446 ]
+"16
+[; ;config.c: 16:     do { LATBbits.LATB5 = 0; } while(0);
+[e :U 2450 ]
 {
 [e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2443 ]
-"9
-[; ;config.c: 9:     do { LATDbits.LATD3 = 0; } while(0);
-[e :U 2447 ]
+[e :U 2449 ]
+"17
+[; ;config.c: 17:     do { LATDbits.LATD3 = 0; } while(0);
+[e :U 2453 ]
 {
 [e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 2446 ]
-"10
-[; ;config.c: 10:     do { LATDbits.LATD5 = 0; } while(0);
-[e :U 2450 ]
+[e :U 2452 ]
+"18
+[; ;config.c: 18:     do { LATDbits.LATD5 = 0; } while(0);
+[e :U 2456 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2449 ]
-"11
-[; ;config.c: 11:     do { LATDbits.LATD4 = 0; } while(0);
-[e :U 2453 ]
+[e :U 2455 ]
+"19
+[; ;config.c: 19:     do { LATDbits.LATD4 = 0; } while(0);
+[e :U 2459 ]
 {
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2452 ]
-"12
-[; ;config.c: 12:     do { LATDbits.LATD1 = 0; } while(0);
-[e :U 2456 ]
+[e :U 2458 ]
+"20
+[; ;config.c: 20:     do { LATDbits.LATD1 = 0; } while(0);
+[e :U 2462 ]
 {
 [e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 2455 ]
-"13
-[; ;config.c: 13:     do { LATAbits.LATA4 = 0; } while(0);
-[e :U 2459 ]
-{
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 2458 ]
-"14
-[; ;config.c: 14:     do { LATBbits.LATB3 = 0; } while(0);
-[e :U 2462 ]
+[e :U 2461 ]
+"21
+[; ;config.c: 21:     do { LATBbits.LATB3 = 0; } while(0);
+[e :U 2465 ]
 {
 [e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 2461 ]
-"15
-[; ;config.c: 15: }
-[e :UE 2432 ]
+[e :U 2464 ]
+"22
+[; ;config.c: 22:     do { LATDbits.LATD6 = 0; } while(0);
+[e :U 2468 ]
+{
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 }
-"17
-[; ;config.c: 17: void blocking_solenoid_set(_Bool enable){
+[e :U 2467 ]
+"23
+[; ;config.c: 23:     do { LATDbits.LATD7 = 0; } while(0);
+[e :U 2471 ]
+{
+[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
+}
+[e :U 2470 ]
+"24
+[; ;config.c: 24: }
+[e :UE 2438 ]
+}
+"26
+[; ;config.c: 26: void blocking_solenoid_set(_Bool enable){
 [v _blocking_solenoid_set `(v ~T0 @X0 1 ef1`a ]
 {
 [e :U _blocking_solenoid_set ]
 [v _enable `a ~T0 @X0 1 r1 ]
 [f ]
-"18
-[; ;config.c: 18:     if(enable) do { LATDbits.LATD0 = 1; } while(0);
-[e $ ! != -> _enable `i -> 0 `i 2464  ]
-[e :U 2467 ]
+"27
+[; ;config.c: 27:     if(enable) do { LATDbits.LATD0 = 1; } while(0);
+[e $ ! != -> _enable `i -> 0 `i 2473  ]
+[e :U 2476 ]
 {
 [e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 2466 ]
-[e $U 2468  ]
-"19
-[; ;config.c: 19:     else do { LATDbits.LATD0 = 0; } while(0);
-[e :U 2464 ]
-[e :U 2471 ]
+[e :U 2475 ]
+[e $U 2477  ]
+"28
+[; ;config.c: 28:     else do { LATDbits.LATD0 = 0; } while(0);
+[e :U 2473 ]
+[e :U 2480 ]
 {
 [e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 2470 ]
-[e :U 2468 ]
-"20
-[; ;config.c: 20: }
-[e :UE 2463 ]
+[e :U 2479 ]
+[e :U 2477 ]
+"29
+[; ;config.c: 29: }
+[e :UE 2472 ]
+}
+"31
+[; ;config.c: 31: void cylinder_set(_Bool extended){
+[v _cylinder_set `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _cylinder_set ]
+[v _extended `a ~T0 @X0 1 r1 ]
+[f ]
+"32
+[; ;config.c: 32:     if(extended) do { LATDbits.LATD2 = 1; } while(0);
+[e $ ! != -> _extended `i -> 0 `i 2482  ]
+[e :U 2485 ]
+{
+[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 2484 ]
+[e $U 2486  ]
+"33
+[; ;config.c: 33:     else do { LATDbits.LATD2 = 0; } while(0);
+[e :U 2482 ]
+[e :U 2489 ]
+{
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 2488 ]
+[e :U 2486 ]
+"34
+[; ;config.c: 34: }
+[e :UE 2481 ]
+}
+"36
+[; ;config.c: 36: void error_lights(_Bool on){
+[v _error_lights `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _error_lights ]
+[v _on `a ~T0 @X0 1 r1 ]
+[f ]
+"37
+[; ;config.c: 37:     if(on){
+[e $ ! != -> _on `i -> 0 `i 2491  ]
+{
+"38
+[; ;config.c: 38:         do { LATDbits.LATD1 = 1; } while(0);
+[e :U 2494 ]
+{
+[e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 2493 ]
+"39
+[; ;config.c: 39:     }
+}
+[e $U 2495  ]
+"40
+[; ;config.c: 40:     else do { LATDbits.LATD1 = 0; } while(0);
+[e :U 2491 ]
+[e :U 2498 ]
+{
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 2497 ]
+[e :U 2495 ]
+"41
+[; ;config.c: 41: }
+[e :UE 2490 ]
+}
+"43
+[; ;config.c: 43: void bolt_release_led(_Bool on){
+[v _bolt_release_led `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _bolt_release_led ]
+[v _on `a ~T0 @X0 1 r1 ]
+[f ]
+"44
+[; ;config.c: 44:     if(on){
+[e $ ! != -> _on `i -> 0 `i 2500  ]
+{
+"45
+[; ;config.c: 45:         do { LATDbits.LATD4 = 1; } while(0);
+[e :U 2503 ]
+{
+[e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 2502 ]
+"46
+[; ;config.c: 46:     }
+}
+[e $U 2504  ]
+"47
+[; ;config.c: 47:     else{
+[e :U 2500 ]
+{
+"48
+[; ;config.c: 48:         do { LATDbits.LATD4 = 0; } while(0);
+[e :U 2507 ]
+{
+[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 2506 ]
+"49
+[; ;config.c: 49:     }
+}
+[e :U 2504 ]
+"51
+[; ;config.c: 51: }
+[e :UE 2499 ]
 }

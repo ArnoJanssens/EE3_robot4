@@ -108,6 +108,7 @@
 #define IO_RA4_SetOpenDrain()       do { ODCONAbits.ODCA4 = 1; } while(0)
 #define IO_RA4_SetAnalogMode()      do { ANSELAbits.ANSELA4 = 1; } while(0)
 #define IO_RA4_SetDigitalMode()     do { ANSELAbits.ANSELA4 = 0; } while(0)
+#define RA4_SetInterruptHandler  IO_RA4_SetInterruptHandler
 
 // get/set RA5 aliases
 #define IO_RA5_TRIS                 TRISAbits.TRISA5
@@ -170,7 +171,6 @@
 #define IO_RA7_SetOpenDrain()       do { ODCONAbits.ODCA7 = 1; } while(0)
 #define IO_RA7_SetAnalogMode()      do { ANSELAbits.ANSELA7 = 1; } while(0)
 #define IO_RA7_SetDigitalMode()     do { ANSELAbits.ANSELA7 = 0; } while(0)
-#define RA7_SetInterruptHandler  IO_RA7_SetInterruptHandler
 
 // get/set RB0 aliases
 #define IO_RB0_TRIS                 TRISBbits.TRISB0
@@ -452,6 +452,46 @@
 #define IO_RD7_SetAnalogMode()      do { ANSELDbits.ANSELD7 = 1; } while(0)
 #define IO_RD7_SetDigitalMode()     do { ANSELDbits.ANSELD7 = 0; } while(0)
 
+// get/set RF0 aliases
+#define IO_RF0_TRIS                 TRISFbits.TRISF0
+#define IO_RF0_LAT                  LATFbits.LATF0
+#define IO_RF0_PORT                 PORTFbits.RF0
+#define IO_RF0_WPU                  WPUFbits.WPUF0
+#define IO_RF0_OD                   ODCONFbits.ODCF0
+#define IO_RF0_ANS                  ANSELFbits.ANSELF0
+#define IO_RF0_SetHigh()            do { LATFbits.LATF0 = 1; } while(0)
+#define IO_RF0_SetLow()             do { LATFbits.LATF0 = 0; } while(0)
+#define IO_RF0_Toggle()             do { LATFbits.LATF0 = ~LATFbits.LATF0; } while(0)
+#define IO_RF0_GetValue()           PORTFbits.RF0
+#define IO_RF0_SetDigitalInput()    do { TRISFbits.TRISF0 = 1; } while(0)
+#define IO_RF0_SetDigitalOutput()   do { TRISFbits.TRISF0 = 0; } while(0)
+#define IO_RF0_SetPullup()          do { WPUFbits.WPUF0 = 1; } while(0)
+#define IO_RF0_ResetPullup()        do { WPUFbits.WPUF0 = 0; } while(0)
+#define IO_RF0_SetPushPull()        do { ODCONFbits.ODCF0 = 0; } while(0)
+#define IO_RF0_SetOpenDrain()       do { ODCONFbits.ODCF0 = 1; } while(0)
+#define IO_RF0_SetAnalogMode()      do { ANSELFbits.ANSELF0 = 1; } while(0)
+#define IO_RF0_SetDigitalMode()     do { ANSELFbits.ANSELF0 = 0; } while(0)
+
+// get/set RF1 aliases
+#define IO_RF1_TRIS                 TRISFbits.TRISF1
+#define IO_RF1_LAT                  LATFbits.LATF1
+#define IO_RF1_PORT                 PORTFbits.RF1
+#define IO_RF1_WPU                  WPUFbits.WPUF1
+#define IO_RF1_OD                   ODCONFbits.ODCF1
+#define IO_RF1_ANS                  ANSELFbits.ANSELF1
+#define IO_RF1_SetHigh()            do { LATFbits.LATF1 = 1; } while(0)
+#define IO_RF1_SetLow()             do { LATFbits.LATF1 = 0; } while(0)
+#define IO_RF1_Toggle()             do { LATFbits.LATF1 = ~LATFbits.LATF1; } while(0)
+#define IO_RF1_GetValue()           PORTFbits.RF1
+#define IO_RF1_SetDigitalInput()    do { TRISFbits.TRISF1 = 1; } while(0)
+#define IO_RF1_SetDigitalOutput()   do { TRISFbits.TRISF1 = 0; } while(0)
+#define IO_RF1_SetPullup()          do { WPUFbits.WPUF1 = 1; } while(0)
+#define IO_RF1_ResetPullup()        do { WPUFbits.WPUF1 = 0; } while(0)
+#define IO_RF1_SetPushPull()        do { ODCONFbits.ODCF1 = 0; } while(0)
+#define IO_RF1_SetOpenDrain()       do { ODCONFbits.ODCF1 = 1; } while(0)
+#define IO_RF1_SetAnalogMode()      do { ANSELFbits.ANSELF1 = 1; } while(0)
+#define IO_RF1_SetDigitalMode()     do { ANSELFbits.ANSELF1 = 0; } while(0)
+
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization
@@ -467,6 +507,46 @@ void PIN_MANAGER_Initialize (void);
  * @return none
  */
 void PIN_MANAGER_IOC(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt on Change Handler for the IO_RA4 pin functionality
+ * @param none
+ * @return none
+ */
+void IO_RA4_ISR(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for IO_RA4 pin interrupt-on-change functionality.
+ *        Allows selecting an interrupt handler for IO_RA4 at application runtime
+ * @pre Pins intializer called
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Dynamic Interrupt Handler for IO_RA4 pin.
+ *        This is a dynamic interrupt handler to be used together with the IO_RA4_SetInterruptHandler() method.
+ *        This handler is called every time the IO_RA4 ISR is executed and allows any function to be registered at runtime.
+ * @pre Pins intializer called
+ * @param none
+ * @return none
+ */
+extern void (*IO_RA4_InterruptHandler)(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for IO_RA4 pin. 
+ *        This is a predefined interrupt handler to be used together with the IO_RA4_SetInterruptHandler() method.
+ *        This handler is called every time the IO_RA4 ISR is executed. 
+ * @pre Pins intializer called
+ * @param none
+ * @return none
+ */
+void IO_RA4_DefaultInterruptHandler(void);
 
 /**
  * @ingroup  pinsdriver
@@ -547,46 +627,6 @@ extern void (*IO_RA6_InterruptHandler)(void);
  * @return none
  */
 void IO_RA6_DefaultInterruptHandler(void);
-
-/**
- * @ingroup  pinsdriver
- * @brief Interrupt on Change Handler for the IO_RA7 pin functionality
- * @param none
- * @return none
- */
-void IO_RA7_ISR(void);
-
-/**
- * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for IO_RA7 pin interrupt-on-change functionality.
- *        Allows selecting an interrupt handler for IO_RA7 at application runtime
- * @pre Pins intializer called
- * @param InterruptHandler function pointer.
- * @return none
- */
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
-
-/**
- * @ingroup  pinsdriver
- * @brief Dynamic Interrupt Handler for IO_RA7 pin.
- *        This is a dynamic interrupt handler to be used together with the IO_RA7_SetInterruptHandler() method.
- *        This handler is called every time the IO_RA7 ISR is executed and allows any function to be registered at runtime.
- * @pre Pins intializer called
- * @param none
- * @return none
- */
-extern void (*IO_RA7_InterruptHandler)(void);
-
-/**
- * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for IO_RA7 pin. 
- *        This is a predefined interrupt handler to be used together with the IO_RA7_SetInterruptHandler() method.
- *        This handler is called every time the IO_RA7 ISR is executed. 
- * @pre Pins intializer called
- * @param none
- * @return none
- */
-void IO_RA7_DefaultInterruptHandler(void);
 
 
 #endif // PINS_H

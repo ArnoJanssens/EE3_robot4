@@ -130,6 +130,8 @@ void INT0_SetInterruptHandler(void (* InterruptHandler)(void)){
 }
 
 void INT0_DefaultInterruptHandler(void){
+    
+    
     // add your INT0 interrupt custom code
     // or set custom function using INT0_SetInterruptHandler()
 }

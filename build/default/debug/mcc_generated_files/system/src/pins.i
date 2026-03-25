@@ -29578,7 +29578,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
 # 39 "mcc_generated_files/system/src/../pins.h" 2
-# 461 "mcc_generated_files/system/src/../pins.h"
+# 501 "mcc_generated_files/system/src/../pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29596,11 +29596,11 @@ void PIN_MANAGER_IOC(void);
 
 
 void IO_RA5_ISR(void);
-# 487 "mcc_generated_files/system/src/../pins.h"
+# 527 "mcc_generated_files/system/src/../pins.h"
 void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
-# 498 "mcc_generated_files/system/src/../pins.h"
+# 538 "mcc_generated_files/system/src/../pins.h"
 extern void (*IO_RA5_InterruptHandler)(void);
-# 509 "mcc_generated_files/system/src/../pins.h"
+# 549 "mcc_generated_files/system/src/../pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29610,11 +29610,11 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 527 "mcc_generated_files/system/src/../pins.h"
+# 567 "mcc_generated_files/system/src/../pins.h"
 void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 538 "mcc_generated_files/system/src/../pins.h"
+# 578 "mcc_generated_files/system/src/../pins.h"
 extern void (*IO_RA6_InterruptHandler)(void);
-# 549 "mcc_generated_files/system/src/../pins.h"
+# 589 "mcc_generated_files/system/src/../pins.h"
 void IO_RA6_DefaultInterruptHandler(void);
 
 
@@ -29624,11 +29624,11 @@ void IO_RA6_DefaultInterruptHandler(void);
 
 
 void IO_RA7_ISR(void);
-# 567 "mcc_generated_files/system/src/../pins.h"
+# 607 "mcc_generated_files/system/src/../pins.h"
 void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "mcc_generated_files/system/src/../pins.h"
+# 618 "mcc_generated_files/system/src/../pins.h"
 extern void (*IO_RA7_InterruptHandler)(void);
-# 589 "mcc_generated_files/system/src/../pins.h"
+# 629 "mcc_generated_files/system/src/../pins.h"
 void IO_RA7_DefaultInterruptHandler(void);
 # 36 "mcc_generated_files/system/src/pins.c" 2
 
@@ -29665,7 +29665,7 @@ void PIN_MANAGER_Initialize(void)
     TRISC = 0xFE;
     TRISD = 0x0;
     TRISE = 0xF;
-    TRISF = 0xFF;
+    TRISF = 0xFD;
 
 
 
@@ -29675,7 +29675,7 @@ void PIN_MANAGER_Initialize(void)
     ANSELC = 0xFE;
     ANSELD = 0x0;
     ANSELE = 0x7;
-    ANSELF = 0xFF;
+    ANSELF = 0xFC;
 
 
 
@@ -29718,14 +29718,16 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    U1RXPPS = 0x28;
     INT0PPS = 0x9;
     INT1PPS = 0xA;
+    RF1PPS = 0x20;
 
 
 
 
     IOCAP = 0xE0;
-    IOCAN = 0xE0;
+    IOCAN = 0x0;
     IOCAF = 0x0;
     IOCBP = 0x0;
     IOCBN = 0x0;

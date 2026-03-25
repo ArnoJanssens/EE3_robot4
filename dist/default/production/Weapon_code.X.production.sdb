@@ -21,6 +21,12 @@
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
+"1177 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+[v i1_vfpfcnvrt vfpfcnvrt `(v  1 s 1 i1_vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+[v i1_vfprintf vfprintf `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\float.c
@@ -47,6 +53,14 @@
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+[v i1_fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+[v i1_printf printf `(i  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -63,9 +77,15 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"4 C:\Users\janss\MPLABXProjects\Weapon code.X\config.c
+"12 C:\Users\janss\MPLABXProjects\Weapon code.X\config.c
 [v _resetActuators resetActuators `(v  1 e 1 0 ]
-"47 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
+"31
+[v _cylinder_set cylinder_set `(v  1 e 1 0 ]
+"36
+[v _error_lights error_lights `(v  1 e 1 0 ]
+"43
+[v _bolt_release_led bolt_release_led `(v  1 e 1 0 ]
+"15 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
 [v _main main `(i  1 e 2 0 ]
 "39 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -81,46 +101,48 @@
 [v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
 "128
 [v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
 "132
 [v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"144
+"146
 [v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
-"153
+"155
 [v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
-"162
+"164
 [v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
-"166
+[v i2_INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"168
 [v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
-"178
+"180
 [v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
-"187
+"189
 [v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
-"196
+"198
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
-"200
-[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"41 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
-[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"150
-[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"172
-[v _IO_RA5_ISR IO_RA5_ISR `(v  1 e 1 0 ]
-"187
-[v _IO_RA5_SetInterruptHandler IO_RA5_SetInterruptHandler `(v  1 e 1 0 ]
-"194
-[v _IO_RA5_DefaultInterruptHandler IO_RA5_DefaultInterruptHandler `(v  1 e 1 0 ]
 "202
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"42 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"153
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"175
+[v _IO_RA4_ISR IO_RA4_ISR `(v  1 e 1 0 ]
+"190
+[v _IO_RA4_SetInterruptHandler IO_RA4_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _IO_RA4_DefaultInterruptHandler IO_RA4_DefaultInterruptHandler `(v  1 e 1 0 ]
+"206
+[v _IO_RA5_ISR IO_RA5_ISR `(v  1 e 1 0 ]
+"221
+[v _IO_RA5_SetInterruptHandler IO_RA5_SetInterruptHandler `(v  1 e 1 0 ]
+"228
+[v _IO_RA5_DefaultInterruptHandler IO_RA5_DefaultInterruptHandler `(v  1 e 1 0 ]
+"238
 [v _IO_RA6_ISR IO_RA6_ISR `(v  1 e 1 0 ]
-"217
+"253
 [v _IO_RA6_SetInterruptHandler IO_RA6_SetInterruptHandler `(v  1 e 1 0 ]
-"224
+"260
 [v _IO_RA6_DefaultInterruptHandler IO_RA6_DefaultInterruptHandler `(v  1 e 1 0 ]
-"232
-[v _IO_RA7_ISR IO_RA7_ISR `(v  1 e 1 0 ]
-"247
-[v _IO_RA7_SetInterruptHandler IO_RA7_SetInterruptHandler `(v  1 e 1 0 ]
-"254
-[v _IO_RA7_DefaultInterruptHandler IO_RA7_DefaultInterruptHandler `(v  1 e 1 0 ]
 "38 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "60 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
@@ -148,6 +170,62 @@
 [v i2_TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
 "158
 [v _TMR0_DefaultOverflowCallback TMR0_DefaultOverflowCallback `(v  1 s 1 TMR0_DefaultOverflowCallback ]
+"100 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/uart/src/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+"147
+[v _UART1_Deinitialize UART1_Deinitialize `(v  1 e 1 0 ]
+"180
+[v _UART1_TransmitEnable UART1_TransmitEnable `(v  1 e 1 0 ]
+"185
+[v _UART1_TransmitDisable UART1_TransmitDisable `(v  1 e 1 0 ]
+"210
+[v _UART1_AutoBaudSet UART1_AutoBaudSet `(v  1 e 1 0 ]
+"223
+[v _UART1_AutoBaudQuery UART1_AutoBaudQuery `(a  1 e 1 0 ]
+"243
+[v _UART1_IsRxReady UART1_IsRxReady `(a  1 e 1 0 ]
+"248
+[v _UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+[v i1_UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+"253
+[v _UART1_IsTxDone UART1_IsTxDone `(a  1 e 1 0 ]
+"258
+[v _UART1_ErrorGet UART1_ErrorGet `(ui  1 e 2 0 ]
+"290
+[v _UART1_Read UART1_Read `(uc  1 e 1 0 ]
+"296
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+[v i1_UART1_Write UART1_Write `(v  1 e 1 0 ]
+"311
+[v _putch putch `(v  1 e 1 0 ]
+[v i1_putch putch `(v  1 e 1 0 ]
+"324
+[v _UART1_DefaultFramingErrorCallback UART1_DefaultFramingErrorCallback `(v  1 s 1 UART1_DefaultFramingErrorCallback ]
+"329
+[v _UART1_DefaultOverrunErrorCallback UART1_DefaultOverrunErrorCallback `(v  1 s 1 UART1_DefaultOverrunErrorCallback ]
+"334
+[v _UART1_DefaultParityErrorCallback UART1_DefaultParityErrorCallback `(v  1 s 1 UART1_DefaultParityErrorCallback ]
+"339
+[v _UART1_FramingErrorCallbackRegister UART1_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+"347
+[v _UART1_OverrunErrorCallbackRegister UART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+"355
+[v _UART1_ParityErrorCallbackRegister UART1_ParityErrorCallbackRegister `(v  1 e 1 0 ]
+"9 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v _interrupt_routine_trigger_1 interrupt_routine_trigger_1 `(v  1 e 1 0 ]
+"14
+[v _interrupt_routine_LS2_shooting interrupt_routine_LS2_shooting `(v  1 e 1 0 ]
+"21
+[v _safety_initialize safety_initialize `(v  1 e 1 0 ]
+"29
+[v _safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+[v i1_safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+"35
+[v _safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+[v i1_safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+"41
+[v _safety_set_A safety_set_A `(v  1 e 1 0 ]
+[v i1_safety_set_A safety_set_A `(v  1 e 1 0 ]
 "7 C:\Users\janss\MPLABXProjects\Weapon code.X\startupsequence.c
 [v _startup_sequence_actuator_on startup_sequence_actuator_on `(v  1 e 1 0 ]
 "29
@@ -168,10 +246,14 @@
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
 "5592
 [v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"10602
+[v _RF1PPS RF1PPS `VEuc  1 e 1 @554 ]
 "10994
 [v _INT0PPS INT0PPS `VEuc  1 e 1 @574 ]
 "11054
 [v _INT1PPS INT1PPS `VEuc  1 e 1 @575 ]
+"14720
+[v _U1RXPPS U1RXPPS `VEuc  1 e 1 @626 ]
 "15416
 [v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
 "15548
@@ -180,41 +262,186 @@
 [v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
 "15812
 [v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"16989
+[v _U1RXB U1RXB `VEuc  1 e 1 @673 ]
+"17027
+[v _U1RXCHK U1RXCHK `VEuc  1 e 1 @674 ]
+"17047
+[v _U1TXB U1TXB `VEuc  1 e 1 @675 ]
+"17085
+[v _U1TXCHK U1TXCHK `VEuc  1 e 1 @676 ]
+"17112
+[v _U1P1L U1P1L `VEuc  1 e 1 @677 ]
+"17132
+[v _U1P1H U1P1H `VEuc  1 e 1 @678 ]
+"17159
+[v _U1P2L U1P2L `VEuc  1 e 1 @679 ]
+"17179
+[v _U1P2H U1P2H `VEuc  1 e 1 @680 ]
+"17206
+[v _U1P3L U1P3L `VEuc  1 e 1 @681 ]
+"17226
+[v _U1P3H U1P3H `VEuc  1 e 1 @682 ]
+"17246
+[v _U1CON0 U1CON0 `VEuc  1 e 1 @683 ]
+[s S1169 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+]
+"17279
+[s S1174 . 1 `uc 1 U1MODE 1 0 :4:0 
+`uc 1 U1RXEN 1 0 :1:4 
+`uc 1 U1TXEN 1 0 :1:5 
+`uc 1 U1ABDEN 1 0 :1:6 
+`uc 1 U1BRGS 1 0 :1:7 
+]
+[s S1180 . 1 `uc 1 U1MODE0 1 0 :1:0 
+`uc 1 U1MODE1 1 0 :1:1 
+`uc 1 U1MODE2 1 0 :1:2 
+`uc 1 U1MODE3 1 0 :1:3 
+]
+[s S1185 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 RXEN 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 ABDEN 1 0 :1:6 
+`uc 1 BRGS 1 0 :1:7 
+]
+[u S1191 . 1 `S1169 1 . 1 0 `S1174 1 . 1 0 `S1180 1 . 1 0 `S1185 1 . 1 0 ]
+[v _U1CON0bits U1CON0bits `VES1191  1 e 1 @683 ]
+"17374
+[v _U1CON1 U1CON1 `VEuc  1 e 1 @684 ]
+[s S1133 . 1 `uc 1 SENDB 1 0 :1:0 
+`uc 1 BRKOVR 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 RXBIMD 1 0 :1:3 
+`uc 1 WUE 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 ON 1 0 :1:7 
+]
+"17399
+[s S1141 . 1 `uc 1 U1SENDB 1 0 :1:0 
+`uc 1 U1BRKOVR 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 U1RXBIMD 1 0 :1:3 
+`uc 1 U1WUE 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 U1ON 1 0 :1:7 
+]
+[u S1149 . 1 `S1133 1 . 1 0 `S1141 1 . 1 0 ]
+[v _U1CON1bits U1CON1bits `VES1149  1 e 1 @684 ]
+"17454
+[v _U1CON2 U1CON2 `VEuc  1 e 1 @685 ]
+"17603
+[v _U1BRGL U1BRGL `VEuc  1 e 1 @686 ]
+"17623
+[v _U1BRGH U1BRGH `VEuc  1 e 1 @687 ]
+"17643
+[v _U1FIFO U1FIFO `VEuc  1 e 1 @688 ]
+[s S1287 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 RXBE 1 0 :1:1 
+`uc 1 XON 1 0 :1:2 
+`uc 1 RXIDL 1 0 :1:3 
+`uc 1 TXBF 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 STPMD 1 0 :1:6 
+`uc 1 TXWRE 1 0 :1:7 
+]
+"17678
+[s S1296 . 1 `uc 1 U1RXBF 1 0 :1:0 
+`uc 1 U1RXBE 1 0 :1:1 
+`uc 1 U1XON 1 0 :1:2 
+`uc 1 U1RXIDL 1 0 :1:3 
+`uc 1 U1TXBF 1 0 :1:4 
+`uc 1 U1TXBE 1 0 :1:5 
+`uc 1 U1STPMD 1 0 :1:6 
+`uc 1 U1TXWRE 1 0 :1:7 
+]
+[s S1305 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 U1RCIDL 1 0 :1:3 
+]
+[s S1308 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 RCIDL 1 0 :1:3 
+]
+[u S1311 . 1 `S1287 1 . 1 0 `S1296 1 . 1 0 `S1305 1 . 1 0 `S1308 1 . 1 0 ]
+[v _U1FIFObits U1FIFObits `VES1311  1 e 1 @688 ]
+"17773
+[v _U1UIR U1UIR `VEuc  1 e 1 @689 ]
+[s S1219 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ABDIE 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 ABDIF 1 0 :1:6 
+`uc 1 WUIF 1 0 :1:7 
+]
+"17794
+[s S1225 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 U1ABDIE 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 U1ABDIF 1 0 :1:6 
+`uc 1 U1WUIF 1 0 :1:7 
+]
+[u S1231 . 1 `S1219 1 . 1 0 `S1225 1 . 1 0 ]
+[v _U1UIRbits U1UIRbits `VES1231  1 e 1 @689 ]
+"17829
+[v _U1ERRIR U1ERRIR `VEuc  1 e 1 @690 ]
+[s S1247 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"17856
+[s S1256 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+`uc 1 U1RXFOIF 1 0 :1:1 
+`uc 1 U1RXBKIF 1 0 :1:2 
+`uc 1 U1FERIF 1 0 :1:3 
+`uc 1 U1CERIF 1 0 :1:4 
+`uc 1 U1ABDOVF 1 0 :1:5 
+`uc 1 U1PERIF 1 0 :1:6 
+`uc 1 U1TXMTIF 1 0 :1:7 
+]
+[u S1265 . 1 `S1247 1 . 1 0 `S1256 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES1265  1 e 1 @690 ]
+"17941
+[v _U1ERRIE U1ERRIE `VEuc  1 e 1 @691 ]
 "23240
 [v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
 "23378
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
 "23632
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
-[s S781 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S799 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "23666
-[s S787 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S805 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S793 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S811 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[s S799 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S817 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S804 . 1 `S781 1 . 1 0 `S787 1 . 1 0 `S793 1 . 1 0 `S799 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES804  1 e 1 @794 ]
+[u S822 . 1 `S799 1 . 1 0 `S805 1 . 1 0 `S811 1 . 1 0 `S817 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES822  1 e 1 @794 ]
 "23756
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
-[s S341 . 1 `uc 1 SWIP 1 0 :1:0 
+[s S356 . 1 `uc 1 SWIP 1 0 :1:0 
 `uc 1 HLVDIP 1 0 :1:1 
 `uc 1 OSFIP 1 0 :1:2 
 `uc 1 CSWIP 1 0 :1:3 
@@ -224,9 +451,9 @@
 `uc 1 IOCIP 1 0 :1:7 
 ]
 "31822
-[u S350 . 1 `S341 1 . 1 0 ]
-[v _IPR0bits IPR0bits `VES350  1 e 1 @866 ]
-[s S278 . 1 `uc 1 INT0IP 1 0 :1:0 
+[u S365 . 1 `S356 1 . 1 0 ]
+[v _IPR0bits IPR0bits `VES365  1 e 1 @866 ]
+[s S293 . 1 `uc 1 INT0IP 1 0 :1:0 
 `uc 1 ZCDIP 1 0 :1:1 
 `uc 1 ADIP 1 0 :1:2 
 `uc 1 ACTIP 1 0 :1:3 
@@ -236,9 +463,9 @@
 `uc 1 SMT1PWAIP 1 0 :1:7 
 ]
 "31874
-[u S287 . 1 `S278 1 . 1 0 ]
-[v _IPR1bits IPR1bits `VES287  1 e 1 @867 ]
-[s S299 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+[u S302 . 1 `S293 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES302  1 e 1 @867 ]
+[s S314 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
 `uc 1 SPI1TXIP 1 0 :1:1 
 `uc 1 SPI1IP 1 0 :1:2 
 `uc 1 TMR2IP 1 0 :1:3 
@@ -248,9 +475,9 @@
 `uc 1 TMR0IP 1 0 :1:7 
 ]
 "31981
-[u S308 . 1 `S299 1 . 1 0 ]
-[v _IPR3bits IPR3bits `VES308  1 e 1 @869 ]
-[s S320 . 1 `uc 1 INT1IP 1 0 :1:0 
+[u S323 . 1 `S314 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES323  1 e 1 @869 ]
+[s S335 . 1 `uc 1 INT1IP 1 0 :1:0 
 `uc 1 CLC2IP 1 0 :1:1 
 `uc 1 CWG1IP 1 0 :1:2 
 `uc 1 NCO1IP 1 0 :1:3 
@@ -260,8 +487,8 @@
 `uc 1 DMA2AIP 1 0 :1:7 
 ]
 "32151
-[u S329 . 1 `S320 1 . 1 0 ]
-[v _IPR6bits IPR6bits `VES329  1 e 1 @872 ]
+[u S344 . 1 `S335 1 . 1 0 ]
+[v _IPR6bits IPR6bits `VES344  1 e 1 @872 ]
 "39957
 [v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
 "40019
@@ -278,7 +505,7 @@
 [v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
 "40391
 [v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
-[s S155 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[s S157 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -288,10 +515,10 @@
 `uc 1 IOCAF7 1 0 :1:7 
 ]
 "40408
-[u S164 . 1 `S155 1 . 1 0 ]
+[u S166 . 1 `S157 1 . 1 0 ]
 "40408
 "40408
-[v _IOCAFbits IOCAFbits `VES164  1 e 1 @1031 ]
+[v _IOCAFbits IOCAFbits `VES166  1 e 1 @1031 ]
 "40453
 [v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
 "40515
@@ -362,20 +589,20 @@
 [v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
 "44994
 [v _IVTLOCK IVTLOCK `VEuc  1 e 1 @1113 ]
-[s S268 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
+[s S283 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
 ]
 "45004
-[u S270 . 1 `S268 1 . 1 0 ]
+[u S285 . 1 `S283 1 . 1 0 ]
 "45004
 "45004
-[v _IVTLOCKbits IVTLOCKbits `VES270  1 e 1 @1113 ]
+[v _IVTLOCKbits IVTLOCKbits `VES285  1 e 1 @1113 ]
 "45200
 [v _IVTBASEL IVTBASEL `VEuc  1 e 1 @1117 ]
 "45262
 [v _IVTBASEH IVTBASEH `VEuc  1 e 1 @1118 ]
 "45324
 [v _IVTBASEU IVTBASEU `VEuc  1 e 1 @1119 ]
-[s S134 . 1 `uc 1 SWIE 1 0 :1:0 
+[s S136 . 1 `uc 1 SWIE 1 0 :1:0 
 `uc 1 HLVDIE 1 0 :1:1 
 `uc 1 OSFIE 1 0 :1:2 
 `uc 1 CSWIE 1 0 :1:3 
@@ -385,11 +612,11 @@
 `uc 1 IOCIE 1 0 :1:7 
 ]
 "47072
-[u S143 . 1 `S134 1 . 1 0 ]
+[u S145 . 1 `S136 1 . 1 0 ]
 "47072
 "47072
-[v _PIE0bits PIE0bits `VES143  1 e 1 @1182 ]
-[s S393 . 1 `uc 1 INT0IE 1 0 :1:0 
+[v _PIE0bits PIE0bits `VES145  1 e 1 @1182 ]
+[s S408 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 ZCDIE 1 0 :1:1 
 `uc 1 ADIE 1 0 :1:2 
 `uc 1 ACTIE 1 0 :1:3 
@@ -399,11 +626,11 @@
 `uc 1 SMT1PWAIE 1 0 :1:7 
 ]
 "47124
-[u S402 . 1 `S393 1 . 1 0 ]
+[u S417 . 1 `S408 1 . 1 0 ]
 "47124
 "47124
-[v _PIE1bits PIE1bits `VES402  1 e 1 @1183 ]
-[s S759 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+[v _PIE1bits PIE1bits `VES417  1 e 1 @1183 ]
+[s S777 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
 `uc 1 SPI1TXIE 1 0 :1:1 
 `uc 1 SPI1IE 1 0 :1:2 
 `uc 1 TMR2IE 1 0 :1:3 
@@ -413,11 +640,11 @@
 `uc 1 TMR0IE 1 0 :1:7 
 ]
 "47231
-[u S768 . 1 `S759 1 . 1 0 ]
+[u S786 . 1 `S777 1 . 1 0 ]
 "47231
 "47231
-[v _PIE3bits PIE3bits `VES768  1 e 1 @1185 ]
-[s S445 . 1 `uc 1 INT1IE 1 0 :1:0 
+[v _PIE3bits PIE3bits `VES786  1 e 1 @1185 ]
+[s S460 . 1 `uc 1 INT1IE 1 0 :1:0 
 `uc 1 CLC2IE 1 0 :1:1 
 `uc 1 CWG1IE 1 0 :1:2 
 `uc 1 NCO1IE 1 0 :1:3 
@@ -427,11 +654,11 @@
 `uc 1 DMA2AIE 1 0 :1:7 
 ]
 "47401
-[u S454 . 1 `S445 1 . 1 0 ]
+[u S469 . 1 `S460 1 . 1 0 ]
 "47401
 "47401
-[v _PIE6bits PIE6bits `VES454  1 e 1 @1188 ]
-[s S362 . 1 `uc 1 INT0IF 1 0 :1:0 
+[v _PIE6bits PIE6bits `VES469  1 e 1 @1188 ]
+[s S377 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 ZCDIF 1 0 :1:1 
 `uc 1 ADIF 1 0 :1:2 
 `uc 1 ACTIF 1 0 :1:3 
@@ -441,11 +668,11 @@
 `uc 1 SMT1PWAIF 1 0 :1:7 
 ]
 "47998
-[u S371 . 1 `S362 1 . 1 0 ]
+[u S386 . 1 `S377 1 . 1 0 ]
 "47998
 "47998
-[v _PIR1bits PIR1bits `VES371  1 e 1 @1199 ]
-[s S738 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+[v _PIR1bits PIR1bits `VES386  1 e 1 @1199 ]
+[s S756 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
 `uc 1 SPI1TXIF 1 0 :1:1 
 `uc 1 SPI1IF 1 0 :1:2 
 `uc 1 TMR2IF 1 0 :1:3 
@@ -455,11 +682,11 @@
 `uc 1 TMR0IF 1 0 :1:7 
 ]
 "48105
-[u S747 . 1 `S738 1 . 1 0 ]
+[u S765 . 1 `S756 1 . 1 0 ]
 "48105
 "48105
-[v _PIR3bits PIR3bits `VES747  1 e 1 @1201 ]
-[s S414 . 1 `uc 1 INT1IF 1 0 :1:0 
+[v _PIR3bits PIR3bits `VES765  1 e 1 @1201 ]
+[s S429 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 CLC2IF 1 0 :1:1 
 `uc 1 CWG1IF 1 0 :1:2 
 `uc 1 NCO1IF 1 0 :1:3 
@@ -469,11 +696,11 @@
 `uc 1 DMA2AIF 1 0 :1:7 
 ]
 "48275
-[u S423 . 1 `S414 1 . 1 0 ]
+[u S438 . 1 `S429 1 . 1 0 ]
 "48275
 "48275
-[v _PIR6bits PIR6bits `VES423  1 e 1 @1204 ]
-[s S466 . 1 `uc 1 INT2IF 1 0 :1:0 
+[v _PIR6bits PIR6bits `VES438  1 e 1 @1204 ]
+[s S481 . 1 `uc 1 INT2IF 1 0 :1:0 
 `uc 1 CLC5IF 1 0 :1:1 
 `uc 1 CWG2IF 1 0 :1:2 
 `uc 1 NCO2IF 1 0 :1:3 
@@ -483,13 +710,13 @@
 `uc 1 DMA3AIF 1 0 :1:7 
 ]
 "48501
-[u S475 . 1 `S466 1 . 1 0 ]
+[u S490 . 1 `S481 1 . 1 0 ]
 "48501
 "48501
-[v _PIR10bits PIR10bits `VES475  1 e 1 @1208 ]
+[v _PIR10bits PIR10bits `VES490  1 e 1 @1208 ]
 "48803
 [v _LATA LATA `VEuc  1 e 1 @1214 ]
-[s S988 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S1562 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -499,13 +726,13 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "48820
-[u S997 . 1 `S988 1 . 1 0 ]
+[u S1571 . 1 `S1562 1 . 1 0 ]
 "48820
 "48820
-[v _LATAbits LATAbits `VES997  1 e 1 @1214 ]
+[v _LATAbits LATAbits `VES1571  1 e 1 @1214 ]
 "48865
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
-[s S967 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1541 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -515,13 +742,13 @@
 `uc 1 LATB7 1 0 :1:7 
 ]
 "48882
-[u S976 . 1 `S967 1 . 1 0 ]
+[u S1550 . 1 `S1541 1 . 1 0 ]
 "48882
 "48882
-[v _LATBbits LATBbits `VES976  1 e 1 @1215 ]
+[v _LATBbits LATBbits `VES1550  1 e 1 @1215 ]
 "48927
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S946 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S1520 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -531,13 +758,13 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "48944
-[u S955 . 1 `S946 1 . 1 0 ]
+[u S1529 . 1 `S1520 1 . 1 0 ]
 "48944
 "48944
-[v _LATCbits LATCbits `VES955  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES1529  1 e 1 @1216 ]
 "48989
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
-[s S925 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S1499 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -547,10 +774,10 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "49006
-[u S934 . 1 `S925 1 . 1 0 ]
+[u S1508 . 1 `S1499 1 . 1 0 ]
 "49006
 "49006
-[v _LATDbits LATDbits `VES934  1 e 1 @1217 ]
+[v _LATDbits LATDbits `VES1508  1 e 1 @1217 ]
 "49051
 [v _LATE LATE `VEuc  1 e 1 @1218 ]
 "49083
@@ -567,7 +794,21 @@
 [v _TRISE TRISE `VEuc  1 e 1 @1226 ]
 "49425
 [v _TRISF TRISF `VEuc  1 e 1 @1227 ]
-[s S240 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S1701 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"49504
+[u S1710 . 1 `S1701 1 . 1 0 ]
+"49504
+"49504
+[v _PORTAbits PORTAbits `VES1710  1 e 1 @1230 ]
+[s S255 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -576,38 +817,59 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "49855
-[s S248 . 1 `uc 1 . 1 0 :7:0 
+[s S263 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "49855
-[u S251 . 1 `S240 1 . 1 0 `S248 1 . 1 0 ]
+[u S266 . 1 `S255 1 . 1 0 `S263 1 . 1 0 ]
 "49855
 "49855
-[v _INTCON0bits INTCON0bits `VES251  1 e 1 @1238 ]
+[v _INTCON0bits INTCON0bits `VES266  1 e 1 @1238 ]
 "55357
 [v _GIE GIE `VEb  1 e 0 @9911 ]
+"153 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
 "38 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
 "39
 [v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
 "40
 [v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
-"37 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
-[v _IO_RA5_InterruptHandler IO_RA5_InterruptHandler `*.38(v  1 e 3 0 ]
-"38
-[v _IO_RA6_InterruptHandler IO_RA6_InterruptHandler `*.38(v  1 e 3 0 ]
+"38 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
+[v _IO_RA4_InterruptHandler IO_RA4_InterruptHandler `*.38(v  1 e 3 0 ]
 "39
-[v _IO_RA7_InterruptHandler IO_RA7_InterruptHandler `*.38(v  1 e 3 0 ]
+[v _IO_RA5_InterruptHandler IO_RA5_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _IO_RA6_InterruptHandler IO_RA6_InterruptHandler `*.38(v  1 e 3 0 ]
 "52 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
 [v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
 "53
 [v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
+[s S1091 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"82 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/uart/src/uart1.c
+[u S1096 . 2 `S1091 1 . 1 0 `ui 1 status 2 0 ]
+[v _uart1RxLastError uart1RxLastError `VES1096  1 s 2 uart1RxLastError ]
+"88
+[v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.38(v  1 s 3 UART1_FramingErrorHandler ]
+"89
+[v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 s 3 UART1_OverrunErrorHandler ]
+"90
+[v _UART1_ParityErrorHandler UART1_ParityErrorHandler `*.38(v  1 s 3 UART1_ParityErrorHandler ]
+"6 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v _safetyStatus safetyStatus `VEc  1 e 1 0 ]
 "5 C:\Users\janss\MPLABXProjects\Weapon code.X\startupsequence.c
 [v _currentAct currentAct `VEc  1 s 1 currentAct ]
-"47 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
+"15 C:\Users\janss\MPLABXProjects\Weapon code.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"62
+"28
 } 0
 "64 C:\Users\janss\MPLABXProjects\Weapon code.X\startupsequence.c
 [v _startup_sequence_Init startup_sequence_Init `(v  1 e 1 0 ]
@@ -620,43 +882,144 @@
 [v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
 "156
 } 0
-"4 C:\Users\janss\MPLABXProjects\Weapon code.X\config.c
+"60
+[v _TMR0_Initialize_startup_sequence TMR0_Initialize_startup_sequence `(v  1 e 1 0 ]
+{
+"79
+} 0
+"21 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v _safety_initialize safety_initialize `(v  1 e 1 0 ]
+{
+"26
+} 0
+"29
+[v _safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+{
+"33
+} 0
+"41
+[v _safety_set_A safety_set_A `(v  1 e 1 0 ]
+{
+"44
+} 0
+"35
+[v _safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+{
+"39
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.39v  1 a 2 38 ]
+"5
+[v printf@fmt fmt `*.31Cuc  1 p 1 37 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.31uc  1 a 1 36 ]
+[s S2371 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.39S2371  1 p 2 31 ]
+[v vfprintf@fmt fmt `*.31Cuc  1 p 1 33 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 34 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[s S2371 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.39S2371  1 p 2 25 ]
+[v vfpfcnvrt@fmt fmt `*.39*.31uc  1 p 2 27 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 29 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 16 ]
+[u S2350 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S2353 _IO_FILE 11 `S2350 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2353  1 p 2 18 ]
+"24
+} 0
+"311 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/uart/src/uart1.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 p 1 wreg ]
+[v putch@txData txData `uc  1 p 1 wreg ]
+[v putch@txData txData `uc  1 p 1 15 ]
+"318
+} 1
+"296
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+{
+[v UART1_Write@txData txData `uc  1 p 1 14 ]
+"299
+} 0
+"248
+[v _UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+{
+"251
+} 0
+"12 C:\Users\janss\MPLABXProjects\Weapon code.X\config.c
 [v _resetActuators resetActuators `(v  1 e 1 0 ]
 {
-"15
+"24
 } 0
 "38 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "44
 } 0
-"60 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
-[v _TMR0_Initialize_startup_sequence TMR0_Initialize_startup_sequence `(v  1 e 1 0 ]
+"100 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/uart/src/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 {
-"79
+"145
 } 0
-"41 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
+"355
+[v _UART1_ParityErrorCallbackRegister UART1_ParityErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v UART1_ParityErrorCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
+"361
+} 0
+"347
+[v _UART1_OverrunErrorCallbackRegister UART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v UART1_OverrunErrorCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
+"353
+} 0
+"339
+[v _UART1_FramingErrorCallbackRegister UART1_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v UART1_FramingErrorCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
+"345
+} 0
+"42 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"148
+"151
 } 0
-"247
-[v _IO_RA7_SetInterruptHandler IO_RA7_SetInterruptHandler `(v  1 e 1 0 ]
-{
-[v IO_RA7_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 14 ]
-"249
-} 0
-"217
+"253
 [v _IO_RA6_SetInterruptHandler IO_RA6_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IO_RA6_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 14 ]
-"219
+"255
 } 0
-"187
+"221
 [v _IO_RA5_SetInterruptHandler IO_RA5_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IO_RA5_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 14 ]
-"189
+"223
+} 0
+"190
+[v _IO_RA4_SetInterruptHandler IO_RA4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IO_RA4_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 14 ]
+"192
 } 0
 "42 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
@@ -665,17 +1028,17 @@
 [v INTERRUPT_Initialize@state state `a  1 a 1 17 ]
 "91
 } 0
-"196
+"198
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 14 ]
-"198
+"200
 } 0
-"162
+"164
 [v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 14 ]
-"164
+"166
 } 0
 "128
 [v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
@@ -693,42 +1056,121 @@
 {
 "100
 } 0
-"150 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
+"153 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"167
+"170
 } 0
-"232
-[v _IO_RA7_ISR IO_RA7_ISR `(v  1 e 1 0 ]
-{
-"242
-} 0
-"254
-[v _IO_RA7_DefaultInterruptHandler IO_RA7_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"257
-} 0
-"202
+"238
 [v _IO_RA6_ISR IO_RA6_ISR `(v  1 e 1 0 ]
 {
-"212
+"248
 } 0
-"224
+"260
 [v _IO_RA6_DefaultInterruptHandler IO_RA6_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"227
+"264
 } 0
-"172
+"35 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v i1_safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+{
+"39
+} 0
+"206 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
 [v _IO_RA5_ISR IO_RA5_ISR `(v  1 e 1 0 ]
 {
-"182
+"216
 } 0
-"194
+"228
 [v _IO_RA5_DefaultInterruptHandler IO_RA5_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"197
+"233
 } 0
-"93 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
+"41 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v i1_safety_set_A safety_set_A `(v  1 e 1 0 ]
+{
+"44
+} 0
+"175 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/pins.c
+[v _IO_RA4_ISR IO_RA4_ISR `(v  1 e 1 0 ]
+{
+"185
+} 0
+"197
+[v _IO_RA4_DefaultInterruptHandler IO_RA4_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"201
+} 0
+"29 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v i1_safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+{
+"33
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
+[v i1_printf printf `(i  1 e 2 0 ]
+{
+"8
+[v i1printf@ap ap `[1]*.39v  1 a 2 5 ]
+"5
+[v i1printf@fmt fmt `*.31Cuc  1 p 1 35 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v i1_vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v i1vfprintf@cfmt cfmt `*.31uc  1 a 1 34 ]
+[s S2371 _IO_FILE 0 ]
+"1817
+[v i1vfprintf@fp fp `*.39S2371  1 p 2 0 ]
+[v i1vfprintf@fmt fmt `*.31Cuc  1 p 1 2 ]
+[v i1vfprintf@ap ap `*.39*.39v  1 p 2 3 ]
+"1840
+} 0
+"1177
+[v i1_vfpfcnvrt vfpfcnvrt `(v  1 s 1 i1_vfpfcnvrt ]
+{
+[s S2371 _IO_FILE 0 ]
+[v i1vfpfcnvrt@fp fp `*.39S2371  1 p 2 28 ]
+[v i1vfpfcnvrt@fmt fmt `*.39*.31uc  1 p 2 30 ]
+[v i1vfpfcnvrt@ap ap `*.39*.39v  1 p 2 32 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+[v i1_fputc fputc `(i  1 e 2 0 ]
+{
+[v i1fputc@c c `i  1 p 2 19 ]
+[u S2350 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S2353 _IO_FILE 11 `S2350 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v i1fputc@fp fp `*.39S2353  1 p 2 21 ]
+"24
+} 0
+"311 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/uart/src/uart1.c
+[v i1_putch putch `(v  1 e 1 0 ]
+{
+[v i1putch@txData txData `uc  1 p 1 wreg ]
+[v i1putch@txData txData `uc  1 p 1 wreg ]
+[v i1putch@txData txData `uc  1 p 1 18 ]
+"318
+} 1
+"296
+[v i1_UART1_Write UART1_Write `(v  1 e 1 0 ]
+{
+[v i1UART1_Write@txData txData `uc  1 p 1 17 ]
+"299
+} 0
+"248
+[v i1_UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+{
+"251
+} 0
+"128 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
+[v i1_INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 17 ]
+"130
+} 0
+"93
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
 {
 "95
@@ -746,37 +1188,61 @@
 "132
 [v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"135
+"137
 } 0
-"144
+"9 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v _interrupt_routine_trigger_1 interrupt_routine_trigger_1 `(v  1 e 1 0 ]
+{
+"12
+} 0
+"164 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
+[v i2_INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i2INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 5 ]
+"166
+} 0
+"31 C:\Users\janss\MPLABXProjects\Weapon code.X\config.c
+[v _cylinder_set cylinder_set `(v  1 e 1 0 ]
+{
+[v cylinder_set@extended extended `a  1 p 1 wreg ]
+[v cylinder_set@extended extended `a  1 p 1 wreg ]
+[v cylinder_set@extended extended `a  1 p 1 5 ]
+"34
+} 1
+"146 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
 [v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
 {
-"150
+"152
 } 0
-"153
+"155
 [v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
 {
-"160
+"162
 } 0
-"166
+"168
 [v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"169
+"171
 } 0
-"178
+"14 C:\Users\janss\MPLABXProjects\Weapon code.X\safety.c
+[v _interrupt_routine_LS2_shooting interrupt_routine_LS2_shooting `(v  1 e 1 0 ]
+{
+"17
+} 0
+"180 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/system/src/interrupt.c
 [v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
 {
-"184
+"186
 } 0
-"187
+"189
 [v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
 {
-"194
+"196
 } 0
-"200
+"202
 [v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"203
+"205
 } 0
 "141 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
@@ -796,7 +1262,7 @@
 "153 C:\Users\janss\MPLABXProjects\Weapon code.X\mcc_generated_files/timer/src/tmr0.c
 [v i2_TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
 {
-[v i2TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 6 ]
+[v i2TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 12 ]
 "156
 } 0
 "7 C:\Users\janss\MPLABXProjects\Weapon code.X\startupsequence.c
@@ -804,7 +1270,7 @@
 {
 [v startup_sequence_actuator_on@i i `c  1 p 1 wreg ]
 [v startup_sequence_actuator_on@i i `c  1 p 1 wreg ]
-[v startup_sequence_actuator_on@i i `c  1 p 1 6 ]
+[v startup_sequence_actuator_on@i i `c  1 p 1 12 ]
 "27
 } 1
 "29
@@ -812,6 +1278,6 @@
 {
 [v startup_sequence_actuator_off@i i `c  1 p 1 wreg ]
 [v startup_sequence_actuator_off@i i `c  1 p 1 wreg ]
-[v startup_sequence_actuator_off@i i `c  1 p 1 6 ]
+[v startup_sequence_actuator_off@i i `c  1 p 1 12 ]
 "49
 } 1
