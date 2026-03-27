@@ -16,8 +16,8 @@ void interrupt_routine_trigger_1(void){
 }
 
 void interrupt_routine_LS2_shooting(void){
-    //cylinder_set(false);
-    //INT1_SetInterruptHandler(NULL);
+    cylinder_set(false);
+    INT1_SetInterruptHandler(NULL);
 }
 
 void interrupt_routine_laser(void){
