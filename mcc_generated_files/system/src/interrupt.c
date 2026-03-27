@@ -60,7 +60,9 @@ void  INTERRUPT_Initialize (void)
     GIE = state;
     // Assign peripheral interrupt priority vectors
     IPR1bits.INT0IP = 1;
+    IPR3bits.TMR1IP = 1;
     IPR3bits.TMR0IP = 1;
+    IPR5bits.TMR3IP = 1;
     IPR6bits.INT1IP = 1;
     IPR0bits.IOCIP = 0;
 
@@ -130,8 +132,6 @@ void INT0_SetInterruptHandler(void (* InterruptHandler)(void)){
 }
 
 void INT0_DefaultInterruptHandler(void){
-    
-    
     // add your INT0 interrupt custom code
     // or set custom function using INT0_SetInterruptHandler()
 }

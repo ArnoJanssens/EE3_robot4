@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"56 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 56: void SYSTEM_Initialize(void);
+"58 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 58: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "14 ./config.h
 [; ;./config.h: 14: void resetActuators(void);
@@ -2875,4 +2875,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51
 [; ;config.c: 51: }
 [e :UE 2499 ]
+}
+"53
+[; ;config.c: 53: void laser_set(_Bool on){
+[v _laser_set `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _laser_set ]
+[v _on `a ~T0 @X0 1 r1 ]
+[f ]
+"54
+[; ;config.c: 54:     if (on){
+[e $ ! != -> _on `i -> 0 `i 2509  ]
+{
+"55
+[; ;config.c: 55:         do { LATBbits.LATB5 = 1; } while(0);
+[e :U 2512 ]
+{
+[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
+}
+[e :U 2511 ]
+"56
+[; ;config.c: 56:     }
+}
+[e $U 2513  ]
+"57
+[; ;config.c: 57:     else{
+[e :U 2509 ]
+{
+"58
+[; ;config.c: 58:         do { LATBbits.LATB5 = 0; } while(0);
+[e :U 2516 ]
+{
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 2515 ]
+"59
+[; ;config.c: 59:     }
+}
+[e :U 2513 ]
+"60
+[; ;config.c: 60: }
+[e :UE 2508 ]
 }

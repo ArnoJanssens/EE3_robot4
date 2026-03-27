@@ -50,3 +50,11 @@ void bolt_release_led(bool on){
         
 }
 
+void laser_set(bool on){
+    if (on){
+        IO_RB5_SetHigh();
+    }
+    else{
+        IO_RB5_SetLow();
+    }
+}

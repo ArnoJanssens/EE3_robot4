@@ -29595,12 +29595,26 @@ void PIN_MANAGER_IOC(void);
 
 
 
-void IO_RA5_ISR(void);
+void IO_RA4_ISR(void);
 # 527 "mcc_generated_files/system/src/../pins.h"
-void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
 # 538 "mcc_generated_files/system/src/../pins.h"
-extern void (*IO_RA5_InterruptHandler)(void);
+extern void (*IO_RA4_InterruptHandler)(void);
 # 549 "mcc_generated_files/system/src/../pins.h"
+void IO_RA4_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 567 "mcc_generated_files/system/src/../pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "mcc_generated_files/system/src/../pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 589 "mcc_generated_files/system/src/../pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29610,31 +29624,31 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 567 "mcc_generated_files/system/src/../pins.h"
-void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "mcc_generated_files/system/src/../pins.h"
-extern void (*IO_RA6_InterruptHandler)(void);
-# 589 "mcc_generated_files/system/src/../pins.h"
-void IO_RA6_DefaultInterruptHandler(void);
-
-
-
-
-
-
-
-void IO_RA7_ISR(void);
 # 607 "mcc_generated_files/system/src/../pins.h"
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 618 "mcc_generated_files/system/src/../pins.h"
-extern void (*IO_RA7_InterruptHandler)(void);
+extern void (*IO_RA6_InterruptHandler)(void);
 # 629 "mcc_generated_files/system/src/../pins.h"
-void IO_RA7_DefaultInterruptHandler(void);
+void IO_RA6_DefaultInterruptHandler(void);
 # 36 "mcc_generated_files/system/src/pins.c" 2
+# 1 "mcc_generated_files/system/src/../../../safety.h" 1
+# 17 "mcc_generated_files/system/src/../../../safety.h"
+volatile int8_t safetyStatus;
 
+void safety_check();
+void safety_initialize();
+void safety_set_safe();
+void safety_set_1();
+void safety_set_A();
+void interrupt_routine_trigger_1(void);
+void interrupt_routine_LS2_shooting(void);
+void interrupt_routine_laser(void);
+void interrupt_routine_TMR3_shooting(void);
+# 37 "mcc_generated_files/system/src/pins.c" 2
+
+void (*IO_RA4_InterruptHandler)(void);
 void (*IO_RA5_InterruptHandler)(void);
 void (*IO_RA6_InterruptHandler)(void);
-void (*IO_RA7_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -29660,7 +29674,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0xEF;
+    TRISA = 0xFF;
     TRISB = 0xD7;
     TRISC = 0xFE;
     TRISD = 0x0;
@@ -29726,7 +29740,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    IOCAP = 0xE0;
+    IOCAP = 0x70;
     IOCAN = 0x0;
     IOCAF = 0x0;
     IOCBP = 0x0;
@@ -29739,9 +29753,9 @@ void PIN_MANAGER_Initialize(void)
     IOCEN = 0x0;
     IOCEF = 0x0;
 
+    IO_RA4_SetInterruptHandler(IO_RA4_DefaultInterruptHandler);
     IO_RA5_SetInterruptHandler(IO_RA5_DefaultInterruptHandler);
     IO_RA6_SetInterruptHandler(IO_RA6_DefaultInterruptHandler);
-    IO_RA7_SetInterruptHandler(IO_RA7_DefaultInterruptHandler);
 
 
     PIE0bits.IOCIE = 1;
@@ -29749,6 +29763,11 @@ void PIN_MANAGER_Initialize(void)
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCAFbits.IOCAF4 == 1)
+    {
+        IO_RA4_ISR();
+    }
 
     if(IOCAFbits.IOCAF5 == 1)
     {
@@ -29759,11 +29778,37 @@ void PIN_MANAGER_IOC(void)
     {
         IO_RA6_ISR();
     }
+}
 
-    if(IOCAFbits.IOCAF7 == 1)
+
+
+
+void IO_RA4_ISR(void) {
+
+
+
+
+    if(IO_RA4_InterruptHandler)
     {
-        IO_RA7_ISR();
+        IO_RA4_InterruptHandler();
     }
+    IOCAFbits.IOCAF4 = 0;
+}
+
+
+
+
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA4_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IO_RA4_DefaultInterruptHandler(void){
+    safety_set_safe();
+
+
 }
 
 
@@ -29792,6 +29837,8 @@ void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void)){
 
 
 void IO_RA5_DefaultInterruptHandler(void){
+
+    safety_set_A();
 
 
 }
@@ -29822,36 +29869,7 @@ void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void)){
 
 
 void IO_RA6_DefaultInterruptHandler(void){
-
-
-}
-
-
-
-
-void IO_RA7_ISR(void) {
-
-
-
-
-    if(IO_RA7_InterruptHandler)
-    {
-        IO_RA7_InterruptHandler();
-    }
-    IOCAFbits.IOCAF7 = 0;
-}
-
-
-
-
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void)){
-    IO_RA7_InterruptHandler = InterruptHandler;
-}
-
-
-
-
-void IO_RA7_DefaultInterruptHandler(void){
+    safety_set_1();
 
 
 }

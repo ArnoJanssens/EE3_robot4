@@ -5,18 +5,30 @@
 
 volatile int8_t safetyStatus = MODE_ERROR;
 
-
 void interrupt_routine_trigger_1(void){
     cylinder_set(true);
+    laser_set(true);
+    TMR1_OverflowCallbackRegister(interrupt_routine_laser);
+    TMR1_Start();
+    TMR3_OverflowCallbackRegister(interrupt_routine_TMR3_shooting);
+    TMR3_Start();
     INT1_SetInterruptHandler(interrupt_routine_LS2_shooting);
 }
 
 void interrupt_routine_LS2_shooting(void){
-    cylinder_set(false);
-    INT1_SetInterruptHandler(NULL);
+    //cylinder_set(false);
+    //INT1_SetInterruptHandler(NULL);
 }
 
+void interrupt_routine_laser(void){
+    laser_set(false);
+    TMR1_Stop();
+}
 
+void interrupt_routine_TMR3_shooting(void){
+    cylinder_set(false);
+    TMR3_Stop();
+}
 
 void safety_initialize(){
     if(PORTAbits.RA5 && !PORTAbits.RA6 && !PORTAbits.RA4){ safety_set_A();}

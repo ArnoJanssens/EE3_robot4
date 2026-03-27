@@ -12,4 +12,6 @@ mcc_generated_files/system/src/../../system/../uart/uart_types.h  \
 mcc_generated_files/system/src/../../system/../system/interrupt.h  \
 mcc_generated_files/system/src/../../system/../system/clock.h  \
 mcc_generated_files/system/src/../../system/../timer/tmr0.h  \
-mcc_generated_files/system/src/../../system/../timer/timer_interface.h 
+mcc_generated_files/system/src/../../system/../timer/timer_interface.h  \
+mcc_generated_files/system/src/../../system/../timer/tmr1.h  \
+mcc_generated_files/system/src/../../system/../timer/tmr3.h 

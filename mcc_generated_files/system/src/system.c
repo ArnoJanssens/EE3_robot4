@@ -39,6 +39,8 @@ void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
+    TMR1_Initialize();
+    TMR3_Initialize();
     UART1_Initialize();
     INTERRUPT_Initialize();
 }

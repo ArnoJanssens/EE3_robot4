@@ -29634,12 +29634,26 @@ void PIN_MANAGER_IOC(void);
 
 
 
-void IO_RA5_ISR(void);
+void IO_RA4_ISR(void);
 # 527 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
 # 538 "mcc_generated_files/system/src/../../system/../system/pins.h"
-extern void (*IO_RA5_InterruptHandler)(void);
+extern void (*IO_RA4_InterruptHandler)(void);
 # 549 "mcc_generated_files/system/src/../../system/../system/pins.h"
+void IO_RA4_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 567 "mcc_generated_files/system/src/../../system/../system/pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "mcc_generated_files/system/src/../../system/../system/pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 589 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29649,26 +29663,12 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 567 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "mcc_generated_files/system/src/../../system/../system/pins.h"
-extern void (*IO_RA6_InterruptHandler)(void);
-# 589 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void IO_RA6_DefaultInterruptHandler(void);
-
-
-
-
-
-
-
-void IO_RA7_ISR(void);
 # 607 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 618 "mcc_generated_files/system/src/../../system/../system/pins.h"
-extern void (*IO_RA7_InterruptHandler)(void);
+extern void (*IO_RA6_InterruptHandler)(void);
 # 629 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void IO_RA7_DefaultInterruptHandler(void);
+void IO_RA6_DefaultInterruptHandler(void);
 # 44 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../uart/uart1.h" 1
 # 45 "mcc_generated_files/system/src/../../system/../uart/uart1.h"
@@ -30131,6 +30131,102 @@ uint32_t TMR0_MaxCountGet(void);
 # 230 "mcc_generated_files/system/src/../../system/../timer/tmr0.h"
  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 # 48 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 1
+# 143 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+extern const struct TIMER_INTERFACE Timer1;
+# 152 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Initialize(void);
+
+
+
+
+
+
+
+void TMR1_Deinitialize(void);
+# 169 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Start(void);
+# 178 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Stop(void);
+# 187 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+uint32_t TMR1_CounterGet(void);
+# 196 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_CounterSet(uint32_t timerVal);
+# 205 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_PeriodSet(uint32_t periodVal);
+
+
+
+
+
+
+
+uint32_t TMR1_PeriodGet(void);
+
+
+
+
+
+
+
+uint32_t TMR1_MaxCountGet(void);
+
+
+
+
+
+
+
+ void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+# 49 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr3.h" 1
+# 143 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+extern const struct TIMER_INTERFACE Timer3;
+# 152 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+void TMR3_Initialize(void);
+
+
+
+
+
+
+
+void TMR3_Deinitialize(void);
+# 169 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+void TMR3_Start(void);
+# 178 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+void TMR3_Stop(void);
+# 187 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+uint32_t TMR3_CounterGet(void);
+# 196 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+void TMR3_CounterSet(uint32_t timerVal);
+# 205 "mcc_generated_files/system/src/../../system/../timer/tmr3.h"
+void TMR3_PeriodSet(uint32_t periodVal);
+
+
+
+
+
+
+
+uint32_t TMR3_PeriodGet(void);
+
+
+
+
+
+
+
+uint32_t TMR3_MaxCountGet(void);
+
+
+
+
+
+
+
+ void TMR3_OverflowCallbackRegister(void (* CallbackHandler)(void));
+# 50 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 
@@ -30168,7 +30264,9 @@ void INTERRUPT_Initialize (void)
     GIE = state;
 
     IPR1bits.INT0IP = 1;
+    IPR3bits.TMR1IP = 1;
     IPR3bits.TMR0IP = 1;
+    IPR5bits.TMR3IP = 1;
     IPR6bits.INT1IP = 1;
     IPR0bits.IOCIP = 0;
 
@@ -30206,7 +30304,7 @@ void __attribute__((picinterrupt(("irq(IOC), base(8), low_priority")))) IOC_ISR(
 {
     PIN_MANAGER_IOC();
 }
-# 110 "mcc_generated_files/system/src/interrupt.c"
+# 112 "mcc_generated_files/system/src/interrupt.c"
 void __attribute__((picinterrupt(("irq(INT0),base(8)")))) INT0_ISR()
 {
     (PIR1bits.INT0IF = 0);
@@ -30233,7 +30331,7 @@ void INT0_DefaultInterruptHandler(void){
 
 
 }
-# 144 "mcc_generated_files/system/src/interrupt.c"
+# 146 "mcc_generated_files/system/src/interrupt.c"
 void __attribute__((picinterrupt(("irq(INT1),base(8)")))) INT1_ISR()
 {
     (PIR6bits.INT1IF = 0);
@@ -30260,7 +30358,7 @@ void INT1_DefaultInterruptHandler(void){
 
 
 }
-# 178 "mcc_generated_files/system/src/interrupt.c"
+# 180 "mcc_generated_files/system/src/interrupt.c"
 void __attribute__((picinterrupt(("irq(INT2),base(8)")))) INT2_ISR()
 {
     (PIR10bits.INT2IF = 0);

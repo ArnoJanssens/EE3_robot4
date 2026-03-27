@@ -3,16 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/mcc_generated_files/system/src/interrupt.c</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/main.c</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/safety.c</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/config.h</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/mcc_generated_files/system/src/system.c</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/mcc_generated_files/system/src/pins.c</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/startupsequence.c</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/startupsequence.h</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/safety.h</file>
-            <file>file:/C:/Users/janss/MPLABXProjects/Weapon%20code.X/config.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/config.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/mcc_generated_files/system/src/interrupt.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/mcc_generated_files/system/src/system.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/mcc_generated_files/system/src/pins.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/mcc_generated_files/timer/src/tmr0.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/safety.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/main.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/mcc_generated_files/system/interrupt.h</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/mcc_generated_files/system/src/config_bits.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/safety.h</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/startupsequence.c</file>
+            <file>file:/C:/Users/Emiel/MPLABXProjects/EE3_robot4/config.h</file>
         </group>
     </open-files>
 </project-private>

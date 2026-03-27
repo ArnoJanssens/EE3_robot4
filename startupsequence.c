@@ -55,7 +55,7 @@ void startup_sequence_OnTimerInterrupt(void)
     if (currentAct >= N_ACTUATORS){
         void TMR0_Deinitialize(void);
         TMR0_OverflowCallbackRegister(NULL);
-        IO_RB5_SetHigh(); //turn laser on permanently
+        //laser_set(true); //turn laser on permanently
         return;
         }
     startup_sequence_actuator_on(currentAct);

@@ -30130,6 +30130,102 @@ uint32_t TMR0_MaxCountGet(void);
 # 230 "mcc_generated_files/system/src/../../timer/tmr0.h"
  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 # 48 "mcc_generated_files/system/src/../system.h" 2
+# 1 "mcc_generated_files/system/src/../../timer/tmr1.h" 1
+# 143 "mcc_generated_files/system/src/../../timer/tmr1.h"
+extern const struct TIMER_INTERFACE Timer1;
+# 152 "mcc_generated_files/system/src/../../timer/tmr1.h"
+void TMR1_Initialize(void);
+
+
+
+
+
+
+
+void TMR1_Deinitialize(void);
+# 169 "mcc_generated_files/system/src/../../timer/tmr1.h"
+void TMR1_Start(void);
+# 178 "mcc_generated_files/system/src/../../timer/tmr1.h"
+void TMR1_Stop(void);
+# 187 "mcc_generated_files/system/src/../../timer/tmr1.h"
+uint32_t TMR1_CounterGet(void);
+# 196 "mcc_generated_files/system/src/../../timer/tmr1.h"
+void TMR1_CounterSet(uint32_t timerVal);
+# 205 "mcc_generated_files/system/src/../../timer/tmr1.h"
+void TMR1_PeriodSet(uint32_t periodVal);
+
+
+
+
+
+
+
+uint32_t TMR1_PeriodGet(void);
+
+
+
+
+
+
+
+uint32_t TMR1_MaxCountGet(void);
+
+
+
+
+
+
+
+ void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+# 49 "mcc_generated_files/system/src/../system.h" 2
+# 1 "mcc_generated_files/system/src/../../timer/tmr3.h" 1
+# 143 "mcc_generated_files/system/src/../../timer/tmr3.h"
+extern const struct TIMER_INTERFACE Timer3;
+# 152 "mcc_generated_files/system/src/../../timer/tmr3.h"
+void TMR3_Initialize(void);
+
+
+
+
+
+
+
+void TMR3_Deinitialize(void);
+# 169 "mcc_generated_files/system/src/../../timer/tmr3.h"
+void TMR3_Start(void);
+# 178 "mcc_generated_files/system/src/../../timer/tmr3.h"
+void TMR3_Stop(void);
+# 187 "mcc_generated_files/system/src/../../timer/tmr3.h"
+uint32_t TMR3_CounterGet(void);
+# 196 "mcc_generated_files/system/src/../../timer/tmr3.h"
+void TMR3_CounterSet(uint32_t timerVal);
+# 205 "mcc_generated_files/system/src/../../timer/tmr3.h"
+void TMR3_PeriodSet(uint32_t periodVal);
+
+
+
+
+
+
+
+uint32_t TMR3_PeriodGet(void);
+
+
+
+
+
+
+
+uint32_t TMR3_MaxCountGet(void);
+
+
+
+
+
+
+
+ void TMR3_OverflowCallbackRegister(void (* CallbackHandler)(void));
+# 50 "mcc_generated_files/system/src/../system.h" 2
 
 
 
@@ -30145,6 +30241,8 @@ void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
+    TMR1_Initialize();
+    TMR3_Initialize();
     UART1_Initialize();
     INTERRUPT_Initialize();
 }

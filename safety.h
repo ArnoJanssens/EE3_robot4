@@ -23,6 +23,8 @@ void safety_set_1();
 void safety_set_A();
 void interrupt_routine_trigger_1(void);
 void interrupt_routine_LS2_shooting(void);
+void interrupt_routine_laser(void);
+void interrupt_routine_TMR3_shooting(void);
         
 
 #endif	/* SAFETY_H */

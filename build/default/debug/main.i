@@ -29606,12 +29606,26 @@ void PIN_MANAGER_IOC(void);
 
 
 
-void IO_RA5_ISR(void);
+void IO_RA4_ISR(void);
 # 527 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
 # 538 "./mcc_generated_files/system/../system/pins.h"
-extern void (*IO_RA5_InterruptHandler)(void);
+extern void (*IO_RA4_InterruptHandler)(void);
 # 549 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA4_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 567 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "./mcc_generated_files/system/../system/pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 589 "./mcc_generated_files/system/../system/pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29621,26 +29635,12 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 567 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "./mcc_generated_files/system/../system/pins.h"
-extern void (*IO_RA6_InterruptHandler)(void);
-# 589 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA6_DefaultInterruptHandler(void);
-
-
-
-
-
-
-
-void IO_RA7_ISR(void);
 # 607 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 618 "./mcc_generated_files/system/../system/pins.h"
-extern void (*IO_RA7_InterruptHandler)(void);
+extern void (*IO_RA6_InterruptHandler)(void);
 # 629 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA7_DefaultInterruptHandler(void);
+void IO_RA6_DefaultInterruptHandler(void);
 # 44 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../uart/uart1.h" 1
 # 45 "./mcc_generated_files/system/../uart/uart1.h"
@@ -30130,6 +30130,102 @@ uint32_t TMR0_MaxCountGet(void);
 # 230 "./mcc_generated_files/system/../timer/tmr0.h"
  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 # 48 "./mcc_generated_files/system/system.h" 2
+# 1 "./mcc_generated_files/system/../timer/tmr1.h" 1
+# 143 "./mcc_generated_files/system/../timer/tmr1.h"
+extern const struct TIMER_INTERFACE Timer1;
+# 152 "./mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_Initialize(void);
+
+
+
+
+
+
+
+void TMR1_Deinitialize(void);
+# 169 "./mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_Start(void);
+# 178 "./mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_Stop(void);
+# 187 "./mcc_generated_files/system/../timer/tmr1.h"
+uint32_t TMR1_CounterGet(void);
+# 196 "./mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_CounterSet(uint32_t timerVal);
+# 205 "./mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_PeriodSet(uint32_t periodVal);
+
+
+
+
+
+
+
+uint32_t TMR1_PeriodGet(void);
+
+
+
+
+
+
+
+uint32_t TMR1_MaxCountGet(void);
+
+
+
+
+
+
+
+ void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+# 49 "./mcc_generated_files/system/system.h" 2
+# 1 "./mcc_generated_files/system/../timer/tmr3.h" 1
+# 143 "./mcc_generated_files/system/../timer/tmr3.h"
+extern const struct TIMER_INTERFACE Timer3;
+# 152 "./mcc_generated_files/system/../timer/tmr3.h"
+void TMR3_Initialize(void);
+
+
+
+
+
+
+
+void TMR3_Deinitialize(void);
+# 169 "./mcc_generated_files/system/../timer/tmr3.h"
+void TMR3_Start(void);
+# 178 "./mcc_generated_files/system/../timer/tmr3.h"
+void TMR3_Stop(void);
+# 187 "./mcc_generated_files/system/../timer/tmr3.h"
+uint32_t TMR3_CounterGet(void);
+# 196 "./mcc_generated_files/system/../timer/tmr3.h"
+void TMR3_CounterSet(uint32_t timerVal);
+# 205 "./mcc_generated_files/system/../timer/tmr3.h"
+void TMR3_PeriodSet(uint32_t periodVal);
+
+
+
+
+
+
+
+uint32_t TMR3_PeriodGet(void);
+
+
+
+
+
+
+
+uint32_t TMR3_MaxCountGet(void);
+
+
+
+
+
+
+
+ void TMR3_OverflowCallbackRegister(void (* CallbackHandler)(void));
+# 50 "./mcc_generated_files/system/system.h" 2
 
 
 
@@ -30149,6 +30245,8 @@ void reset();
 void error_lights(_Bool on);
 void cylinder_set(_Bool extended);
 void blocking_solenoid_set(_Bool enable);
+void bolt_release_led(_Bool on);
+void laser_set(_Bool on);
 # 6 "main.c" 2
 # 1 "./startupsequence.h" 1
 # 11 "./startupsequence.h"
@@ -30162,11 +30260,17 @@ void startup_sequence_Init(void);
 # 7 "main.c" 2
 # 1 "./safety.h" 1
 # 17 "./safety.h"
+volatile int8_t safetyStatus;
+
+void safety_check();
 void safety_initialize();
-int8_t get_safety();
 void safety_set_safe();
 void safety_set_1();
 void safety_set_A();
+void interrupt_routine_trigger_1(void);
+void interrupt_routine_LS2_shooting(void);
+void interrupt_routine_laser(void);
+void interrupt_routine_TMR3_shooting(void);
 # 8 "main.c" 2
 
 
@@ -30182,12 +30286,6 @@ int main(void)
     (INTCON0bits.GIE = 1);
     (INTCON0bits.GIEL = 1);
     safety_initialize();
-    while(get_safety() != 0;){
-        error_lights(1);
-    }
-    error_lights(0);
-
-
     startup_sequence_Init();
 
     while(1)

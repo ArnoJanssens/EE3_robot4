@@ -1,0 +1,1551 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"1177 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+[v i1_vfpfcnvrt vfpfcnvrt `(v  1 s 1 i1_vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+[v i1_vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lodiv.c
+[v ___lodiv __lodiv `(uo  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lomod.c
+[v ___lomod __lomod `(uo  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+[v i1_fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+[v i1_printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"12 C:\Users\Emiel\MPLABXProjects\EE3_robot4\config.c
+[v _resetActuators resetActuators `(v  1 e 1 0 ]
+"31
+[v _cylinder_set cylinder_set `(v  1 e 1 0 ]
+"36
+[v _error_lights error_lights `(v  1 e 1 0 ]
+"43
+[v _bolt_release_led bolt_release_led `(v  1 e 1 0 ]
+"53
+[v _laser_set laser_set `(v  1 e 1 0 ]
+"15 C:\Users\Emiel\MPLABXProjects\EE3_robot4\main.c
+[v _main main `(i  1 e 2 0 ]
+"39 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"42 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"95
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+"99
+[v _IOC_ISR IOC_ISR `IIL(v  1 e 1 0 ]
+"112
+[v _INT0_ISR INT0_ISR `IIH(v  1 e 1 0 ]
+"121
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"130
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"134
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"146
+[v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
+"155
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"164
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+[v i2_INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"168
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"180
+[v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
+"189
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"198
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"202
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"42 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"153
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"175
+[v _IO_RA4_ISR IO_RA4_ISR `(v  1 e 1 0 ]
+"190
+[v _IO_RA4_SetInterruptHandler IO_RA4_SetInterruptHandler `(v  1 e 1 0 ]
+"197
+[v _IO_RA4_DefaultInterruptHandler IO_RA4_DefaultInterruptHandler `(v  1 e 1 0 ]
+"206
+[v _IO_RA5_ISR IO_RA5_ISR `(v  1 e 1 0 ]
+"221
+[v _IO_RA5_SetInterruptHandler IO_RA5_SetInterruptHandler `(v  1 e 1 0 ]
+"228
+[v _IO_RA5_DefaultInterruptHandler IO_RA5_DefaultInterruptHandler `(v  1 e 1 0 ]
+"238
+[v _IO_RA6_ISR IO_RA6_ISR `(v  1 e 1 0 ]
+"253
+[v _IO_RA6_SetInterruptHandler IO_RA6_SetInterruptHandler `(v  1 e 1 0 ]
+"260
+[v _IO_RA6_DefaultInterruptHandler IO_RA6_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize_startup_sequence TMR0_Initialize_startup_sequence `(v  1 e 1 0 ]
+"81
+[v _TMR0_Deinitialize TMR0_Deinitialize `(v  1 e 1 0 ]
+"94
+[v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
+"99
+[v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
+"104
+[v _TMR0_CounterGet TMR0_CounterGet `(ul  1 e 4 0 ]
+"117
+[v _TMR0_CounterSet TMR0_CounterSet `(v  1 e 1 0 ]
+"123
+[v _TMR0_PeriodSet TMR0_PeriodSet `(v  1 e 1 0 ]
+"131
+[v _TMR0_PeriodGet TMR0_PeriodGet `(ul  1 e 4 0 ]
+"136
+[v _TMR0_MaxCountGet TMR0_MaxCountGet `(ul  1 e 4 0 ]
+"141
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+"153
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+[v i2_TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+"158
+[v _TMR0_DefaultOverflowCallback TMR0_DefaultOverflowCallback `(v  1 s 1 TMR0_DefaultOverflowCallback ]
+"60 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"89
+[v _TMR1_Deinitialize TMR1_Deinitialize `(v  1 e 1 0 ]
+"107
+[v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
+"112
+[v _TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+"117
+[v _TMR1_CounterGet TMR1_CounterGet `(ul  1 e 4 0 ]
+"131
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+"149
+[v _TMR1_PeriodSet TMR1_PeriodSet `(v  1 e 1 0 ]
+"156
+[v _TMR1_PeriodGet TMR1_PeriodGet `(ul  1 e 4 0 ]
+"161
+[v _TMR1_MaxCountGet TMR1_MaxCountGet `(ul  1 e 4 0 ]
+"166
+[v _TMR1_OverflowISR TMR1_OverflowISR `IIH(v  1 e 1 0 ]
+"179
+[v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
+"184
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+"60 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _TMR3_Initialize TMR3_Initialize `(v  1 e 1 0 ]
+"89
+[v _TMR3_Deinitialize TMR3_Deinitialize `(v  1 e 1 0 ]
+"107
+[v _TMR3_Start TMR3_Start `(v  1 e 1 0 ]
+"112
+[v _TMR3_Stop TMR3_Stop `(v  1 e 1 0 ]
+"117
+[v _TMR3_CounterGet TMR3_CounterGet `(ul  1 e 4 0 ]
+"131
+[v _TMR3_CounterSet TMR3_CounterSet `(v  1 e 1 0 ]
+"149
+[v _TMR3_PeriodSet TMR3_PeriodSet `(v  1 e 1 0 ]
+"156
+[v _TMR3_PeriodGet TMR3_PeriodGet `(ul  1 e 4 0 ]
+"161
+[v _TMR3_MaxCountGet TMR3_MaxCountGet `(ul  1 e 4 0 ]
+"166
+[v _TMR3_OverflowISR TMR3_OverflowISR `IIH(v  1 e 1 0 ]
+"179
+[v _TMR3_OverflowCallbackRegister TMR3_OverflowCallbackRegister `(v  1 e 1 0 ]
+"184
+[v _TMR3_DefaultOverflowCallback TMR3_DefaultOverflowCallback `(v  1 s 1 TMR3_DefaultOverflowCallback ]
+"100 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/uart/src/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+"147
+[v _UART1_Deinitialize UART1_Deinitialize `(v  1 e 1 0 ]
+"180
+[v _UART1_TransmitEnable UART1_TransmitEnable `(v  1 e 1 0 ]
+"185
+[v _UART1_TransmitDisable UART1_TransmitDisable `(v  1 e 1 0 ]
+"210
+[v _UART1_AutoBaudSet UART1_AutoBaudSet `(v  1 e 1 0 ]
+"223
+[v _UART1_AutoBaudQuery UART1_AutoBaudQuery `(a  1 e 1 0 ]
+"243
+[v _UART1_IsRxReady UART1_IsRxReady `(a  1 e 1 0 ]
+"248
+[v _UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+[v i1_UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+"253
+[v _UART1_IsTxDone UART1_IsTxDone `(a  1 e 1 0 ]
+"258
+[v _UART1_ErrorGet UART1_ErrorGet `(ui  1 e 2 0 ]
+"290
+[v _UART1_Read UART1_Read `(uc  1 e 1 0 ]
+"296
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+[v i1_UART1_Write UART1_Write `(v  1 e 1 0 ]
+"311
+[v _putch putch `(v  1 e 1 0 ]
+[v i1_putch putch `(v  1 e 1 0 ]
+"324
+[v _UART1_DefaultFramingErrorCallback UART1_DefaultFramingErrorCallback `(v  1 s 1 UART1_DefaultFramingErrorCallback ]
+"329
+[v _UART1_DefaultOverrunErrorCallback UART1_DefaultOverrunErrorCallback `(v  1 s 1 UART1_DefaultOverrunErrorCallback ]
+"334
+[v _UART1_DefaultParityErrorCallback UART1_DefaultParityErrorCallback `(v  1 s 1 UART1_DefaultParityErrorCallback ]
+"339
+[v _UART1_FramingErrorCallbackRegister UART1_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+"347
+[v _UART1_OverrunErrorCallbackRegister UART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+"355
+[v _UART1_ParityErrorCallbackRegister UART1_ParityErrorCallbackRegister `(v  1 e 1 0 ]
+"8 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _interrupt_routine_trigger_1 interrupt_routine_trigger_1 `(v  1 e 1 0 ]
+"18
+[v _interrupt_routine_LS2_shooting interrupt_routine_LS2_shooting `(v  1 e 1 0 ]
+"23
+[v _interrupt_routine_laser interrupt_routine_laser `(v  1 e 1 0 ]
+"28
+[v _interrupt_routine_TMR3_shooting interrupt_routine_TMR3_shooting `(v  1 e 1 0 ]
+"33
+[v _safety_initialize safety_initialize `(v  1 e 1 0 ]
+"41
+[v _safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+[v i1_safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+"47
+[v _safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+[v i1_safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+"53
+[v _safety_set_A safety_set_A `(v  1 e 1 0 ]
+[v i1_safety_set_A safety_set_A `(v  1 e 1 0 ]
+"7 C:\Users\Emiel\MPLABXProjects\EE3_robot4\startupsequence.c
+[v _startup_sequence_actuator_on startup_sequence_actuator_on `(v  1 e 1 0 ]
+"29
+[v _startup_sequence_actuator_off startup_sequence_actuator_off `(v  1 e 1 0 ]
+"51
+[v _startup_sequence_OnTimerInterrupt startup_sequence_OnTimerInterrupt `(v  1 e 1 0 ]
+"64
+[v _startup_sequence_Init startup_sequence_Init `(v  1 e 1 0 ]
+"5082 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5152
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5292
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5332
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5390
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5592
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"10602
+[v _RF1PPS RF1PPS `VEuc  1 e 1 @554 ]
+"10994
+[v _INT0PPS INT0PPS `VEuc  1 e 1 @574 ]
+"11054
+[v _INT1PPS INT1PPS `VEuc  1 e 1 @575 ]
+"14720
+[v _U1RXPPS U1RXPPS `VEuc  1 e 1 @626 ]
+"15416
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15548
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15680
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15812
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"16989
+[v _U1RXB U1RXB `VEuc  1 e 1 @673 ]
+"17027
+[v _U1RXCHK U1RXCHK `VEuc  1 e 1 @674 ]
+"17047
+[v _U1TXB U1TXB `VEuc  1 e 1 @675 ]
+"17085
+[v _U1TXCHK U1TXCHK `VEuc  1 e 1 @676 ]
+"17112
+[v _U1P1L U1P1L `VEuc  1 e 1 @677 ]
+"17132
+[v _U1P1H U1P1H `VEuc  1 e 1 @678 ]
+"17159
+[v _U1P2L U1P2L `VEuc  1 e 1 @679 ]
+"17179
+[v _U1P2H U1P2H `VEuc  1 e 1 @680 ]
+"17206
+[v _U1P3L U1P3L `VEuc  1 e 1 @681 ]
+"17226
+[v _U1P3H U1P3H `VEuc  1 e 1 @682 ]
+"17246
+[v _U1CON0 U1CON0 `VEuc  1 e 1 @683 ]
+[s S1425 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+]
+"17279
+[s S1430 . 1 `uc 1 U1MODE 1 0 :4:0 
+`uc 1 U1RXEN 1 0 :1:4 
+`uc 1 U1TXEN 1 0 :1:5 
+`uc 1 U1ABDEN 1 0 :1:6 
+`uc 1 U1BRGS 1 0 :1:7 
+]
+[s S1436 . 1 `uc 1 U1MODE0 1 0 :1:0 
+`uc 1 U1MODE1 1 0 :1:1 
+`uc 1 U1MODE2 1 0 :1:2 
+`uc 1 U1MODE3 1 0 :1:3 
+]
+[s S1441 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 RXEN 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 ABDEN 1 0 :1:6 
+`uc 1 BRGS 1 0 :1:7 
+]
+[u S1447 . 1 `S1425 1 . 1 0 `S1430 1 . 1 0 `S1436 1 . 1 0 `S1441 1 . 1 0 ]
+[v _U1CON0bits U1CON0bits `VES1447  1 e 1 @683 ]
+"17374
+[v _U1CON1 U1CON1 `VEuc  1 e 1 @684 ]
+[s S1389 . 1 `uc 1 SENDB 1 0 :1:0 
+`uc 1 BRKOVR 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 RXBIMD 1 0 :1:3 
+`uc 1 WUE 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 ON 1 0 :1:7 
+]
+"17399
+[s S1397 . 1 `uc 1 U1SENDB 1 0 :1:0 
+`uc 1 U1BRKOVR 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 U1RXBIMD 1 0 :1:3 
+`uc 1 U1WUE 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 U1ON 1 0 :1:7 
+]
+[u S1405 . 1 `S1389 1 . 1 0 `S1397 1 . 1 0 ]
+[v _U1CON1bits U1CON1bits `VES1405  1 e 1 @684 ]
+"17454
+[v _U1CON2 U1CON2 `VEuc  1 e 1 @685 ]
+"17603
+[v _U1BRGL U1BRGL `VEuc  1 e 1 @686 ]
+"17623
+[v _U1BRGH U1BRGH `VEuc  1 e 1 @687 ]
+"17643
+[v _U1FIFO U1FIFO `VEuc  1 e 1 @688 ]
+[s S1543 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 RXBE 1 0 :1:1 
+`uc 1 XON 1 0 :1:2 
+`uc 1 RXIDL 1 0 :1:3 
+`uc 1 TXBF 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 STPMD 1 0 :1:6 
+`uc 1 TXWRE 1 0 :1:7 
+]
+"17678
+[s S1552 . 1 `uc 1 U1RXBF 1 0 :1:0 
+`uc 1 U1RXBE 1 0 :1:1 
+`uc 1 U1XON 1 0 :1:2 
+`uc 1 U1RXIDL 1 0 :1:3 
+`uc 1 U1TXBF 1 0 :1:4 
+`uc 1 U1TXBE 1 0 :1:5 
+`uc 1 U1STPMD 1 0 :1:6 
+`uc 1 U1TXWRE 1 0 :1:7 
+]
+[s S1561 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 U1RCIDL 1 0 :1:3 
+]
+[s S1564 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 RCIDL 1 0 :1:3 
+]
+[u S1567 . 1 `S1543 1 . 1 0 `S1552 1 . 1 0 `S1561 1 . 1 0 `S1564 1 . 1 0 ]
+[v _U1FIFObits U1FIFObits `VES1567  1 e 1 @688 ]
+"17773
+[v _U1UIR U1UIR `VEuc  1 e 1 @689 ]
+[s S1475 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ABDIE 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 ABDIF 1 0 :1:6 
+`uc 1 WUIF 1 0 :1:7 
+]
+"17794
+[s S1481 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 U1ABDIE 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 U1ABDIF 1 0 :1:6 
+`uc 1 U1WUIF 1 0 :1:7 
+]
+[u S1487 . 1 `S1475 1 . 1 0 `S1481 1 . 1 0 ]
+[v _U1UIRbits U1UIRbits `VES1487  1 e 1 @689 ]
+"17829
+[v _U1ERRIR U1ERRIR `VEuc  1 e 1 @690 ]
+[s S1503 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"17856
+[s S1512 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+`uc 1 U1RXFOIF 1 0 :1:1 
+`uc 1 U1RXBKIF 1 0 :1:2 
+`uc 1 U1FERIF 1 0 :1:3 
+`uc 1 U1CERIF 1 0 :1:4 
+`uc 1 U1ABDOVF 1 0 :1:5 
+`uc 1 U1PERIF 1 0 :1:6 
+`uc 1 U1TXMTIF 1 0 :1:7 
+]
+[u S1521 . 1 `S1503 1 . 1 0 `S1512 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES1521  1 e 1 @690 ]
+"17941
+[v _U1ERRIE U1ERRIE `VEuc  1 e 1 @691 ]
+"23240
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23378
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23632
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S836 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23666
+[s S842 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S848 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[s S854 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S859 . 1 `S836 1 . 1 0 `S842 1 . 1 0 `S848 1 . 1 0 `S854 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES859  1 e 1 @794 ]
+"23756
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+"23905
+[v _TMR1L TMR1L `VEuc  1 e 1 @796 ]
+"24025
+[v _TMR1H TMR1H `VEuc  1 e 1 @797 ]
+"24145
+[v _T1CON T1CON `VEuc  1 e 1 @798 ]
+[s S1029 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 NOT_SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"24187
+[s S1035 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S1042 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S1048 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[s S1051 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nT1SYNC 1 0 :1:2 
+]
+[u S1054 . 1 `S1029 1 . 1 0 `S1035 1 . 1 0 `S1042 1 . 1 0 `S1048 1 . 1 0 `S1051 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1054  1 e 1 @798 ]
+"24367
+[v _T1GCON T1GCON `VEuc  1 e 1 @799 ]
+"24653
+[v _T1GATE T1GATE `VEuc  1 e 1 @800 ]
+"24843
+[v _T1CLK T1CLK `VEuc  1 e 1 @801 ]
+"25768
+[v _TMR3L TMR3L `VEuc  1 e 1 @808 ]
+"25888
+[v _TMR3H TMR3H `VEuc  1 e 1 @809 ]
+"26008
+[v _T3CON T3CON `VEuc  1 e 1 @810 ]
+"26050
+[s S2121 . 1 `uc 1 TMR3ON 1 0 :1:0 
+`uc 1 T3RD16 1 0 :1:1 
+`uc 1 NOT_T3SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T3CKPS0 1 0 :1:4 
+`uc 1 T3CKPS1 1 0 :1:5 
+]
+[s S2134 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD163 1 0 :1:1 
+]
+[s S2137 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nT3SYNC 1 0 :1:2 
+]
+[u S2140 . 1 `S1029 1 . 1 0 `S2121 1 . 1 0 `S1042 1 . 1 0 `S2134 1 . 1 0 `S2137 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES2140  1 e 1 @810 ]
+"26230
+[v _T3GCON T3GCON `VEuc  1 e 1 @811 ]
+"26516
+[v _T3GATE T3GATE `VEuc  1 e 1 @812 ]
+"26706
+[v _T3CLK T3CLK `VEuc  1 e 1 @813 ]
+[s S385 . 1 `uc 1 SWIP 1 0 :1:0 
+`uc 1 HLVDIP 1 0 :1:1 
+`uc 1 OSFIP 1 0 :1:2 
+`uc 1 CSWIP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC1IP 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IOCIP 1 0 :1:7 
+]
+"31822
+[u S394 . 1 `S385 1 . 1 0 ]
+[v _IPR0bits IPR0bits `VES394  1 e 1 @866 ]
+[s S301 . 1 `uc 1 INT0IP 1 0 :1:0 
+`uc 1 ZCDIP 1 0 :1:1 
+`uc 1 ADIP 1 0 :1:2 
+`uc 1 ACTIP 1 0 :1:3 
+`uc 1 C1IP 1 0 :1:4 
+`uc 1 SMT1IP 1 0 :1:5 
+`uc 1 SMT1PRAIP 1 0 :1:6 
+`uc 1 SMT1PWAIP 1 0 :1:7 
+]
+"31874
+[u S310 . 1 `S301 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES310  1 e 1 @867 ]
+[s S322 . 1 `uc 1 SPI1RXIP 1 0 :1:0 
+`uc 1 SPI1TXIP 1 0 :1:1 
+`uc 1 SPI1IP 1 0 :1:2 
+`uc 1 TMR2IP 1 0 :1:3 
+`uc 1 TMR1IP 1 0 :1:4 
+`uc 1 TMR1GIP 1 0 :1:5 
+`uc 1 CCP1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"31981
+[u S331 . 1 `S322 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES331  1 e 1 @869 ]
+[s S343 . 1 `uc 1 SPI2RXIP 1 0 :1:0 
+`uc 1 SPI2TXIP 1 0 :1:1 
+`uc 1 SPI2IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IP 1 0 :1:4 
+`uc 1 TMR3GIP 1 0 :1:5 
+`uc 1 PWM2PIP 1 0 :1:6 
+`uc 1 PWM2IP 1 0 :1:7 
+]
+"32094
+[u S352 . 1 `S343 1 . 1 0 ]
+[v _IPR5bits IPR5bits `VES352  1 e 1 @871 ]
+[s S364 . 1 `uc 1 INT1IP 1 0 :1:0 
+`uc 1 CLC2IP 1 0 :1:1 
+`uc 1 CWG1IP 1 0 :1:2 
+`uc 1 NCO1IP 1 0 :1:3 
+`uc 1 DMA2SCNTIP 1 0 :1:4 
+`uc 1 DMA2DCNTIP 1 0 :1:5 
+`uc 1 DMA2ORIP 1 0 :1:6 
+`uc 1 DMA2AIP 1 0 :1:7 
+]
+"32151
+[u S373 . 1 `S364 1 . 1 0 ]
+[v _IPR6bits IPR6bits `VES373  1 e 1 @872 ]
+"39957
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"40019
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"40081
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"40143
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"40205
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"40267
+[v _IOCAP IOCAP `VEuc  1 e 1 @1029 ]
+"40329
+[v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
+"40391
+[v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
+[s S165 . 1 `uc 1 IOCAF0 1 0 :1:0 
+`uc 1 IOCAF1 1 0 :1:1 
+`uc 1 IOCAF2 1 0 :1:2 
+`uc 1 IOCAF3 1 0 :1:3 
+`uc 1 IOCAF4 1 0 :1:4 
+`uc 1 IOCAF5 1 0 :1:5 
+`uc 1 IOCAF6 1 0 :1:6 
+`uc 1 IOCAF7 1 0 :1:7 
+]
+"40408
+[u S174 . 1 `S165 1 . 1 0 ]
+"40408
+"40408
+[v _IOCAFbits IOCAFbits `VES174  1 e 1 @1031 ]
+"40453
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40515
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"40577
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"40639
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"40701
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40763
+[v _IOCBP IOCBP `VEuc  1 e 1 @1037 ]
+"40825
+[v _IOCBN IOCBN `VEuc  1 e 1 @1038 ]
+"40887
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"40949
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"41011
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"41073
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"41135
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"41197
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"41259
+[v _IOCCP IOCCP `VEuc  1 e 1 @1045 ]
+"41321
+[v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
+"41383
+[v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
+"41445
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"41507
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41569
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"41631
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"41693
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"41755
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"41787
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"41825
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41857
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41889
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41927
+[v _IOCEP IOCEP `VEuc  1 e 1 @1061 ]
+"41948
+[v _IOCEN IOCEN `VEuc  1 e 1 @1062 ]
+"41969
+[v _IOCEF IOCEF `VEuc  1 e 1 @1063 ]
+"41990
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"42052
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"42114
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"42176
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"42238
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"44994
+[v _IVTLOCK IVTLOCK `VEuc  1 e 1 @1113 ]
+[s S291 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
+]
+"45004
+[u S293 . 1 `S291 1 . 1 0 ]
+"45004
+"45004
+[v _IVTLOCKbits IVTLOCKbits `VES293  1 e 1 @1113 ]
+"45200
+[v _IVTBASEL IVTBASEL `VEuc  1 e 1 @1117 ]
+"45262
+[v _IVTBASEH IVTBASEH `VEuc  1 e 1 @1118 ]
+"45324
+[v _IVTBASEU IVTBASEU `VEuc  1 e 1 @1119 ]
+[s S144 . 1 `uc 1 SWIE 1 0 :1:0 
+`uc 1 HLVDIE 1 0 :1:1 
+`uc 1 OSFIE 1 0 :1:2 
+`uc 1 CSWIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC1IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IOCIE 1 0 :1:7 
+]
+"47072
+[u S153 . 1 `S144 1 . 1 0 ]
+"47072
+"47072
+[v _PIE0bits PIE0bits `VES153  1 e 1 @1182 ]
+[s S437 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 ZCDIE 1 0 :1:1 
+`uc 1 ADIE 1 0 :1:2 
+`uc 1 ACTIE 1 0 :1:3 
+`uc 1 C1IE 1 0 :1:4 
+`uc 1 SMT1IE 1 0 :1:5 
+`uc 1 SMT1PRAIE 1 0 :1:6 
+`uc 1 SMT1PWAIE 1 0 :1:7 
+]
+"47124
+[u S446 . 1 `S437 1 . 1 0 ]
+"47124
+"47124
+[v _PIE1bits PIE1bits `VES446  1 e 1 @1183 ]
+[s S814 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"47231
+[u S823 . 1 `S814 1 . 1 0 ]
+"47231
+"47231
+[v _PIE3bits PIE3bits `VES823  1 e 1 @1185 ]
+[s S2202 . 1 `uc 1 SPI2RXIE 1 0 :1:0 
+`uc 1 SPI2TXIE 1 0 :1:1 
+`uc 1 SPI2IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IE 1 0 :1:4 
+`uc 1 TMR3GIE 1 0 :1:5 
+`uc 1 PWM2PIE 1 0 :1:6 
+`uc 1 PWM2IE 1 0 :1:7 
+]
+"47344
+[u S2211 . 1 `S2202 1 . 1 0 ]
+"47344
+"47344
+[v _PIE5bits PIE5bits `VES2211  1 e 1 @1187 ]
+[s S489 . 1 `uc 1 INT1IE 1 0 :1:0 
+`uc 1 CLC2IE 1 0 :1:1 
+`uc 1 CWG1IE 1 0 :1:2 
+`uc 1 NCO1IE 1 0 :1:3 
+`uc 1 DMA2SCNTIE 1 0 :1:4 
+`uc 1 DMA2DCNTIE 1 0 :1:5 
+`uc 1 DMA2ORIE 1 0 :1:6 
+`uc 1 DMA2AIE 1 0 :1:7 
+]
+"47401
+[u S498 . 1 `S489 1 . 1 0 ]
+"47401
+"47401
+[v _PIE6bits PIE6bits `VES498  1 e 1 @1188 ]
+[s S406 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"47998
+[u S415 . 1 `S406 1 . 1 0 ]
+"47998
+"47998
+[v _PIR1bits PIR1bits `VES415  1 e 1 @1199 ]
+[s S793 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"48105
+[u S802 . 1 `S793 1 . 1 0 ]
+"48105
+"48105
+[v _PIR3bits PIR3bits `VES802  1 e 1 @1201 ]
+[s S2181 . 1 `uc 1 SPI2RXIF 1 0 :1:0 
+`uc 1 SPI2TXIF 1 0 :1:1 
+`uc 1 SPI2IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IF 1 0 :1:4 
+`uc 1 TMR3GIF 1 0 :1:5 
+`uc 1 PWM2PIF 1 0 :1:6 
+`uc 1 PWM2IF 1 0 :1:7 
+]
+"48218
+[u S2190 . 1 `S2181 1 . 1 0 ]
+"48218
+"48218
+[v _PIR5bits PIR5bits `VES2190  1 e 1 @1203 ]
+[s S458 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48275
+[u S467 . 1 `S458 1 . 1 0 ]
+"48275
+"48275
+[v _PIR6bits PIR6bits `VES467  1 e 1 @1204 ]
+[s S510 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"48501
+[u S519 . 1 `S510 1 . 1 0 ]
+"48501
+"48501
+[v _PIR10bits PIR10bits `VES519  1 e 1 @1208 ]
+"48803
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+[s S1818 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"48820
+[u S1827 . 1 `S1818 1 . 1 0 ]
+"48820
+"48820
+[v _LATAbits LATAbits `VES1827  1 e 1 @1214 ]
+"48865
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+[s S1797 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"48882
+[u S1806 . 1 `S1797 1 . 1 0 ]
+"48882
+"48882
+[v _LATBbits LATBbits `VES1806  1 e 1 @1215 ]
+"48927
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+[s S1776 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"48944
+[u S1785 . 1 `S1776 1 . 1 0 ]
+"48944
+"48944
+[v _LATCbits LATCbits `VES1785  1 e 1 @1216 ]
+"48989
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+[s S1755 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"49006
+[u S1764 . 1 `S1755 1 . 1 0 ]
+"49006
+"49006
+[v _LATDbits LATDbits `VES1764  1 e 1 @1217 ]
+"49051
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"49083
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"49145
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"49207
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"49269
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"49331
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"49393
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"49425
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+[s S1985 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"49504
+[u S1994 . 1 `S1985 1 . 1 0 ]
+"49504
+"49504
+[v _PORTAbits PORTAbits `VES1994  1 e 1 @1230 ]
+[s S263 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49855
+[s S271 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49855
+[u S274 . 1 `S263 1 . 1 0 `S271 1 . 1 0 ]
+"49855
+"49855
+[v _INTCON0bits INTCON0bits `VES274  1 e 1 @1238 ]
+"55357
+[v _GIE GIE `VEb  1 e 0 @9911 ]
+"153 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"38 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"38 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/pins.c
+[v _IO_RA4_InterruptHandler IO_RA4_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _IO_RA5_InterruptHandler IO_RA5_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _IO_RA6_InterruptHandler IO_RA6_InterruptHandler `*.38(v  1 e 3 0 ]
+"52 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr0.c
+[v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
+"53
+[v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
+"56 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 s 2 timer1ReloadVal ]
+"58
+[v _TMR1_OverflowCallback TMR1_OverflowCallback `*.38(v  1 s 3 TMR1_OverflowCallback ]
+"56 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _timer3ReloadVal timer3ReloadVal `VEus  1 s 2 timer3ReloadVal ]
+"58
+[v _TMR3_OverflowCallback TMR3_OverflowCallback `*.38(v  1 s 3 TMR3_OverflowCallback ]
+[s S1347 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"82 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/uart/src/uart1.c
+[u S1352 . 2 `S1347 1 . 1 0 `ui 1 status 2 0 ]
+[v _uart1RxLastError uart1RxLastError `VES1352  1 s 2 uart1RxLastError ]
+"88
+[v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.38(v  1 s 3 UART1_FramingErrorHandler ]
+"89
+[v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 s 3 UART1_OverrunErrorHandler ]
+"90
+[v _UART1_ParityErrorHandler UART1_ParityErrorHandler `*.38(v  1 s 3 UART1_ParityErrorHandler ]
+"6 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _safetyStatus safetyStatus `VEc  1 e 1 0 ]
+"5 C:\Users\Emiel\MPLABXProjects\EE3_robot4\startupsequence.c
+[v _currentAct currentAct `VEc  1 s 1 currentAct ]
+"15 C:\Users\Emiel\MPLABXProjects\EE3_robot4\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"28
+} 0
+"64 C:\Users\Emiel\MPLABXProjects\EE3_robot4\startupsequence.c
+[v _startup_sequence_Init startup_sequence_Init `(v  1 e 1 0 ]
+{
+"67
+} 0
+"153 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 28 ]
+"156
+} 0
+"60
+[v _TMR0_Initialize_startup_sequence TMR0_Initialize_startup_sequence `(v  1 e 1 0 ]
+{
+"79
+} 0
+"33 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _safety_initialize safety_initialize `(v  1 e 1 0 ]
+{
+"38
+} 0
+"41
+[v _safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+{
+"45
+} 0
+"53
+[v _safety_set_A safety_set_A `(v  1 e 1 0 ]
+{
+"56
+} 0
+"47
+[v _safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+{
+"51
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.39v  1 a 2 55 ]
+"5
+[v printf@fmt fmt `*.32Cuc  1 p 2 53 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 51 ]
+[s S2901 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.39S2901  1 p 2 45 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 47 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 49 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[s S2901 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.39S2901  1 p 2 39 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 41 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 43 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 30 ]
+[u S2880 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S2883 _IO_FILE 11 `S2880 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2883  1 p 2 32 ]
+"24
+} 0
+"311 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/uart/src/uart1.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 p 1 wreg ]
+[v putch@txData txData `uc  1 p 1 wreg ]
+[v putch@txData txData `uc  1 p 1 29 ]
+"318
+} 1
+"296
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+{
+[v UART1_Write@txData txData `uc  1 p 1 28 ]
+"299
+} 0
+"248
+[v _UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+{
+"251
+} 0
+"12 C:\Users\Emiel\MPLABXProjects\EE3_robot4\config.c
+[v _resetActuators resetActuators `(v  1 e 1 0 ]
+{
+"24
+} 0
+"38 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"100 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/uart/src/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+{
+"145
+} 0
+"355
+[v _UART1_ParityErrorCallbackRegister UART1_ParityErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v UART1_ParityErrorCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 28 ]
+"361
+} 0
+"347
+[v _UART1_OverrunErrorCallbackRegister UART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v UART1_OverrunErrorCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 28 ]
+"353
+} 0
+"339
+[v _UART1_FramingErrorCallbackRegister UART1_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v UART1_FramingErrorCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 28 ]
+"345
+} 0
+"60 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _TMR3_Initialize TMR3_Initialize `(v  1 e 1 0 ]
+{
+"87
+} 0
+"60 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"87
+} 0
+"42 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"151
+} 0
+"253
+[v _IO_RA6_SetInterruptHandler IO_RA6_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IO_RA6_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"255
+} 0
+"221
+[v _IO_RA5_SetInterruptHandler IO_RA5_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IO_RA5_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"223
+} 0
+"190
+[v _IO_RA4_SetInterruptHandler IO_RA4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IO_RA4_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"192
+} 0
+"42 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"46
+[v INTERRUPT_Initialize@state state `a  1 a 1 31 ]
+"93
+} 0
+"198
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"200
+} 0
+"164
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"166
+} 0
+"130
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"132
+} 0
+"39 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"99 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v _IOC_ISR IOC_ISR `IIL(v  1 e 1 0 ]
+{
+"102
+} 0
+"153 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"170
+} 0
+"238
+[v _IO_RA6_ISR IO_RA6_ISR `(v  1 e 1 0 ]
+{
+"248
+} 0
+"260
+[v _IO_RA6_DefaultInterruptHandler IO_RA6_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"264
+} 0
+"47 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v i1_safety_set_1 safety_set_1 `(v  1 e 1 0 ]
+{
+"51
+} 0
+"206 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/pins.c
+[v _IO_RA5_ISR IO_RA5_ISR `(v  1 e 1 0 ]
+{
+"216
+} 0
+"228
+[v _IO_RA5_DefaultInterruptHandler IO_RA5_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"233
+} 0
+"53 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v i1_safety_set_A safety_set_A `(v  1 e 1 0 ]
+{
+"56
+} 0
+"175 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/pins.c
+[v _IO_RA4_ISR IO_RA4_ISR `(v  1 e 1 0 ]
+{
+"185
+} 0
+"197
+[v _IO_RA4_DefaultInterruptHandler IO_RA4_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"201
+} 0
+"41 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v i1_safety_set_safe safety_set_safe `(v  1 e 1 0 ]
+{
+"45
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\printf.c
+[v i1_printf printf `(i  1 e 2 0 ]
+{
+"8
+[v i1printf@ap ap `[1]*.39v  1 a 2 19 ]
+"5
+[v i1printf@fmt fmt `*.32Cuc  1 p 2 17 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\doprnt.c
+[v i1_vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v i1vfprintf@cfmt cfmt `*.32uc  1 a 2 34 ]
+[s S2901 _IO_FILE 0 ]
+"1817
+[v i1vfprintf@fp fp `*.39S2901  1 p 2 11 ]
+[v i1vfprintf@fmt fmt `*.32Cuc  1 p 2 13 ]
+[v i1vfprintf@ap ap `*.39*.39v  1 p 2 15 ]
+"1840
+} 0
+"1177
+[v i1_vfpfcnvrt vfpfcnvrt `(v  1 s 1 i1_vfpfcnvrt ]
+{
+[s S2901 _IO_FILE 0 ]
+[v i1vfpfcnvrt@fp fp `*.39S2901  1 p 2 5 ]
+[v i1vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 7 ]
+[v i1vfpfcnvrt@ap ap `*.39*.39v  1 p 2 9 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\nf_fputc.c
+[v i1_fputc fputc `(i  1 e 2 0 ]
+{
+[v i1fputc@c c `i  1 p 2 30 ]
+[u S2880 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S2883 _IO_FILE 11 `S2880 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v i1fputc@fp fp `*.39S2883  1 p 2 32 ]
+"24
+} 0
+"311 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/uart/src/uart1.c
+[v i1_putch putch `(v  1 e 1 0 ]
+{
+[v i1putch@txData txData `uc  1 p 1 wreg ]
+[v i1putch@txData txData `uc  1 p 1 wreg ]
+[v i1putch@txData txData `uc  1 p 1 29 ]
+"318
+} 1
+"296
+[v i1_UART1_Write UART1_Write `(v  1 e 1 0 ]
+{
+[v i1UART1_Write@txData txData `uc  1 p 1 28 ]
+"299
+} 0
+"248
+[v i1_UART1_IsTxReady UART1_IsTxReady `(a  1 e 1 0 ]
+{
+"251
+} 0
+"130 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v i1_INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 28 ]
+"132
+} 0
+"95
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+{
+"97
+} 0
+"112
+[v _INT0_ISR INT0_ISR `IIH(v  1 e 1 0 ]
+{
+"118
+} 0
+"121
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+{
+"128
+} 0
+"134
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"137
+} 0
+"8 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _interrupt_routine_trigger_1 interrupt_routine_trigger_1 `(v  1 e 1 0 ]
+{
+"16
+} 0
+"164 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v i2_INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i2INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"166
+} 0
+"53 C:\Users\Emiel\MPLABXProjects\EE3_robot4\config.c
+[v _laser_set laser_set `(v  1 e 1 0 ]
+{
+[v laser_set@on on `a  1 p 1 wreg ]
+[v laser_set@on on `a  1 p 1 wreg ]
+[v laser_set@on on `a  1 p 1 21 ]
+"60
+} 1
+"31
+[v _cylinder_set cylinder_set `(v  1 e 1 0 ]
+{
+[v cylinder_set@extended extended `a  1 p 1 wreg ]
+[v cylinder_set@extended extended `a  1 p 1 wreg ]
+[v cylinder_set@extended extended `a  1 p 1 21 ]
+"34
+} 1
+"107 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _TMR3_Start TMR3_Start `(v  1 e 1 0 ]
+{
+"110
+} 0
+"179
+[v _TMR3_OverflowCallbackRegister TMR3_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR3_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.38(v  1 p 3 0 ]
+"182
+} 0
+"107 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
+{
+"110
+} 0
+"179
+[v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR1_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.38(v  1 p 3 0 ]
+"182
+} 0
+"146 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v _INT1_ISR INT1_ISR `IIH(v  1 e 1 0 ]
+{
+"152
+} 0
+"155
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+{
+"162
+} 0
+"168
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"171
+} 0
+"18 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _interrupt_routine_LS2_shooting interrupt_routine_LS2_shooting `(v  1 e 1 0 ]
+{
+"21
+} 0
+"180 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/system/src/interrupt.c
+[v _INT2_ISR INT2_ISR `IIH(v  1 e 1 0 ]
+{
+"186
+} 0
+"189
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+{
+"196
+} 0
+"202
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"205
+} 0
+"141 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+{
+"151
+} 0
+"184 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _TMR3_DefaultOverflowCallback TMR3_DefaultOverflowCallback `(v  1 s 1 TMR3_DefaultOverflowCallback ]
+{
+"187
+} 0
+"28 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _interrupt_routine_TMR3_shooting interrupt_routine_TMR3_shooting `(v  1 e 1 0 ]
+{
+"31
+} 0
+"184 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+{
+"187
+} 0
+"23 C:\Users\Emiel\MPLABXProjects\EE3_robot4\safety.c
+[v _interrupt_routine_laser interrupt_routine_laser `(v  1 e 1 0 ]
+{
+"26
+} 0
+"158 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_DefaultOverflowCallback TMR0_DefaultOverflowCallback `(v  1 s 1 TMR0_DefaultOverflowCallback ]
+{
+"161
+} 0
+"51 C:\Users\Emiel\MPLABXProjects\EE3_robot4\startupsequence.c
+[v _startup_sequence_OnTimerInterrupt startup_sequence_OnTimerInterrupt `(v  1 e 1 0 ]
+{
+"62
+} 0
+"153 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr0.c
+[v i2_TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v i2TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 21 ]
+"156
+} 0
+"7 C:\Users\Emiel\MPLABXProjects\EE3_robot4\startupsequence.c
+[v _startup_sequence_actuator_on startup_sequence_actuator_on `(v  1 e 1 0 ]
+{
+[v startup_sequence_actuator_on@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_on@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_on@i i `c  1 p 1 21 ]
+"27
+} 1
+"29
+[v _startup_sequence_actuator_off startup_sequence_actuator_off `(v  1 e 1 0 ]
+{
+[v startup_sequence_actuator_off@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_off@i i `c  1 p 1 wreg ]
+[v startup_sequence_actuator_off@i i `c  1 p 1 21 ]
+"49
+} 1
+"112 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+{
+"115
+} 0
+"112 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _TMR3_Stop TMR3_Stop `(v  1 e 1 0 ]
+{
+"115
+} 0
+"166 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_OverflowISR TMR1_OverflowISR `IIH(v  1 e 1 0 ]
+{
+"177
+} 0
+"131
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+{
+"135
+[v TMR1_CounterSet@onState onState `a  1 a 1 18 ]
+"131
+[v TMR1_CounterSet@timerVal timerVal `ul  1 p 4 14 ]
+"147
+} 0
+"166 C:\Users\Emiel\MPLABXProjects\EE3_robot4\mcc_generated_files/timer/src/tmr3.c
+[v _TMR3_OverflowISR TMR3_OverflowISR `IIH(v  1 e 1 0 ]
+{
+"177
+} 0
+"131
+[v _TMR3_CounterSet TMR3_CounterSet `(v  1 e 1 0 ]
+{
+"135
+[v TMR3_CounterSet@onState onState `a  1 a 1 25 ]
+"131
+[v TMR3_CounterSet@timerVal timerVal `ul  1 p 4 21 ]
+"147
+} 0

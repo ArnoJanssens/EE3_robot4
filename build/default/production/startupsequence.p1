@@ -43,11 +43,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48820
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48820: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
 [v _LATAbits `VS2281 ~T0 @X0 0 e@1214 ]
-[v F17841 `(v ~T0 @X0 0 tf ]
+[v F17843 `(v ~T0 @X0 0 tf ]
 "230 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 230:  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17841 ]
-[v F17852 `(v ~T0 @X0 0 tf ]
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17843 ]
+[v F17886 `(v ~T0 @X0 0 tf ]
 "151
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 151: void TMR0_Initialize_startup_sequence(void);
 [v _TMR0_Initialize_startup_sequence `(v ~T0 @X0 0 ef ]
@@ -2895,14 +2895,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "57
 [; ;startupsequence.c: 57:         TMR0_OverflowCallbackRegister(((void*)0));
-[e ( _TMR0_OverflowCallbackRegister (1 -> -> -> 0 `i `*v `*F17852 ]
-"58
-[; ;startupsequence.c: 58:         do { LATBbits.LATB5 = 1; } while(0);
-[e :U 2526 ]
-{
-[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 2525 ]
+[e ( _TMR0_OverflowCallbackRegister (1 -> -> -> 0 `i `*v `*F17886 ]
 "59
 [; ;startupsequence.c: 59:         return;
 [e $UE 2522  ]
@@ -2931,5 +2924,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _TMR0_OverflowCallbackRegister (1 &U _startup_sequence_OnTimerInterrupt ]
 "67
 [; ;startupsequence.c: 67: }
-[e :UE 2527 ]
+[e :UE 2524 ]
 }

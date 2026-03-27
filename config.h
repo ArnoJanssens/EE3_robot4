@@ -17,6 +17,7 @@ void error_lights(bool on);
 void cylinder_set(bool extended);
 void blocking_solenoid_set(bool enable);
 void bolt_release_led(bool on);
+void laser_set(bool on);
 
 
 #endif	/* CONFIG_H */

@@ -29642,6 +29642,8 @@ void safety_set_1();
 void safety_set_A();
 void interrupt_routine_trigger_1(void);
 void interrupt_routine_LS2_shooting(void);
+void interrupt_routine_laser(void);
+void interrupt_routine_TMR3_shooting(void);
 # 37 "mcc_generated_files/system/src/pins.c" 2
 
 void (*IO_RA4_InterruptHandler)(void);

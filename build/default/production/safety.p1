@@ -2,14 +2,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 ./config.h
 [; ;./config.h: 17: void cylinder_set(_Bool extended);
 [v _cylinder_set `(v ~T0 @X0 0 ef1`a ]
-[v F65 `(v ~T0 @X0 0 tf ]
+"20
+[; ;./config.h: 20: void laser_set(_Bool on);
+[v _laser_set `(v ~T0 @X0 0 ef1`a ]
+[v F17869 `(v ~T0 @X0 0 tf ]
+"229 ./mcc_generated_files/system/../timer/tmr1.h
+[; ;./mcc_generated_files/system/../timer/tmr1.h: 229:  void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+[v _TMR1_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17869 ]
+"26 ./safety.h
+[; ;./safety.h: 26: void interrupt_routine_laser(void);
+[v _interrupt_routine_laser `(v ~T0 @X0 0 ef ]
+"169 ./mcc_generated_files/system/../timer/tmr1.h
+[; ;./mcc_generated_files/system/../timer/tmr1.h: 169: void TMR1_Start(void);
+[v _TMR1_Start `(v ~T0 @X0 0 ef ]
+[v F17885 `(v ~T0 @X0 0 tf ]
+"229 ./mcc_generated_files/system/../timer/tmr3.h
+[; ;./mcc_generated_files/system/../timer/tmr3.h: 229:  void TMR3_OverflowCallbackRegister(void (* CallbackHandler)(void));
+[v _TMR3_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17885 ]
+"27 ./safety.h
+[; ;./safety.h: 27: void interrupt_routine_TMR3_shooting(void);
+[v _interrupt_routine_TMR3_shooting `(v ~T0 @X0 0 ef ]
+"169 ./mcc_generated_files/system/../timer/tmr3.h
+[; ;./mcc_generated_files/system/../timer/tmr3.h: 169: void TMR3_Start(void);
+[v _TMR3_Start `(v ~T0 @X0 0 ef ]
+[v F69 `(v ~T0 @X0 0 tf ]
 "274 ./mcc_generated_files/system/interrupt.h
 [; ;./mcc_generated_files/system/interrupt.h: 274: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F65 ]
+[v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F69 ]
 "25 ./safety.h
 [; ;./safety.h: 25: void interrupt_routine_LS2_shooting(void);
 [v _interrupt_routine_LS2_shooting `(v ~T0 @X0 0 ef ]
-[v F17857 `(v ~T0 @X0 0 tf ]
+"178 ./mcc_generated_files/system/../timer/tmr1.h
+[; ;./mcc_generated_files/system/../timer/tmr1.h: 178: void TMR1_Stop(void);
+[v _TMR1_Stop `(v ~T0 @X0 0 ef ]
+"178 ./mcc_generated_files/system/../timer/tmr3.h
+[; ;./mcc_generated_files/system/../timer/tmr3.h: 178: void TMR3_Stop(void);
+[v _TMR3_Stop `(v ~T0 @X0 0 ef ]
 "49493 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49493:     struct {
 [s S2306 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -33,11 +61,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "117 C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h
 [; ;C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/stdio.h: 117: int printf(const char *restrict, ...);
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-[v F57 `(v ~T0 @X0 0 tf ]
+[v F61 `(v ~T0 @X0 0 tf ]
 "237 ./mcc_generated_files/system/interrupt.h
 [; ;./mcc_generated_files/system/interrupt.h: 237: void INT0_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F57 ]
-[v F17860 `(v ~T0 @X0 0 tf ]
+[v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F61 ]
+[v F17899 `(v ~T0 @X0 0 tf ]
 "19 ./config.h
 [; ;./config.h: 19: void bolt_release_led(_Bool on);
 [v _bolt_release_led `(v ~T0 @X0 0 ef1`a ]
@@ -2624,218 +2652,259 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _safetyStatus
 -> -> 3 `i `c
 ]
-"9
-[; ;safety.c: 9: void interrupt_routine_trigger_1(void){
+"8
+[; ;safety.c: 8: void interrupt_routine_trigger_1(void){
 [v _interrupt_routine_trigger_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _interrupt_routine_trigger_1 ]
 [f ]
-"10
-[; ;safety.c: 10:     cylinder_set(1);
+"9
+[; ;safety.c: 9:     cylinder_set(1);
 [e ( _cylinder_set (1 -> -> 1 `i `a ]
+"10
+[; ;safety.c: 10:     laser_set(1);
+[e ( _laser_set (1 -> -> 1 `i `a ]
 "11
-[; ;safety.c: 11:     INT1_SetInterruptHandler(interrupt_routine_LS2_shooting);
-[e ( _INT1_SetInterruptHandler (1 &U _interrupt_routine_LS2_shooting ]
+[; ;safety.c: 11:     TMR1_OverflowCallbackRegister(interrupt_routine_laser);
+[e ( _TMR1_OverflowCallbackRegister (1 &U _interrupt_routine_laser ]
 "12
-[; ;safety.c: 12: }
+[; ;safety.c: 12:     TMR1_Start();
+[e ( _TMR1_Start ..  ]
+"13
+[; ;safety.c: 13:     TMR3_OverflowCallbackRegister(interrupt_routine_TMR3_shooting);
+[e ( _TMR3_OverflowCallbackRegister (1 &U _interrupt_routine_TMR3_shooting ]
+"14
+[; ;safety.c: 14:     TMR3_Start();
+[e ( _TMR3_Start ..  ]
+"15
+[; ;safety.c: 15:     INT1_SetInterruptHandler(interrupt_routine_LS2_shooting);
+[e ( _INT1_SetInterruptHandler (1 &U _interrupt_routine_LS2_shooting ]
+"16
+[; ;safety.c: 16: }
 [e :UE 2437 ]
 }
-"14
-[; ;safety.c: 14: void interrupt_routine_LS2_shooting(void){
+"18
+[; ;safety.c: 18: void interrupt_routine_LS2_shooting(void){
 [v _interrupt_routine_LS2_shooting `(v ~T0 @X0 1 ef ]
 {
 [e :U _interrupt_routine_LS2_shooting ]
 [f ]
-"15
-[; ;safety.c: 15:     cylinder_set(0);
-[e ( _cylinder_set (1 -> -> 0 `i `a ]
-"16
-[; ;safety.c: 16:     INT1_SetInterruptHandler(((void*)0));
-[e ( _INT1_SetInterruptHandler (1 -> -> -> 0 `i `*v `*F17857 ]
-"17
-[; ;safety.c: 17: }
+"21
+[; ;safety.c: 21: }
 [e :UE 2438 ]
 }
-"21
-[; ;safety.c: 21: void safety_initialize(){
-[v _safety_initialize `(v ~T0 @X0 1 ef ]
-{
-[e :U _safety_initialize ]
-[f ]
-"22
-[; ;safety.c: 22:     if(PORTAbits.RA5 && !PORTAbits.RA6 && !PORTAbits.RA4){ safety_set_A();}
-[e $ ! && && != -> . . _PORTAbits 0 5 `i -> 0 `i ! != -> . . _PORTAbits 0 6 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i 2440  ]
-{
-[e ( _safety_set_A ..  ]
-}
-[e $U 2441  ]
 "23
-[; ;safety.c: 23:     else if(!PORTAbits.RA5 && PORTAbits.RA6 && !PORTAbits.RA4){ safety_set_1();}
-[e :U 2440 ]
-[e $ ! && && ! != -> . . _PORTAbits 0 5 `i -> 0 `i != -> . . _PORTAbits 0 6 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i 2442  ]
+[; ;safety.c: 23: void interrupt_routine_laser(void){
+[v _interrupt_routine_laser `(v ~T0 @X0 1 ef ]
 {
-[e ( _safety_set_1 ..  ]
-}
-[e $U 2443  ]
+[e :U _interrupt_routine_laser ]
+[f ]
 "24
-[; ;safety.c: 24:     else if(!PORTAbits.RA5 && !PORTAbits.RA6 && PORTAbits.RA4){safety_set_safe();}
-[e :U 2442 ]
-[e $ ! && && ! != -> . . _PORTAbits 0 5 `i -> 0 `i ! != -> . . _PORTAbits 0 6 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i 2444  ]
-{
-[e ( _safety_set_safe ..  ]
-}
-[e $U 2445  ]
+[; ;safety.c: 24:     laser_set(0);
+[e ( _laser_set (1 -> -> 0 `i `a ]
 "25
-[; ;safety.c: 25:     else {safetyStatus = 3; printf("Error while initiating safety \n");}
-[e :U 2444 ]
-{
-[e = _safetyStatus -> -> 3 `i `c ]
-[e ( _printf :s 1C ]
-}
-[e :U 2445 ]
-[e :U 2443 ]
-[e :U 2441 ]
+[; ;safety.c: 25:     TMR1_Stop();
+[e ( _TMR1_Stop ..  ]
 "26
 [; ;safety.c: 26: }
 [e :UE 2439 ]
 }
+"28
+[; ;safety.c: 28: void interrupt_routine_TMR3_shooting(void){
+[v _interrupt_routine_TMR3_shooting `(v ~T0 @X0 1 ef ]
+{
+[e :U _interrupt_routine_TMR3_shooting ]
+[f ]
 "29
-[; ;safety.c: 29: void safety_set_safe(){
+[; ;safety.c: 29:     cylinder_set(0);
+[e ( _cylinder_set (1 -> -> 0 `i `a ]
+"30
+[; ;safety.c: 30:     TMR3_Stop();
+[e ( _TMR3_Stop ..  ]
+"31
+[; ;safety.c: 31: }
+[e :UE 2440 ]
+}
+"33
+[; ;safety.c: 33: void safety_initialize(){
+[v _safety_initialize `(v ~T0 @X0 1 ef ]
+{
+[e :U _safety_initialize ]
+[f ]
+"34
+[; ;safety.c: 34:     if(PORTAbits.RA5 && !PORTAbits.RA6 && !PORTAbits.RA4){ safety_set_A();}
+[e $ ! && && != -> . . _PORTAbits 0 5 `i -> 0 `i ! != -> . . _PORTAbits 0 6 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i 2442  ]
+{
+[e ( _safety_set_A ..  ]
+}
+[e $U 2443  ]
+"35
+[; ;safety.c: 35:     else if(!PORTAbits.RA5 && PORTAbits.RA6 && !PORTAbits.RA4){ safety_set_1();}
+[e :U 2442 ]
+[e $ ! && && ! != -> . . _PORTAbits 0 5 `i -> 0 `i != -> . . _PORTAbits 0 6 `i -> 0 `i ! != -> . . _PORTAbits 0 4 `i -> 0 `i 2444  ]
+{
+[e ( _safety_set_1 ..  ]
+}
+[e $U 2445  ]
+"36
+[; ;safety.c: 36:     else if(!PORTAbits.RA5 && !PORTAbits.RA6 && PORTAbits.RA4){safety_set_safe();}
+[e :U 2444 ]
+[e $ ! && && ! != -> . . _PORTAbits 0 5 `i -> 0 `i ! != -> . . _PORTAbits 0 6 `i -> 0 `i != -> . . _PORTAbits 0 4 `i -> 0 `i 2446  ]
+{
+[e ( _safety_set_safe ..  ]
+}
+[e $U 2447  ]
+"37
+[; ;safety.c: 37:     else {safetyStatus = 3; printf("Error while initiating safety \n");}
+[e :U 2446 ]
+{
+[e = _safetyStatus -> -> 3 `i `c ]
+[e ( _printf :s 1C ]
+}
+[e :U 2447 ]
+[e :U 2445 ]
+[e :U 2443 ]
+"38
+[; ;safety.c: 38: }
+[e :UE 2441 ]
+}
+"41
+[; ;safety.c: 41: void safety_set_safe(){
 [v _safety_set_safe `(v ~T0 @X0 1 ef ]
 {
 [e :U _safety_set_safe ]
 [f ]
-"30
-[; ;safety.c: 30:     safetyStatus = 0;
+"42
+[; ;safety.c: 42:     safetyStatus = 0;
 [e = _safetyStatus -> -> 0 `i `c ]
-"31
-[; ;safety.c: 31:     INT0_SetInterruptHandler(((void*)0));
-[e ( _INT0_SetInterruptHandler (1 -> -> -> 0 `i `*v `*F17860 ]
-"32
-[; ;safety.c: 32:     printf("Safety Mode Changed: S");
+"43
+[; ;safety.c: 43:     INT0_SetInterruptHandler(((void*)0));
+[e ( _INT0_SetInterruptHandler (1 -> -> -> 0 `i `*v `*F17899 ]
+"44
+[; ;safety.c: 44:     printf("Safety Mode Changed: S");
 [e ( _printf :s 2C ]
-"33
-[; ;safety.c: 33: }
-[e :UE 2446 ]
+"45
+[; ;safety.c: 45: }
+[e :UE 2448 ]
 }
-"35
-[; ;safety.c: 35: void safety_set_1(){
+"47
+[; ;safety.c: 47: void safety_set_1(){
 [v _safety_set_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _safety_set_1 ]
 [f ]
-"36
-[; ;safety.c: 36:     safetyStatus = 1;
+"48
+[; ;safety.c: 48:     safetyStatus = 1;
 [e = _safetyStatus -> -> 1 `i `c ]
-"37
-[; ;safety.c: 37:     INT0_SetInterruptHandler(interrupt_routine_trigger_1);
+"49
+[; ;safety.c: 49:     INT0_SetInterruptHandler(interrupt_routine_trigger_1);
 [e ( _INT0_SetInterruptHandler (1 &U _interrupt_routine_trigger_1 ]
-"38
-[; ;safety.c: 38:     printf("Safety Mode Changed: 1");
+"50
+[; ;safety.c: 50:     printf("Safety Mode Changed: 1");
 [e ( _printf :s 3C ]
-"39
-[; ;safety.c: 39: }
-[e :UE 2447 ]
+"51
+[; ;safety.c: 51: }
+[e :UE 2449 ]
 }
-"41
-[; ;safety.c: 41: void safety_set_A(){
+"53
+[; ;safety.c: 53: void safety_set_A(){
 [v _safety_set_A `(v ~T0 @X0 1 ef ]
 {
 [e :U _safety_set_A ]
 [f ]
-"42
-[; ;safety.c: 42:     safetyStatus = 2;
+"54
+[; ;safety.c: 54:     safetyStatus = 2;
 [e = _safetyStatus -> -> 2 `i `c ]
-"43
-[; ;safety.c: 43:     printf("Safety Mode Changed: A");
+"55
+[; ;safety.c: 55:     printf("Safety Mode Changed: A");
 [e ( _printf :s 4C ]
-"44
-[; ;safety.c: 44: }
-[e :UE 2448 ]
+"56
+[; ;safety.c: 56: }
+[e :UE 2450 ]
 }
-"46
-[; ;safety.c: 46: void safety_check(){
+"58
+[; ;safety.c: 58: void safety_check(){
 [v _safety_check `(v ~T0 @X0 1 ef ]
 {
 [e :U _safety_check ]
 [f ]
-"48
-[; ;safety.c: 48:     switch (safetyStatus) {
-[e $U 2451  ]
+"60
+[; ;safety.c: 60:     switch (safetyStatus) {
+[e $U 2453  ]
 {
-"49
-[; ;safety.c: 49:             case 0: {
-[e :U 2452 ]
-{
-"50
-[; ;safety.c: 50:                 bolt_release_led(1);
-[e ( _bolt_release_led (1 -> -> 1 `i `a ]
-"51
-[; ;safety.c: 51:                 error_lights(0);
-[e ( _error_lights (1 -> -> 0 `i `a ]
-"52
-[; ;safety.c: 52:             break;
-[e $U 2450  ]
-"53
-[; ;safety.c: 53:             }
-}
-"54
-[; ;safety.c: 54:             case 1: {
-[e :U 2453 ]
-{
-"55
-[; ;safety.c: 55:                 bolt_release_led(0);
-[e ( _bolt_release_led (1 -> -> 0 `i `a ]
-"56
-[; ;safety.c: 56:                 error_lights(1);
-[e ( _error_lights (1 -> -> 1 `i `a ]
-"57
-[; ;safety.c: 57:             break;
-[e $U 2450  ]
-"58
-[; ;safety.c: 58:             }
-}
-"59
-[; ;safety.c: 59:             case 2: {
+"61
+[; ;safety.c: 61:             case 0: {
 [e :U 2454 ]
 {
-"60
-[; ;safety.c: 60:                 bolt_release_led(1);
-[e ( _bolt_release_led (1 -> -> 1 `i `a ]
-"61
-[; ;safety.c: 61:                 error_lights(1);
-[e ( _error_lights (1 -> -> 1 `i `a ]
 "62
-[; ;safety.c: 62:             break;
-[e $U 2450  ]
+[; ;safety.c: 62:                 bolt_release_led(1);
+[e ( _bolt_release_led (1 -> -> 1 `i `a ]
 "63
-[; ;safety.c: 63:             }
-}
+[; ;safety.c: 63:                 error_lights(0);
+[e ( _error_lights (1 -> -> 0 `i `a ]
 "64
-[; ;safety.c: 64:             default: {
+[; ;safety.c: 64:             break;
+[e $U 2452  ]
+"65
+[; ;safety.c: 65:             }
+}
+"66
+[; ;safety.c: 66:             case 1: {
 [e :U 2455 ]
 {
-"65
-[; ;safety.c: 65:                 bolt_release_led(0);
-[e ( _bolt_release_led (1 -> -> 0 `i `a ]
-"66
-[; ;safety.c: 66:                 error_lights(0);
-[e ( _error_lights (1 -> -> 0 `i `a ]
 "67
-[; ;safety.c: 67:             break;
-[e $U 2450  ]
+[; ;safety.c: 67:                 bolt_release_led(0);
+[e ( _bolt_release_led (1 -> -> 0 `i `a ]
 "68
-[; ;safety.c: 68:             }}}
+[; ;safety.c: 68:                 error_lights(1);
+[e ( _error_lights (1 -> -> 1 `i `a ]
+"69
+[; ;safety.c: 69:             break;
+[e $U 2452  ]
+"70
+[; ;safety.c: 70:             }
+}
+"71
+[; ;safety.c: 71:             case 2: {
+[e :U 2456 ]
+{
+"72
+[; ;safety.c: 72:                 bolt_release_led(1);
+[e ( _bolt_release_led (1 -> -> 1 `i `a ]
+"73
+[; ;safety.c: 73:                 error_lights(1);
+[e ( _error_lights (1 -> -> 1 `i `a ]
+"74
+[; ;safety.c: 74:             break;
+[e $U 2452  ]
+"75
+[; ;safety.c: 75:             }
+}
+"76
+[; ;safety.c: 76:             default: {
+[e :U 2457 ]
+{
+"77
+[; ;safety.c: 77:                 bolt_release_led(0);
+[e ( _bolt_release_led (1 -> -> 0 `i `a ]
+"78
+[; ;safety.c: 78:                 error_lights(0);
+[e ( _error_lights (1 -> -> 0 `i `a ]
+"79
+[; ;safety.c: 79:             break;
+[e $U 2452  ]
+"80
+[; ;safety.c: 80:             }}}
 }
 }
-[e $U 2450  ]
-[e :U 2451 ]
-[e [\ _safetyStatus , $ -> 0 `i 2452
- , $ -> 1 `i 2453
- , $ -> 2 `i 2454
- 2455 ]
-[e :U 2450 ]
-[e :UE 2449 ]
+[e $U 2452  ]
+[e :U 2453 ]
+[e [\ _safetyStatus , $ -> 0 `i 2454
+ , $ -> 1 `i 2455
+ , $ -> 2 `i 2456
+ 2457 ]
+[e :U 2452 ]
+[e :UE 2451 ]
 }
 [p f _printf 8388608 ]
 [a 2C 83 97 102 101 116 121 32 77 111 100 101 32 67 104 97 110 103 101 100 58 32 83 0 ]
