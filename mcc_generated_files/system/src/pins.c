@@ -35,6 +35,7 @@
 #include "../pins.h"
 #include "../../../safety.h"
 
+void (*IO_RA3_InterruptHandler)(void);
 void (*IO_RA4_InterruptHandler)(void);
 void (*IO_RA5_InterruptHandler)(void);
 void (*IO_RA6_InterruptHandler)(void);
@@ -129,7 +130,7 @@ void PIN_MANAGER_Initialize(void)
    /**
     IOCx registers 
     */
-    IOCAP = 0x70;
+    IOCAP = 0x78;
     IOCAN = 0x0;
     IOCAF = 0x0;
     IOCBP = 0x0;
@@ -142,6 +143,7 @@ void PIN_MANAGER_Initialize(void)
     IOCEN = 0x0;
     IOCEF = 0x0;
 
+    IO_RA3_SetInterruptHandler(IO_RA3_DefaultInterruptHandler);
     IO_RA4_SetInterruptHandler(IO_RA4_DefaultInterruptHandler);
     IO_RA5_SetInterruptHandler(IO_RA5_DefaultInterruptHandler);
     IO_RA6_SetInterruptHandler(IO_RA6_DefaultInterruptHandler);
@@ -152,6 +154,11 @@ void PIN_MANAGER_Initialize(void)
   
 void PIN_MANAGER_IOC(void)
 {
+    // interrupt on change for pin IO_RA3
+    if(IOCAFbits.IOCAF3 == 1)
+    {
+        IO_RA3_ISR();  
+    }
     // interrupt on change for pin IO_RA4
     if(IOCAFbits.IOCAF4 == 1)
     {
@@ -167,6 +174,36 @@ void PIN_MANAGER_IOC(void)
     {
         IO_RA6_ISR();  
     }
+}
+   
+/**
+   IO_RA3 Interrupt Service Routine
+*/
+void IO_RA3_ISR(void) {
+
+    // Add custom IO_RA3 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IO_RA3_InterruptHandler)
+    {
+        IO_RA3_InterruptHandler();
+    }
+    IOCAFbits.IOCAF3 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IO_RA3 at application runtime
+*/
+void IO_RA3_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA3_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IO_RA3
+*/
+void IO_RA3_DefaultInterruptHandler(void){
+    // add your IO_RA3 interrupt custom code
+    // or set custom function using IO_RA3_SetInterruptHandler()
 }
    
 /**
