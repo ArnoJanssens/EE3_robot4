@@ -1,6 +1,7 @@
 #include "safety.h"
 #include "config.h"
 #include "mcc_generated_files/system/interrupt.h"
+#include "mcc_generated_files/system/pins.h"
 #include "mcc_generated_files/system/system.h"
 
 volatile int8_t safetyStatus = MODE_ERROR;
@@ -8,14 +9,40 @@ volatile int8_t safetyStatus = MODE_ERROR;
 
 void interrupt_routine_trigger_1(void){
     cylinder_set(true);
-    INT1_SetInterruptHandler(interrupt_routine_LS2_shooting);
+    bolt_release_led(true);
+    IO_RA3_SetInterruptHandler(interrupt_routine_LS2_shooting); //LS1
+    INT1_SetInterruptHandler(NULL);
+}
+
+void interrupt_routine_trigger_A(void){
+    if(PORTBbits.RB1){ //check if trigger is still pulled in
+        cylinder_set(true);
+        bolt_release_led(true);
+        IO_RA3_SetInterruptHandler(interrupt_routine_LS2_shooting_A);
+    }
+    else{
+        IO_RA3_SetInterruptHandler(NULL);
+        INT1_SetInterruptHandler(NULL);
+    }
 }
 
 void interrupt_routine_LS2_shooting(void){
     cylinder_set(false);
-    INT1_SetInterruptHandler(NULL);
+    bolt_release_led(false);
+    IO_RA3_SetInterruptHandler(NULL);
 }
 
+void interrupt_routine_LS2_shooting_A(void){
+    cylinder_set(false);
+    bolt_release_led(false);
+    IO_RA3_SetInterruptHandler(NULL);
+    INT1_SetInterruptHandler(interrupt_routine_trigger_A);
+}
+
+
+int8_t safety_get(){
+    return safetyStatus;
+}
 
 
 void safety_initialize(){
@@ -29,6 +56,9 @@ void safety_initialize(){
 void safety_set_safe(){
     safetyStatus = MODE_S;
     INT0_SetInterruptHandler(NULL); //trigger doesn't react
+    INT1_SetInterruptHandler(NULL);
+    IO_RA3_SetInterruptHandler(NULL);
+    
     printf("Safety Mode Changed: S");
 }
 
@@ -40,6 +70,7 @@ void safety_set_1(){
 
 void safety_set_A(){
     safetyStatus = MODE_A;
+    INT0_SetInterruptHandler(interrupt_routine_trigger_A);
     printf("Safety Mode Changed: A");
 }
 
