@@ -20,8 +20,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49855
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 49855: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x4D6)));
 [v _INTCON0bits `VS2317 ~T0 @X0 0 e@1238 ]
-"20 ./safety.h
-[; ;./safety.h: 20: void safety_initialize();
+"21 ./safety.h
+[; ;./safety.h: 21: void safety_initialize();
 [v _safety_initialize `(v ~T0 @X0 0 e? ]
 "48995 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48995:     struct {

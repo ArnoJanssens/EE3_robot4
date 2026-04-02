@@ -29636,6 +29636,7 @@ void IO_RA6_DefaultInterruptHandler(void);
 volatile int8_t safetyStatus;
 
 void safety_check();
+int8_t safety_get();
 void safety_initialize();
 void safety_set_safe();
 void safety_set_1();
@@ -29644,6 +29645,7 @@ void interrupt_routine_trigger_1(void);
 void interrupt_routine_LS2_shooting(void);
 # 37 "mcc_generated_files/system/src/pins.c" 2
 
+void (*IO_RA3_InterruptHandler)(void);
 void (*IO_RA4_InterruptHandler)(void);
 void (*IO_RA5_InterruptHandler)(void);
 void (*IO_RA6_InterruptHandler)(void);
@@ -29738,7 +29740,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    IOCAP = 0x70;
+    IOCAP = 0x78;
     IOCAN = 0x0;
     IOCAF = 0x0;
     IOCBP = 0x0;
@@ -29751,6 +29753,7 @@ void PIN_MANAGER_Initialize(void)
     IOCEN = 0x0;
     IOCEF = 0x0;
 
+    IO_RA3_SetInterruptHandler(IO_RA3_DefaultInterruptHandler);
     IO_RA4_SetInterruptHandler(IO_RA4_DefaultInterruptHandler);
     IO_RA5_SetInterruptHandler(IO_RA5_DefaultInterruptHandler);
     IO_RA6_SetInterruptHandler(IO_RA6_DefaultInterruptHandler);
@@ -29761,6 +29764,11 @@ void PIN_MANAGER_Initialize(void)
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCAFbits.IOCAF3 == 1)
+    {
+        IO_RA3_ISR();
+    }
 
     if(IOCAFbits.IOCAF4 == 1)
     {
@@ -29776,6 +29784,36 @@ void PIN_MANAGER_IOC(void)
     {
         IO_RA6_ISR();
     }
+}
+
+
+
+
+void IO_RA3_ISR(void) {
+
+
+
+
+    if(IO_RA3_InterruptHandler)
+    {
+        IO_RA3_InterruptHandler();
+    }
+    IOCAFbits.IOCAF3 = 0;
+}
+
+
+
+
+void IO_RA3_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IO_RA3_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IO_RA3_DefaultInterruptHandler(void){
+
+
 }
 
 

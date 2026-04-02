@@ -29777,12 +29777,26 @@ void PIN_MANAGER_IOC(void);
 
 
 
-void IO_RA5_ISR(void);
+void IO_RA4_ISR(void);
 # 527 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
 # 538 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-extern void (*IO_RA5_InterruptHandler)(void);
+extern void (*IO_RA4_InterruptHandler)(void);
 # 549 "mcc_generated_files/uart/src/../../system/../system/pins.h"
+void IO_RA4_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 567 "mcc_generated_files/uart/src/../../system/../system/pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "mcc_generated_files/uart/src/../../system/../system/pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 589 "mcc_generated_files/uart/src/../../system/../system/pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29792,26 +29806,12 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 567 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-extern void (*IO_RA6_InterruptHandler)(void);
-# 589 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-void IO_RA6_DefaultInterruptHandler(void);
-
-
-
-
-
-
-
-void IO_RA7_ISR(void);
 # 607 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 618 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-extern void (*IO_RA7_InterruptHandler)(void);
+extern void (*IO_RA6_InterruptHandler)(void);
 # 629 "mcc_generated_files/uart/src/../../system/../system/pins.h"
-void IO_RA7_DefaultInterruptHandler(void);
+void IO_RA6_DefaultInterruptHandler(void);
 # 44 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../uart1.h" 1
 # 45 "mcc_generated_files/uart/src/../../system/system.h" 2

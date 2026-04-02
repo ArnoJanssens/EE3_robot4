@@ -17,6 +17,7 @@ void reset();
 void error_lights(_Bool on);
 void cylinder_set(_Bool extended);
 void blocking_solenoid_set(_Bool enable);
+void bolt_release_led(_Bool on);
 # 2 "config.c" 2
 # 1 "./safety.h" 1
 # 10 "./safety.h"
@@ -132,11 +133,16 @@ typedef uint32_t uint_fast32_t;
 
 
 
+volatile int8_t safetyStatus;
+
+void safety_check();
+int8_t safety_get();
 void safety_initialize();
-int8_t get_safety();
 void safety_set_safe();
 void safety_set_1();
 void safety_set_A();
+void interrupt_routine_trigger_1(void);
+void interrupt_routine_LS2_shooting(void);
 # 3 "config.c" 2
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
@@ -29638,12 +29644,26 @@ void PIN_MANAGER_IOC(void);
 
 
 
-void IO_RA5_ISR(void);
+void IO_RA4_ISR(void);
 # 527 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
 # 538 "./mcc_generated_files/system/../system/pins.h"
-extern void (*IO_RA5_InterruptHandler)(void);
+extern void (*IO_RA4_InterruptHandler)(void);
 # 549 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA4_DefaultInterruptHandler(void);
+
+
+
+
+
+
+
+void IO_RA5_ISR(void);
+# 567 "./mcc_generated_files/system/../system/pins.h"
+void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 578 "./mcc_generated_files/system/../system/pins.h"
+extern void (*IO_RA5_InterruptHandler)(void);
+# 589 "./mcc_generated_files/system/../system/pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29653,26 +29673,12 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 567 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "./mcc_generated_files/system/../system/pins.h"
-extern void (*IO_RA6_InterruptHandler)(void);
-# 589 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA6_DefaultInterruptHandler(void);
-
-
-
-
-
-
-
-void IO_RA7_ISR(void);
 # 607 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA7_SetInterruptHandler(void (* InterruptHandler)(void));
+void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
 # 618 "./mcc_generated_files/system/../system/pins.h"
-extern void (*IO_RA7_InterruptHandler)(void);
+extern void (*IO_RA6_InterruptHandler)(void);
 # 629 "./mcc_generated_files/system/../system/pins.h"
-void IO_RA7_DefaultInterruptHandler(void);
+void IO_RA6_DefaultInterruptHandler(void);
 # 44 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../uart/uart1.h" 1
 # 45 "./mcc_generated_files/system/../uart/uart1.h"
@@ -30189,7 +30195,6 @@ void resetActuators(void){
     do { LATDbits.LATD5 = 0; } while(0);
     do { LATDbits.LATD4 = 0; } while(0);
     do { LATDbits.LATD1 = 0; } while(0);
-    do { LATAbits.LATA4 = 0; } while(0);
     do { LATBbits.LATB3 = 0; } while(0);
     do { LATDbits.LATD6 = 0; } while(0);
     do { LATDbits.LATD7 = 0; } while(0);
@@ -30210,4 +30215,14 @@ void error_lights(_Bool on){
         do { LATDbits.LATD1 = 1; } while(0);
     }
     else do { LATDbits.LATD1 = 0; } while(0);
+}
+
+void bolt_release_led(_Bool on){
+    if(on){
+        do { LATDbits.LATD4 = 1; } while(0);
+    }
+    else{
+        do { LATDbits.LATD4 = 0; } while(0);
+    }
+
 }

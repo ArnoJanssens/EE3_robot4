@@ -17,6 +17,7 @@
 volatile int8_t safetyStatus;
 
 void safety_check();
+int8_t safety_get();
 void safety_initialize();
 void safety_set_safe();
 void safety_set_1();

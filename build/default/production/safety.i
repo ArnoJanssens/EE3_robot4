@@ -124,6 +124,7 @@ typedef uint32_t uint_fast32_t;
 volatile int8_t safetyStatus;
 
 void safety_check();
+int8_t safety_get();
 void safety_initialize();
 void safety_set_safe();
 void safety_set_1();
@@ -143,6 +144,7 @@ void cylinder_set(_Bool extended);
 void blocking_solenoid_set(_Bool enable);
 void bolt_release_led(_Bool on);
 # 3 "safety.c" 2
+
 # 1 "./mcc_generated_files/system/interrupt.h" 1
 # 91 "./mcc_generated_files/system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -170,9 +172,9 @@ void INT2_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT2_InterruptHandler)(void);
 # 330 "./mcc_generated_files/system/interrupt.h"
 void INT2_DefaultInterruptHandler(void);
-# 4 "safety.c" 2
-# 1 "./mcc_generated_files/system/system.h" 1
-# 39 "./mcc_generated_files/system/system.h"
+# 5 "safety.c" 2
+# 1 "./mcc_generated_files/system/pins.h" 1
+# 38 "./mcc_generated_files/system/pins.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -29643,18 +29645,8 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 40 "./mcc_generated_files/system/system.h" 2
-
-
-# 1 "./mcc_generated_files/system/../system/config_bits.h" 1
-# 39 "./mcc_generated_files/system/../system/config_bits.h"
-# 1 "./mcc_generated_files/system/../system/../system/clock.h" 1
-# 56 "./mcc_generated_files/system/../system/../system/clock.h"
-void CLOCK_Initialize(void);
-# 40 "./mcc_generated_files/system/../system/config_bits.h" 2
-# 43 "./mcc_generated_files/system/system.h" 2
-# 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 501 "./mcc_generated_files/system/../system/pins.h"
+# 39 "./mcc_generated_files/system/pins.h" 2
+# 501 "./mcc_generated_files/system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29672,11 +29664,11 @@ void PIN_MANAGER_IOC(void);
 
 
 void IO_RA4_ISR(void);
-# 527 "./mcc_generated_files/system/../system/pins.h"
+# 527 "./mcc_generated_files/system/pins.h"
 void IO_RA4_SetInterruptHandler(void (* InterruptHandler)(void));
-# 538 "./mcc_generated_files/system/../system/pins.h"
+# 538 "./mcc_generated_files/system/pins.h"
 extern void (*IO_RA4_InterruptHandler)(void);
-# 549 "./mcc_generated_files/system/../system/pins.h"
+# 549 "./mcc_generated_files/system/pins.h"
 void IO_RA4_DefaultInterruptHandler(void);
 
 
@@ -29686,11 +29678,11 @@ void IO_RA4_DefaultInterruptHandler(void);
 
 
 void IO_RA5_ISR(void);
-# 567 "./mcc_generated_files/system/../system/pins.h"
+# 567 "./mcc_generated_files/system/pins.h"
 void IO_RA5_SetInterruptHandler(void (* InterruptHandler)(void));
-# 578 "./mcc_generated_files/system/../system/pins.h"
+# 578 "./mcc_generated_files/system/pins.h"
 extern void (*IO_RA5_InterruptHandler)(void);
-# 589 "./mcc_generated_files/system/../system/pins.h"
+# 589 "./mcc_generated_files/system/pins.h"
 void IO_RA5_DefaultInterruptHandler(void);
 
 
@@ -29700,13 +29692,23 @@ void IO_RA5_DefaultInterruptHandler(void);
 
 
 void IO_RA6_ISR(void);
-# 607 "./mcc_generated_files/system/../system/pins.h"
+# 607 "./mcc_generated_files/system/pins.h"
 void IO_RA6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 618 "./mcc_generated_files/system/../system/pins.h"
+# 618 "./mcc_generated_files/system/pins.h"
 extern void (*IO_RA6_InterruptHandler)(void);
-# 629 "./mcc_generated_files/system/../system/pins.h"
+# 629 "./mcc_generated_files/system/pins.h"
 void IO_RA6_DefaultInterruptHandler(void);
-# 44 "./mcc_generated_files/system/system.h" 2
+# 6 "safety.c" 2
+# 1 "./mcc_generated_files/system/system.h" 1
+# 42 "./mcc_generated_files/system/system.h"
+# 1 "./mcc_generated_files/system/../system/config_bits.h" 1
+# 39 "./mcc_generated_files/system/../system/config_bits.h"
+# 1 "./mcc_generated_files/system/../system/../system/clock.h" 1
+# 56 "./mcc_generated_files/system/../system/../system/clock.h"
+void CLOCK_Initialize(void);
+# 40 "./mcc_generated_files/system/../system/config_bits.h" 2
+# 43 "./mcc_generated_files/system/system.h" 2
+
 # 1 "./mcc_generated_files/system/../uart/uart1.h" 1
 # 45 "./mcc_generated_files/system/../uart/uart1.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdio.h" 1 3
@@ -30177,21 +30179,47 @@ uint32_t TMR0_MaxCountGet(void);
 
 
 void SYSTEM_Initialize(void);
-# 5 "safety.c" 2
+# 7 "safety.c" 2
 
 volatile int8_t safetyStatus = 3;
 
 
 void interrupt_routine_trigger_1(void){
     cylinder_set(1);
-    INT1_SetInterruptHandler(interrupt_routine_LS2_shooting);
+    bolt_release_led(1);
+    IO_RA3_SetInterruptHandler(interrupt_routine_LS2_shooting);
+    INT1_SetInterruptHandler(((void*)0));
+}
+
+void interrupt_routine_trigger_A(void){
+    if(PORTBbits.RB1){
+        cylinder_set(1);
+        bolt_release_led(1);
+        IO_RA3_SetInterruptHandler(interrupt_routine_LS2_shooting_A);
+    }
+    else{
+        IO_RA3_SetInterruptHandler(((void*)0));
+        INT1_SetInterruptHandler(((void*)0));
+    }
 }
 
 void interrupt_routine_LS2_shooting(void){
     cylinder_set(0);
-    INT1_SetInterruptHandler(((void*)0));
+    bolt_release_led(0);
+    IO_RA3_SetInterruptHandler(((void*)0));
 }
 
+void interrupt_routine_LS2_shooting_A(void){
+    cylinder_set(0);
+    bolt_release_led(0);
+    IO_RA3_SetInterruptHandler(((void*)0));
+    INT1_SetInterruptHandler(interrupt_routine_trigger_A);
+}
+
+
+int8_t safety_get(){
+    return safetyStatus;
+}
 
 
 void safety_initialize(){
@@ -30205,6 +30233,9 @@ void safety_initialize(){
 void safety_set_safe(){
     safetyStatus = 0;
     INT0_SetInterruptHandler(((void*)0));
+    INT1_SetInterruptHandler(((void*)0));
+    IO_RA3_SetInterruptHandler(((void*)0));
+
     printf("Safety Mode Changed: S");
 }
 
@@ -30216,6 +30247,7 @@ void safety_set_1(){
 
 void safety_set_A(){
     safetyStatus = 2;
+    INT0_SetInterruptHandler(interrupt_routine_trigger_A);
     printf("Safety Mode Changed: A");
 }
 

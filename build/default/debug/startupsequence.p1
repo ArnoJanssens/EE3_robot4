@@ -43,11 +43,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48820
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f57q43.h: 48820: extern volatile LATAbits_t LATAbits __attribute__((address(0x4BE)));
 [v _LATAbits `VS2281 ~T0 @X0 0 e@1214 ]
-[v F17839 `(v ~T0 @X0 0 tf ]
+[v F17841 `(v ~T0 @X0 0 tf ]
 "230 ./mcc_generated_files/system/../timer/tmr0.h
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 230:  void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17839 ]
-[v F17850 `(v ~T0 @X0 0 tf ]
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17841 ]
+[v F17852 `(v ~T0 @X0 0 tf ]
 "151
 [; ;./mcc_generated_files/system/../timer/tmr0.h: 151: void TMR0_Initialize_startup_sequence(void);
 [v _TMR0_Initialize_startup_sequence `(v ~T0 @X0 0 ef ]
@@ -2712,26 +2712,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2470 ]
 [e $U 2438  ]
 "23
-[; ;startupsequence.c: 23:         case 8: do { LATAbits.LATA4 = 1; } while(0); break;
+[; ;startupsequence.c: 23:         case 8: break;
 [e :U 2472 ]
-[e :U 2475 ]
-{
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 2474 ]
 [e $U 2438  ]
 "24
 [; ;startupsequence.c: 24:         case 9: do { LATBbits.LATB3 = 1; } while(0); break;
+[e :U 2473 ]
 [e :U 2476 ]
-[e :U 2479 ]
 {
 [e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 2478 ]
+[e :U 2475 ]
 [e $U 2438  ]
 "25
 [; ;startupsequence.c: 25:         default: break;
-[e :U 2480 ]
+[e :U 2477 ]
 [e $U 2438  ]
 "26
 [; ;startupsequence.c: 26:     }
@@ -2747,8 +2742,8 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 6 `i 2464
  , $ -> 7 `i 2468
  , $ -> 8 `i 2472
- , $ -> 9 `i 2476
- 2480 ]
+ , $ -> 9 `i 2473
+ 2477 ]
 [e :U 2438 ]
 "27
 [; ;startupsequence.c: 27: }
@@ -2763,122 +2758,122 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "30
 [; ;startupsequence.c: 30:     switch(i){
-[e $U 2483  ]
+[e $U 2480  ]
 {
 "32
 [; ;startupsequence.c: 32:         case 0: do { LATDbits.LATD0 = 0; } while(0); break;
+[e :U 2481 ]
 [e :U 2484 ]
-[e :U 2487 ]
 {
 [e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 2486 ]
-[e $U 2482  ]
+[e :U 2483 ]
+[e $U 2479  ]
 "33
 [; ;startupsequence.c: 33:         case 1: do { LATDbits.LATD2 = 0; } while(0); break;
+[e :U 2485 ]
 [e :U 2488 ]
-[e :U 2491 ]
 {
 [e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2490 ]
-[e $U 2482  ]
+[e :U 2487 ]
+[e $U 2479  ]
 "36
 [; ;startupsequence.c: 36:         case 2: do { LATCbits.LATC0 = 0; } while(0); break;
+[e :U 2489 ]
 [e :U 2492 ]
-[e :U 2495 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 2494 ]
-[e $U 2482  ]
+[e :U 2491 ]
+[e $U 2479  ]
 "37
 [; ;startupsequence.c: 37:         case 3: do { LATBbits.LATB5 = 0; } while(0); break;
+[e :U 2493 ]
 [e :U 2496 ]
-[e :U 2499 ]
 {
 [e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2498 ]
-[e $U 2482  ]
+[e :U 2495 ]
+[e $U 2479  ]
 "41
 [; ;startupsequence.c: 41:         case 4: do { LATDbits.LATD3 = 0; } while(0); break;
+[e :U 2497 ]
 [e :U 2500 ]
-[e :U 2503 ]
 {
 [e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 2502 ]
-[e $U 2482  ]
+[e :U 2499 ]
+[e $U 2479  ]
 "42
 [; ;startupsequence.c: 42:         case 5: do { LATDbits.LATD5 = 0; } while(0); break;
+[e :U 2501 ]
 [e :U 2504 ]
-[e :U 2507 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2506 ]
-[e $U 2482  ]
+[e :U 2503 ]
+[e $U 2479  ]
 "43
 [; ;startupsequence.c: 43:         case 6: do { LATDbits.LATD4 = 0; } while(0); break;
+[e :U 2505 ]
 [e :U 2508 ]
-[e :U 2511 ]
 {
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2510 ]
-[e $U 2482  ]
+[e :U 2507 ]
+[e $U 2479  ]
 "44
 [; ;startupsequence.c: 44:         case 7: do { LATDbits.LATD1 = 0; } while(0); break;
+[e :U 2509 ]
 [e :U 2512 ]
-[e :U 2515 ]
 {
 [e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 2514 ]
-[e $U 2482  ]
+[e :U 2511 ]
+[e $U 2479  ]
 "45
 [; ;startupsequence.c: 45:         case 8: do { LATAbits.LATA4 = 0; } while(0); break;
+[e :U 2513 ]
 [e :U 2516 ]
-[e :U 2519 ]
 {
 [e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2518 ]
-[e $U 2482  ]
+[e :U 2515 ]
+[e $U 2479  ]
 "46
 [; ;startupsequence.c: 46:         case 9: do { LATBbits.LATB3 = 0; } while(0); break;
+[e :U 2517 ]
 [e :U 2520 ]
-[e :U 2523 ]
 {
 [e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 2522 ]
-[e $U 2482  ]
+[e :U 2519 ]
+[e $U 2479  ]
 "47
 [; ;startupsequence.c: 47:         default: break;
-[e :U 2524 ]
-[e $U 2482  ]
+[e :U 2521 ]
+[e $U 2479  ]
 "48
 [; ;startupsequence.c: 48:     }
 }
-[e $U 2482  ]
-[e :U 2483 ]
-[e [\ _i , $ -> 0 `i 2484
- , $ -> 1 `i 2488
- , $ -> 2 `i 2492
- , $ -> 3 `i 2496
- , $ -> 4 `i 2500
- , $ -> 5 `i 2504
- , $ -> 6 `i 2508
- , $ -> 7 `i 2512
- , $ -> 8 `i 2516
- , $ -> 9 `i 2520
- 2524 ]
-[e :U 2482 ]
+[e $U 2479  ]
+[e :U 2480 ]
+[e [\ _i , $ -> 0 `i 2481
+ , $ -> 1 `i 2485
+ , $ -> 2 `i 2489
+ , $ -> 3 `i 2493
+ , $ -> 4 `i 2497
+ , $ -> 5 `i 2501
+ , $ -> 6 `i 2505
+ , $ -> 7 `i 2509
+ , $ -> 8 `i 2513
+ , $ -> 9 `i 2517
+ 2521 ]
+[e :U 2479 ]
 "49
 [; ;startupsequence.c: 49: }
-[e :UE 2481 ]
+[e :UE 2478 ]
 }
 "51
 [; ;startupsequence.c: 51: void startup_sequence_OnTimerInterrupt(void)
@@ -2896,31 +2891,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _currentAct -> -> 1 `i `Vc ]
 "55
 [; ;startupsequence.c: 55:     if (currentAct >= 10){
-[e $ ! >= -> _currentAct `i -> 10 `i 2526  ]
+[e $ ! >= -> _currentAct `i -> 10 `i 2523  ]
 {
 "57
 [; ;startupsequence.c: 57:         TMR0_OverflowCallbackRegister(((void*)0));
-[e ( _TMR0_OverflowCallbackRegister (1 -> -> -> 0 `i `*v `*F17850 ]
+[e ( _TMR0_OverflowCallbackRegister (1 -> -> -> 0 `i `*v `*F17852 ]
 "58
 [; ;startupsequence.c: 58:         do { LATBbits.LATB5 = 1; } while(0);
-[e :U 2529 ]
+[e :U 2526 ]
 {
 [e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 2528 ]
+[e :U 2525 ]
 "59
 [; ;startupsequence.c: 59:         return;
-[e $UE 2525  ]
+[e $UE 2522  ]
 "60
 [; ;startupsequence.c: 60:         }
 }
-[e :U 2526 ]
+[e :U 2523 ]
 "61
 [; ;startupsequence.c: 61:     startup_sequence_actuator_on(currentAct);
 [e ( _startup_sequence_actuator_on (1 _currentAct ]
 "62
 [; ;startupsequence.c: 62: }
-[e :UE 2525 ]
+[e :UE 2522 ]
 }
 "64
 [; ;startupsequence.c: 64: void startup_sequence_Init(void){
@@ -2936,5 +2931,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _TMR0_OverflowCallbackRegister (1 &U _startup_sequence_OnTimerInterrupt ]
 "67
 [; ;startupsequence.c: 67: }
-[e :UE 2530 ]
+[e :UE 2527 ]
 }
